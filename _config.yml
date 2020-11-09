@@ -3,23 +3,23 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
+title: 田振博客 记录-分享-感悟
+subtitle: '我的程序世界'
+description: '技术分享,快乐传递'
+keywords: 'html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序'
+author: 田振
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://t_z666.gitee.io
+url: http://tianzhen001.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -141,4 +141,7 @@ theme: hexo-theme-matery-master
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/tianzhen001/myBlog #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: gh-pages
+  message: 
