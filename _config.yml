@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 田振博客 记录-分享-感悟
+title: 田振 记录-分享-感悟
 subtitle: '我的程序世界'
 description: '技术分享,快乐传递'
 keywords: 'html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序'
@@ -142,6 +142,6 @@ theme: hexo-theme-matery-master
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/tianzhen001/myBlog #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  repo: https://github.com/tianzhen001/tianzhen001.github.io #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
   branch: gh-pages
   message: 
