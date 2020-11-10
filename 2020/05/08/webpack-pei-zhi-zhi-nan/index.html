@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="哈哈, html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序">
+    <meta name="keywords" content="webpack配置指南, html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序">
     <meta name="description" content="技术分享,快乐传递">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>哈哈 | 记录-分享-感悟</title>
+    <title>webpack配置指南 | 记录-分享-感悟</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -101,17 +101,6 @@
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
       <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
     </a>
     
   </li>
@@ -210,17 +199,6 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
 		<a href="/friends" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-address-book"></i>
@@ -309,12 +287,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">哈哈</h1>
+                    <h1 class="description center-align post-title">webpack配置指南</h1>
                 </div>
             </div>
         </div>
@@ -429,12 +407,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/webpack/">
+                                <span class="chip bg-color">webpack</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/" class="post-category">
+                                打包工具
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -443,7 +434,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-10
+                    2020-05-08
                 </div>
                 
 
@@ -459,7 +450,362 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="webpack概述"><a href="#webpack概述" class="headerlink" title="webpack概述"></a>webpack概述</h2><blockquote>
+<p><em>webpack</em> 是一个现代 JavaScript 应用程序的<em>静态模块打包器(module bundler</em> )</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.webpackjs.com/">webpack中文网</a></p>
+<p><a target="_blank" rel="noopener" href="https://webpack.js.org/">webpack官网</a></p>
+<h2 id="webpack做了什么"><a href="#webpack做了什么" class="headerlink" title="webpack做了什么"></a>webpack做了什么</h2><ul>
+<li>语法转换<ul>
+<li>less/sass转换成css</li>
+<li>ES6转换成ES5</li>
+<li>typescript转换成js</li>
+</ul>
+</li>
+<li>html/css/js代码的压缩与合并（打包）</li>
+<li>webpack可以在开发期间提供一个开发环境<ul>
+<li>自动开启浏览器</li>
+<li>自动监视文件变化</li>
+<li>自动刷新浏览器</li>
+</ul>
+</li>
+<li>项目一般都需要经过webpack打包之后才上线。</li>
+</ul>
+<h2 id="webpack模块说明"><a href="#webpack模块说明" class="headerlink" title="webpack模块说明"></a>webpack模块说明</h2><p>webpack会把所有的资源都当成模块</p>
+<ul>
+<li>css</li>
+<li>js</li>
+<li>图片</li>
+<li>字体图标</li>
+</ul>
+<p>webpack给前端开发提供了模块化的开发环境</p>
+<ul>
+<li>对于js文件，webpack中支持AMD、CMD、commonJS、ES6模块化等语法</li>
+<li>有了webpack，我们可以在前端代码中使用任意的模块化语法</li>
+<li>可以在浏览器中使用nodejs的模块化语法<code>const $ = require(&#39;jquery&#39;)</code></li>
+</ul>
+<h2 id="webpack基本使用"><a href="#webpack基本使用" class="headerlink" title="webpack基本使用"></a>webpack基本使用</h2><ul>
+<li>创建一个文件夹<code>webpack-demo</code></li>
+<li>初始化项目 生成<code>package.json</code></li>
+</ul>
+<pre class=" language-lang-bash"><code class="language-lang-bash">yarn init -y
+</code></pre>
+<ul>
+<li>安装webpack的依赖包</li>
+</ul>
+<pre class=" language-lang-bash"><code class="language-lang-bash">yarn add webpack webpack-cli -D
+</code></pre>
+<ul>
+<li>新建文件<code>src</code>和<code>dist</code>文件夹，，src用于提供源码，，dist用于存放打包后的文件</li>
+<li><p>在src下新建了<code>index.js</code>文件，目的：对<code>src/index.js</code>文件进行打包</p>
+</li>
+<li><p>在package.json文件配置了打包的脚本</p>
+</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">  "scripts": &#123;
+    "build": "webpack --config webpack.config.js"
+  &#125;
+</code></pre>
+<ul>
+<li>在项目的根目录，创建一个文件<code>webpack.config.js</code></li>
+<li>执行打包命令</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">yarn build
+</code></pre>
+<h2 id="配置webpack的打包入口"><a href="#配置webpack的打包入口" class="headerlink" title="配置webpack的打包入口"></a>配置webpack的打包入口</h2><ul>
+<li>在<code>webpack.config.js</code>文件中</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">// 这是webpack的配置文件 
+// webpack是运行在node环境中，webpack可以执行任意的node代码，包括可以使用node中模块。
+module.exports = &#123;
+  // 默认： ./src/index.js
+  entry: './src/app.js'
+&#125;
+</code></pre>
+<h2 id="配置webpack的打包出口"><a href="#配置webpack的打包出口" class="headerlink" title="配置webpack的打包出口"></a>配置webpack的打包出口</h2><blockquote>
+<p>配置webpack最终打包的文件的出口</p>
+</blockquote>
+<pre class=" language-lang-js"><code class="language-lang-js">  // 配置webpack打包出口
+  output: &#123;
+    // path： 打包出口的目录,默认 dist, 必须指定绝对路径
+    path: path.join(__dirname, 'lib'),
+    // filename: 打包出口的文件名字  默认 main.js
+    filename: 'bundle.js'
+  &#125;
+</code></pre>
+<p>==如果要配置path，记得是绝对路径==</p>
+<h2 id="配置webpack的打包模式"><a href="#配置webpack的打包模式" class="headerlink" title="配置webpack的打包模式"></a>配置webpack的打包模式</h2><pre class=" language-lang-js"><code class="language-lang-js">  // 打包模式  development|production
+  // development: 打包不会对进行压缩   打包快
+  // production: 打包会对代码进行压缩  上线
+  mode: 'development'
+</code></pre>
+<h2 id="配置html-webpack-plugin插件"><a href="#配置html-webpack-plugin插件" class="headerlink" title="配置html-webpack-plugin插件"></a>配置html-webpack-plugin插件</h2><blockquote>
+<p>html-webpack-plugin插件能够帮助我们自动在dist中生成一个html文件，并且会自动帮我们引入打包后的文件。</p>
+</blockquote>
+<ul>
+<li>安装html-webpack-plugin插件</li>
+</ul>
+<pre class=" language-lang-bash"><code class="language-lang-bash">yarn add html-webpack-plugin -D
+</code></pre>
+<ul>
+<li>在<code>webpack.config.js</code>中配置</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">//1. 导入html-webpack-plugin插件
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+// 2.配置webpack的插件，是一个数组
+plugins: [new HtmlWebpackPlugin(&#123;
+  // 生成html的模板
+  template: './src/index.html'
+&#125;)]
+</code></pre>
+<h2 id="配置css-loader处理css文件"><a href="#配置css-loader处理css文件" class="headerlink" title="配置css-loader处理css文件"></a>配置css-loader处理css文件</h2><blockquote>
+<p>webpack天生只能处理js文件，如果需要处理其他类型的文件，需要配置loader</p>
+</blockquote>
+<ul>
+<li>安装依赖包</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">yarn add css-loader style-loader -D
+</code></pre>
+<ul>
+<li>配置loader</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">module: &#123;
+  rules: [
+    // 配置css-loader的规则
+    &#123;
+      // 匹配所有.css结尾的文件
+      test: /\.css$/,
+      // 使用css-loader 和 style-loader处理
+      use: ['style-loader', 'css-loader']
+    &#125;
+  ]
+&#125;
+</code></pre>
+<p>==注意：loader加载顺序从右往左==</p>
+<h2 id="配置less-loader处理less文件"><a href="#配置less-loader处理less文件" class="headerlink" title="配置less-loader处理less文件"></a>配置less-loader处理less文件</h2><ul>
+<li>安装依赖包</li>
+</ul>
+<pre class=" language-lang-bash"><code class="language-lang-bash">yarn add less-loader less -D
+</code></pre>
+<ul>
+<li>配置less-loader</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">// 配置less-loader的规则
+&#123;
+  // 匹配所有.less结尾的文件
+  test: /\.less$/,
+    // 使用css-loader 和 style-loader处理
+    use: ['style-loader', 'css-loader', 'less-loader']
+&#125;
+</code></pre>
+<h2 id="配置file-loader处理图片"><a href="#配置file-loader处理图片" class="headerlink" title="配置file-loader处理图片"></a>配置file-loader处理图片</h2><ul>
+<li>安装依赖包</li>
+</ul>
+<pre><code>yarn add file-loader -D
+</code></pre><ul>
+<li>配置file-loader</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">// file-loader配置
+&#123;
+  test: /\.(png|jpg|gif)$/,
+  use: 'file-loader'
+&#125;
+</code></pre>
+<h2 id="配置url-loader处理图片"><a href="#配置url-loader处理图片" class="headerlink" title="配置url-loader处理图片"></a>配置url-loader处理图片</h2><ul>
+<li>安装</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">yarn add url-loader file-loader -D
+</code></pre>
+<ul>
+<li>配置url-loader</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">&#123;
+  test: /\.(png|jpg|gif)$/,
+  use: &#123;
+    loader: 'url-loader',
+    options: &#123;
+      limit: 20 * 1024
+    &#125;
+  &#125;
+&#125;
+</code></pre>
+<h2 id="配置字体图标和音视频"><a href="#配置字体图标和音视频" class="headerlink" title="配置字体图标和音视频"></a>配置字体图标和音视频</h2><pre class=" language-lang-js"><code class="language-lang-js">// 字体图标
+&#123;
+  test: /\.(eot|svg|ttf|woff)$/,
+  use: &#123;
+    loader: 'url-loader',
+    options: &#123;
+      limit: 20 * 1024
+    &#125;
+  &#125;
+&#125;,
+&#123;
+  test: /\.(mp3|mp4|ogg)$/,
+  use: &#123;
+    loader: 'url-loader',
+    options: &#123;
+      limit: 20 * 1024
+    &#125;
+  &#125;
+&#125;
+</code></pre>
+<h2 id="配置babel-loader"><a href="#配置babel-loader" class="headerlink" title="配置babel-loader"></a>配置babel-loader</h2><blockquote>
+<p>babel可以把高版本的js语法转成低版本的js语法，保证运行的效果一样。能够兼容更多的浏览器。</p>
+</blockquote>
+<ul>
+<li>安装依赖包</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">yarn add  babel-loader @babel/core @babel/preset-env -D
+</code></pre>
+<ul>
+<li>配置babel</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">&#123;
+  test: /\.m?js$/,
+  exclude: /(node_modules|bower_components)/,
+  use: &#123;
+    loader: 'babel-loader',
+    options: &#123;
+      presets: ['@babel/preset-env']
+    &#125;
+  &#125;
+&#125;
+</code></pre>
+<h2 id="提取css到单独的文件中"><a href="#提取css到单独的文件中" class="headerlink" title="提取css到单独的文件中"></a>提取css到单独的文件中</h2><ul>
+<li>安装插件</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">yarn add mini-css-extract-plugin -D
+</code></pre>
+<ul>
+<li>配置插件</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+// 配置插件
+plugins: [
+  new MiniCssExtractPlugin(&#123;
+    // 指定生成的css文件名和路径
+    filename: './index.css',
+  &#125;)
+],
+</code></pre>
+<ul>
+<li>配置css和less的loader</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">&#123;
+  test: /\.css$/,
+  // css-loader只能够让webpack能够处理css文件
+  // style-loader： 能够把处理好的css代码添加到页面中
+  // MiniCssExtractPlugin.loader ; 把css提取到单独的css文件中
+  use: [MiniCssExtractPlugin.loader, 'css-loader']
+&#125;,
+&#123;
+  test: /\.less$/,
+  use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+&#125;,
+</code></pre>
+<h2 id="webpack-dev-server的使用"><a href="#webpack-dev-server的使用" class="headerlink" title="webpack-dev-server的使用"></a>webpack-dev-server的使用</h2><blockquote>
+<p>webpack-dev-server不是用来打包的，而是用于启动一个服务器，，，，，当我们代码发生了改变，webpack-dev-server会重新打包（内存）并且会刷新浏览器，实时看到效果</p>
+<p>最新版本的webpack5还不支持，需要降级处理</p>
+</blockquote>
+<p><img src="images/image-20201108181347423.png" alt="image-20201108181347423"></p>
+<ul>
+<li>安装包</li>
+</ul>
+<pre class=" language-lang-bash"><code class="language-lang-bash">yarn add webpack-dev-server -D
+
+## 注意：如果需要使用webpack-dev-server  就不能使用最新的webpack5版本， 应该使用webpack 4
+</code></pre>
+<ul>
+<li>配置一个脚本</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">
+  "scripts": &#123;
+    "build": "webpack --config webpack.config.js",
+    "serve": "webpack-dev-server --config webpack.config.js"
+  &#125;,
+</code></pre>
+<ul>
+<li>使用dev脚本</li>
+</ul>
+<pre><code>yarn serve
+</code></pre><ul>
+<li>常见配置</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">  // devServer的配置
+  devServer: &#123;
+    // 自定义端口
+    port: 9090,
+    // 自动打开浏览器
+    open: true
+  &#125;
+</code></pre>
+<h2 id="webpack处理vue文件"><a href="#webpack处理vue文件" class="headerlink" title="webpack处理vue文件"></a>webpack处理vue文件</h2><ul>
+<li>新建了一个<code>App.vue</code>文件</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js"><template>
+  <div class="app">我是根组件 ---&#123;&#123;msg&#125;&#125;  --<demo></demo> </div>
+</template>
+
+<script>
+export default &#123;
+  data() &#123;
+    return &#123;
+      msg: 'hello'
+    &#125;
+  &#125;,
+&#125;
+</script>
+
+<style>
+.app &#123;
+  background-color: red;
+&#125;
+</style>
+</code></pre>
+<ul>
+<li>在main.js中导入<code>App.vue</code>根组件，并且渲染成为根组件</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">import Vue from 'vue'
+import App from './App.vue'
+
+const vm = new Vue(&#123;
+  el: '##app',
+  // 把App组件渲染成根组件
+  render: c => c(App),
+  // 把app渲染成为根组件
+  // render: function(createElement) &#123;
+  //   return createElement(App)
+  // &#125;
+&#125;)
+</code></pre>
+<ul>
+<li><p>报错，因为webpack处理不了vue文件</p>
+</li>
+<li><p>安装依赖包</p>
+</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">yarn add vue-loader@15.9.0 vue-template-compiler -D
+</code></pre>
+<ul>
+<li>在webpack.config.js中配置vue-loader</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">const VueLoaderPlugin = require('vue-loader/lib/plugin')
+
+  plugins: [
+    new VueLoaderPlugin()
+  ],
+
+    rules: [
+      &#123;
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      &#125;
+    ]
+</code></pre>
+<p>12</p>
+
             </div>
             <hr/>
 
@@ -484,7 +830,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://tianzhen001.github.io/%E5%93%88%E5%93%88/">http://tianzhen001.github.io/%E5%93%88%E5%93%88/</a>
+                    <a href="http://tianzhen001.github.io/2020/05/08/webpack-pei-zhi-zhi-nan/">http://tianzhen001.github.io/2020/05/08/webpack-pei-zhi-zhi-nan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -521,7 +867,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/webpack/">
+                                    <span class="chip bg-color">webpack</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -687,39 +1037,49 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/%E5%93%88%E5%93%88/">
+                <a href="/2020/08/10/vue-ru-he-gei-ge-ge-zu-jian-she-zhi-title/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="哈哈">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="vue如何给各个组件设置title">
                         
-                        <span class="card-title">哈哈</span>
+                        <span class="card-title">vue如何给各个组件设置title</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            你知道如何给vue组件设置标题吗
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-10
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            田振
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/vue/" class="post-category">
+                                    vue
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BB%84%E4%BB%B6/">
+                        <span class="chip bg-color">组件</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -730,34 +1090,46 @@
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/%E5%93%88%E5%93%88/">
+                <a href="/2020/05/08/webpack-pei-zhi-zhi-nan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="哈哈">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="webpack配置指南">
                         
-                        <span class="card-title">哈哈</span>
+                        <span class="card-title">webpack配置指南</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            前端大型项目打包上线必备
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            田振
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    打包工具
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/webpack/">
+                        <span class="chip bg-color">webpack</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -954,7 +1326,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
-            <span id="year">2019</span>
+            <span id="year">2018</span>
             <a href="/about" target="_blank">田振</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
@@ -1086,6 +1458,8 @@ $(function () {
 
     
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     

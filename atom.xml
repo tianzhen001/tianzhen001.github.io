@@ -6,7 +6,7 @@
   <link href="http://tianzhen001.github.io/atom.xml" rel="self"/>
   
   <link href="http://tianzhen001.github.io/"/>
-  <updated>2020-11-09T08:06:26.884Z</updated>
+  <updated>2020-11-10T04:09:42.287Z</updated>
   <id>http://tianzhen001.github.io/</id>
   
   <author>
@@ -17,76 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>layout</title>
-    <link href="http://tianzhen001.github.io/2020/11/09/2020-11-09-layout/"/>
-    <id>http://tianzhen001.github.io/2020/11/09/2020-11-09-layout/</id>
-    <published>2020-11-09T08:05:43.000Z</published>
-    <updated>2020-11-09T08:06:26.884Z</updated>
+    <title>vue如何给各个组件设置title</title>
+    <link href="http://tianzhen001.github.io/2020/08/10/vue-ru-he-gei-ge-ge-zu-jian-she-zhi-title/"/>
+    <id>http://tianzhen001.github.io/2020/08/10/vue-ru-he-gei-ge-ge-zu-jian-she-zhi-title/</id>
+    <published>2020-08-10T04:05:03.000Z</published>
+    <updated>2020-11-10T04:09:42.287Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;hahhhhahahhahha哈哈哈哈&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h3 id=&quot;vue如何给各个组件设置头部&quot;&gt;&lt;a href=&quot;#vue如何给各个组件设置头部&quot; class=&quot;headerlink&quot; title=&quot;vue如何给各个组件设置头部&quot;&gt;&lt;/a&gt;vue如何给各个组件设置头部&lt;/h3&gt;&lt;h4 id=&quot;第一种&quot;&gt;&lt;a</summary>
         
       
     
     
     
+    <category term="vue" scheme="http://tianzhen001.github.io/categories/vue/"/>
+    
+    
+    <category term="组件" scheme="http://tianzhen001.github.io/tags/%E7%BB%84%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
-    <title>My New Post</title>
-    <link href="http://tianzhen001.github.io/2020/11/08/my-new-post/"/>
-    <id>http://tianzhen001.github.io/2020/11/08/my-new-post/</id>
-    <published>2020-11-08T14:13:35.000Z</published>
-    <updated>2020-11-09T04:57:30.214Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;我的第一个博客&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://tianzhen001.github.io/2020/11/08/hello-world/"/>
-    <id>http://tianzhen001.github.io/2020/11/08/hello-world/</id>
-    <published>2020-11-08T13:44:22.636Z</published>
-    <updated>2020-11-08T13:44:22.636Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>My New Post</title>
-    <link href="http://tianzhen001.github.io/2020/08/08/2020-11-09-layout/webpack-pei-zhi-zhi-nan/"/>
-    <id>http://tianzhen001.github.io/2020/08/08/2020-11-09-layout/webpack-pei-zhi-zhi-nan/</id>
-    <published>2020-08-08T14:13:35.000Z</published>
-    <updated>2020-11-09T16:16:05.905Z</updated>
+    <title>webpack配置指南</title>
+    <link href="http://tianzhen001.github.io/2020/05/08/webpack-pei-zhi-zhi-nan/"/>
+    <id>http://tianzhen001.github.io/2020/05/08/webpack-pei-zhi-zhi-nan/</id>
+    <published>2020-05-08T14:13:35.000Z</published>
+    <updated>2020-11-10T04:05:29.119Z</updated>
     
     
       
@@ -94,7 +54,7 @@
         
         
     <summary type="html">&lt;h2 id=&quot;webpack概述&quot;&gt;&lt;a href=&quot;#webpack概述&quot; class=&quot;headerlink&quot; title=&quot;webpack概述&quot;&gt;&lt;/a&gt;webpack概述&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;webpack&lt;/em&gt; 是一个现代</summary>
+&lt;p&gt;&lt;em&gt;webpack&lt;/em&gt; 是一个现代</summary>
         
       
     

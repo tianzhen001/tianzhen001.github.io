@@ -107,17 +107,6 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
     <a href="/friends" class="waves-effect waves-light">
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
@@ -204,17 +193,6 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
 		</a>
           
         </li>
@@ -361,10 +339,19 @@
                 
                 
                 
+                <a href="/categories/vue/" title="vue: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9EBEA;">vue
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/categories/%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/" title="打包工具: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">打包工具
+                            style="background-color: #F5EEF8;">打包工具
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -412,7 +399,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"打包工具","max":2}],
+            indicator: [{"name":"vue","max":2},{"name":"打包工具","max":2}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -423,7 +410,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1],
+                    value : [1,1],
                     name : '文章分类数量'
                 }
             ]
@@ -497,7 +484,7 @@
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
-            <span id="year">2019</span>
+            <span id="year">2018</span>
             <a href="/about" target="_blank">田振</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
@@ -629,6 +616,8 @@ $(function () {
 
     
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
