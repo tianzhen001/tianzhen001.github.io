@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>记录-分享-感悟</title>
+  <title>记录、分享、感悟</title>
   
-  <subtitle>田</subtitle>
+  <subtitle>一路高歌</subtitle>
   <link href="http://tianzhen001.github.io/atom.xml" rel="self"/>
   
   <link href="http://tianzhen001.github.io/"/>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>vue如何给各个组件设置title</title>
-    <link href="http://tianzhen001.github.io/2020/08/10/vue-ru-he-gei-ge-ge-zu-jian-she-zhi-title/"/>
-    <id>http://tianzhen001.github.io/2020/08/10/vue-ru-he-gei-ge-ge-zu-jian-she-zhi-title/</id>
+    <link href="http://tianzhen001.github.io/vue-ru-he-gei-ge-ge-zu-jian-she-zhi-title/"/>
+    <id>http://tianzhen001.github.io/vue-ru-he-gei-ge-ge-zu-jian-she-zhi-title/</id>
     <published>2020-08-10T04:05:03.000Z</published>
     <updated>2020-11-10T04:09:42.287Z</updated>
     
@@ -43,8 +43,8 @@
   
   <entry>
     <title>webpack配置指南</title>
-    <link href="http://tianzhen001.github.io/2020/05/08/webpack-pei-zhi-zhi-nan/"/>
-    <id>http://tianzhen001.github.io/2020/05/08/webpack-pei-zhi-zhi-nan/</id>
+    <link href="http://tianzhen001.github.io/webpack-pei-zhi-zhi-nan/"/>
+    <id>http://tianzhen001.github.io/webpack-pei-zhi-zhi-nan/</id>
     <published>2020-05-08T14:13:35.000Z</published>
     <updated>2020-11-10T04:05:29.119Z</updated>
     
