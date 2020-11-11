@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>记录、分享、感悟</title>
+  <title>一路高歌</title>
   
-  <subtitle>一路高歌</subtitle>
+  <subtitle>分享、感悟、热爱</subtitle>
   <link href="http://tianzhen001.github.io/atom.xml" rel="self"/>
   
   <link href="http://tianzhen001.github.io/"/>
-  <updated>2020-11-10T04:09:42.287Z</updated>
+  <updated>2020-11-11T12:41:08.658Z</updated>
   <id>http://tianzhen001.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue的状态管理工具之vuex</title>
+    <link href="http://tianzhen001.github.io/vuex/"/>
+    <id>http://tianzhen001.github.io/vuex/</id>
+    <published>2020-10-10T14:29:41.000Z</published>
+    <updated>2020-11-11T12:41:08.658Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;vuex-概述&quot;&gt;&lt;a href=&quot;#vuex-概述&quot; class=&quot;headerlink&quot; title=&quot;vuex 概述&quot;&gt;&lt;/a&gt;vuex 概述&lt;/h1&gt;&lt;p&gt;目标：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;了解vuex的应用场景 </summary>
+        
+      
+    
+    
+    
+    <category term="vue全家桶" scheme="http://tianzhen001.github.io/categories/vue%E5%85%A8%E5%AE%B6%E6%A1%B6/"/>
+    
+    
+    <category term="vuex" scheme="http://tianzhen001.github.io/tags/vuex/"/>
+    
+  </entry>
   
   <entry>
     <title>vue如何给各个组件设置title</title>
