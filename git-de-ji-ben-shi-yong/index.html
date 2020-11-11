@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vue的状态管理工具之vuex, html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序">
+    <meta name="keywords" content="Git的基本使用, html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序">
     <meta name="description" content="技术分享,快乐传递">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>vue的状态管理工具之vuex | 一路高歌</title>
+    <title>Git的基本使用 | 一路高歌</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -287,12 +287,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vue的状态管理工具之vuex</h1>
+                    <h1 class="description center-align post-title">Git的基本使用</h1>
                 </div>
             </div>
         </div>
@@ -409,8 +409,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/vuex/">
-                                <span class="chip bg-color">vuex</span>
+                            <a href="/tags/git%E5%91%BD%E4%BB%A4/">
+                                <span class="chip bg-color">git命令</span>
                             </a>
                         
                     </div>
@@ -421,8 +421,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/vue%E5%85%A8%E5%AE%B6%E6%A1%B6/" class="post-category">
-                                vue全家桶
+                            <a href="/categories/Git/" class="post-category">
+                                Git
                             </a>
                         
                     </div>
@@ -434,7 +434,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-10
+                    2020-04-16
                 </div>
                 
 
@@ -450,532 +450,222 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="vuex-概述"><a href="#vuex-概述" class="headerlink" title="vuex 概述"></a>vuex 概述</h1><p>目标：</p>
-<ul>
-<li>了解vuex的应用场景  (在哪用)</li>
-<li>掌握vuex的基本使用  (怎么用)</li>
-</ul>
-<p><strong>vuex 是一个 vue 的状态管理工具,  状态即数据</strong></p>
-<h2 id="回顾-组件之间共享状态-组件通信方案"><a href="#回顾-组件之间共享状态-组件通信方案" class="headerlink" title="回顾-组件之间共享状态 (组件通信方案)"></a>回顾-组件之间共享状态 (组件通信方案)</h2><p>默认组件的数据, 是独立的, 每个组件有着自己的状态(数据)</p>
-<blockquote>
-<p> 状态 === 数据</p>
+                <h1 id="1-git基础入门"><a href="#1-git基础入门" class="headerlink" title="1. git基础入门"></a>1. git基础入门</h1><blockquote>
+<p>Git是一款免费、开源的<strong>分布式</strong> <strong>版本控制系统</strong> ，用于敏捷高效地处理任何或小或大的项目。</p>
 </blockquote>
-<p><img src="/asset/image-20201029060003070.png" alt="image-20201029060003070"></p>
-<p>组件之间共享状态的两种典型方式：</p>
-<ul>
-<li><p>父子之间 : props + $emit</p>
-<p>父传子：props属性绑定</p>
-<pre><code>&lt;son1 msg=&quot;msg&quot;&gt;&lt;/son1&gt;
-</code></pre><p>子传父：$emit事件绑定</p>
-<pre><code>&lt;div&gt;
-    &lt;button @click=&quot;$emit(&#39;event-name&#39;)&quot;&gt;通知父组件&lt;/button&gt;
-&lt;/div&gt;
-</code></pre></li>
-<li><p>非父子之间：EventBus 事件总线</p>
-<ul>
-<li><p>创建一个都能访问到的事件总线</p>
-</li>
-<li><p>在 A 组件中, bus.$emit</p>
-</li>
-<li>在 B 组件中, bus.$on</li>
-</ul>
-</li>
-</ul>
-<p>如果某个状态需要在很多个组件来使用，或者要实现多个组件共同维护一份数据又应该怎么做呢 ？</p>
-<p>这里就要引入Vuex了。</p>
-<h2 id="vuex基本概念"><a href="#vuex基本概念" class="headerlink" title="vuex基本概念"></a>vuex基本概念</h2><p><a target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/guide/">中文文档</a></p>
-<p>vuex是vue的状态管理工具，<strong>状态即数据</strong>。 状态管理就是集中管理vue中通用的一些数据</p>
+<p><img src="/./images/reset.gif"></p>
+<h2 id="1-1-git的安装"><a href="#1-1-git的安装" class="headerlink" title="1.1 git的安装"></a>1.1 git的安装</h2><p><a target="_blank" rel="noopener" href="https://git-scm.com/download/win">下载地址</a></p>
 <p>注意：</p>
-<ul>
-<li>不是所有的场景都适用于vuex，只有在必要的时候才使用vuex</li>
-<li>使用了vuex之后，会附加更多的框架中的概念进来，增加了项目的复杂度</li>
+<ol>
+<li>不要安装在中文目录</li>
+<li>不要使用桌面管理软件</li>
+</ol>
+<p>安装很简单，一直下一步即可。在任意的目录下右键，能看到菜单, 就表示安装成功了。</p>
+<p>github账号注册 </p>
+<p><a target="_blank" rel="noopener" href="https://github.com/">github官网</a></p>
+<h2 id="1-2-git三个区"><a href="#1-2-git三个区" class="headerlink" title="1.2 git三个区"></a>1.2 git三个区</h2><p>要对某个项目使用git进行管理，需要使用<code>git init</code>命令初始化git仓库<br><code>git init</code>会在当前目录生成一个隐藏文件夹 .git  不要去修改这个文件夹下的任意东西。</p>
+<p>git仓库会分成三个区</p>
+<p><strong>工作区</strong>：我们书写代码的地方，工作的目录就叫工作区。</p>
+<p><strong>暂存区：</strong>暂时存储的区域，在git中，代码无法直接从工作区提交到仓库区，而是需要先从工作区添加到暂存区，然后才能从暂存区提交到仓库区。暂存区的目的是避免误操作。</p>
+<p><strong>仓库区：</strong>将保存在暂存区域的内容永久转储到 Git 仓库中，生成版本号。生成版本号之后，就可以任何的回退到某一个具体的版本。</p>
+<h2 id="1-3-git基本命令"><a href="#1-3-git基本命令" class="headerlink" title="1.3 git基本命令"></a>1.3 git基本命令</h2><h3 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h3><ul>
+<li>作用：初始化git仓库，想要使用git对某个项目进行管理，需要<code>git init</code>进行初始化</li>
 </ul>
-<p>Vuex就像近视眼镜, 你自然会知道什么时候需要用它~</p>
-<h2 id="vuex的优点-方便的解决多组件的共享状态"><a href="#vuex的优点-方便的解决多组件的共享状态" class="headerlink" title="vuex的优点: 方便的解决多组件的共享状态"></a>vuex的优点: 方便的解决多组件的共享状态</h2><p> vuex的作用是解决多组件状态共享的问题。</p>
-<ul>
-<li>它是独立于组件而单独存在的，所有的组件都可以把它当作一座桥梁来进行通讯。</li>
-<li><p>与事件总线（EventBus）相比，它具备额外的特点：</p>
-<ul>
-<li><strong>响应式</strong></li>
-<li>操作更简洁</li>
+<pre class=" language-lang-bash"><code class="language-lang-bash"># 初始化仓库， 在当前目录下生成一个隐藏文件夹.git
+git init
+</code></pre>
+<h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><ul>
+<li>作用：将文件由 <code>工作区</code> 添加到 <code>暂存区</code>，在git中，文件无法直接从工作区直接添加到仓库区，必须先从工作区添加到暂存区，再从暂存区添加到仓库区。</li>
+<li>命令：<code>git add 文件名/目录名</code></li>
 </ul>
-<p>代码量非常少, 但是需要熟悉</p>
+<pre class=" language-lang-bash"><code class="language-lang-bash"># 将index.html添加到暂存区
+git add index.html
+
+# 将css目录下所有的文件添加到暂存区
+git add css
+
+# 添加当前目录下所有的文件
+git add .
+git add --all
+</code></pre>
+<h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><p>作用：将文件由 <strong>暂存区</strong> 添加到 <strong>仓库区</strong>，生成版本号（存档）</p>
+<pre class=" language-lang-bash"><code class="language-lang-bash"># 将文件从暂存区提交到仓库
+git commit -m "提交说明"
+
+# 如果不写提交说明，会进入vi编辑器，没有写提交说明，是提交不成功的。 :q!来退出
+git commit   # 需要使用vi输入内容  vi编辑器常用操作
+</code></pre>
+<h3 id="git-config配置"><a href="#git-config配置" class="headerlink" title="git config配置"></a>git config配置</h3><p>如果是第一次提交，需要配置提交者信息，推荐和github的账号邮箱一致</p>
+<pre class=" language-lang-Bash"><code class="language-lang-Bash"># git config  user.name 你的目标用户名
+# git config  user.email 你的目标邮箱名
+
+# 使用--global参数，配置全局的用户名和邮箱，只需要配置一次即可。推荐配置github的用户名和密码
+git config  --global user.name  皮皮虾
+git config  --global user.email 2641543334@qq.com
+</code></pre>
+<p>如果是之前已经配置了，想清空的话，可以使用如下命令：</p>
+<pre class=" language-lang-js"><code class="language-lang-js">git config --global user.name '' 
+git config --global user.email ''
+</code></pre>
+<h3 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h3><ul>
+<li>作用：查看文件的状态</li>
+</ul>
+<ul>
+<li>命令：<code>git status</code> <ul>
+<li>红色表示工作区中的文件需要提交</li>
+<li>绿色表示暂存区中的文件需要提交</li>
+</ul>
 </li>
 </ul>
-<p><img src="/asset/image-20201029061043482.png" alt="image-20201029061043482"></p>
-<h2 id="什么数据适合存到vuex中"><a href="#什么数据适合存到vuex中" class="headerlink" title="什么数据适合存到vuex中"></a>什么数据适合存到vuex中</h2><p>一般情况下，只有  <strong>多个组件均需要共享的数据</strong> ，才有必要存储在vuex中，</p>
-<p>对于某个组件中的私有数据，依旧存储在组件自身的data中。</p>
-<p>例如：</p>
+<h3 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h3><ul>
+<li>作用：查看提交日志</li>
+<li><code>git log</code> 查看提交的日志</li>
+<li><code>git log --oneline</code> 简洁的日志信息</li>
+<li><code>git reflog</code> 查看<strong>所有的</strong>版本信息 ，包括回退的操作</li>
+</ul>
+<h2 id="1-4-git重置或版本回退"><a href="#1-4-git重置或版本回退" class="headerlink" title="1.4 git重置或版本回退"></a>1.4 git重置或版本回退</h2><h3 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h3><ul>
+<li>作用：版本回退，将代码恢复到已经提交的某一个版本中。</li>
+<li><code>git reset --hard 版本号</code> 将代码回退到某个指定的版本(版本号只要有前几位即可)</li>
+</ul>
 <ul>
-<li>对于所有组件而言，当前登陆的用户信息是需要在全体组件之间共享的，则它可以放在vuex中</li>
-<li>对于文章详情页组件来说，当前的用户浏览的文章列表数据则应该属于这个组件的私有数据，应该要放在这个组件data中。</li>
+<li>当使用了<code>git reset</code>命令后，版本会回退，使用<code>git log</code>只能看到<strong>当前版本</strong>之前的信息。使用<code>git reflog</code>可以查看所有的版本信息</li>
 </ul>
-<h2 id="概述小结"><a href="#概述小结" class="headerlink" title="概述小结:"></a>概述小结:</h2><ol>
-<li>vuex解决什么问题?   可以解决多组件共享状态的问题</li>
-<li>什么样的数据, 适合存放到vuex?  多组件都需要用到的数据, 才往vuex中存</li>
-</ol>
-<p>vuex是响应式的, 只要vuex中的数据改了, 那么所有用到这个数据的地方, 都会更新!!!</p>
-<h1 id="vuex入门"><a href="#vuex入门" class="headerlink" title="vuex入门"></a>vuex入门</h1><h2 id="初始化一个vuex项目"><a href="#初始化一个vuex项目" class="headerlink" title="初始化一个vuex项目"></a>初始化一个vuex项目</h2><ul>
-<li>初始化命令</li>
-</ul>
-<pre><code>vue create 02-vuex
-</code></pre><ul>
-<li>vue项目如何配置自动打开浏览器</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">// 1. 在项目的根目录，创建vue.config.js配置文件
-
-/* 
-  我们可以通过vue.config.js文件覆盖vue-cli中webpack的配置文件
-*/
-module.exports = &#123;
-  // 导出配置
-  devServer: &#123;
-    open: true,
-    port: 3000
-  &#125;
-&#125;
-</code></pre>
-<h2 id="需求-多组件共享数据"><a href="#需求-多组件共享数据" class="headerlink" title="需求: 多组件共享数据"></a>需求: 多组件共享数据</h2><p>对于如下三个组件（一个父组件，两个子组件）</p>
-<p><img src="/asset/image-20201029080515105.png" alt="image-20201029080515105"></p>
-<p>效果是三个组件共享一份数据:</p>
+<h2 id="1-5-git忽视文件"><a href="#1-5-git忽视文件" class="headerlink" title="1.5 git忽视文件"></a>1.5 git忽视文件</h2><blockquote>
+<p>在仓库中，有些文件是不想被git管理的，比如数据的配置密码、写代码的一些思路，node_modules等。git可以通过配置从而达到忽视掉一些文件，这样这些文件就可以不用提交了。</p>
+</blockquote>
 <ul>
-<li>任意一个组件都可以修改数据</li>
-<li>三个组件的数据是同步的</li>
+<li>在仓库的根目录创建一个 的文件，文件名是固定的。</li>
+<li>将不需要被git管理的文件路径添加到<code>.gitignore</code>中</li>
 </ul>
-<p>1 创建项目</p>
-<pre><code>vue create 03-vuex-demo
-</code></pre><p>2 创建三个组件, 目录如下</p>
-<pre><code>|-components
-|--add-item.vue
-|--sub-item.vue
-|-App.vue
-</code></pre><p>3 源代码如下</p>
-<p><code>App.vue</code></p>
-<p>在入口组件中引入add-item和sub-item这两个子组件</p>
-<pre class=" language-lang-html"><code class="language-lang-html"><template>
-  <div id="app">
-    <h1>根组件</h1>
-    <input type="text">
-    <add-item></add-item>
-    <hr>
-    <sub-item></sub-item>
-  </div>
-</template>
+<pre class=" language-lang-css"><code class="language-lang-css"># 忽视idea.txt文件
+idea.txt
 
-<script>
-import AddItem from './components/add-item.vue'
-import SubItem from './components/sub-item.vue'
+# 忽视css下的index.js文件
+css/index.js
 
-export default &#123;
-  name: 'app',
-  data: function () &#123;
-    return &#123;
+# 忽视css下的所有的js文件
+css/*.js
 
-    &#125;
-  &#125;,
-  components: &#123;
-    AddItem,
-    SubItem
-  &#125;
-&#125;
-</script>
-
-<style>
-#app &#123;
-  width: 300px;
-  margin: 20px auto;
-  border: 3px solid #ccc;
-  border-radius: 3px;
-  padding: 10px;
-&#125;
-</style>
+# 忽视css文件夹
+css
 </code></pre>
-<p><code>main.js</code></p>
-<pre class=" language-lang-js"><code class="language-lang-js">import Vue from 'vue'
-import App from './App.vue'
-
-Vue.config.productionTip = false
-
-new Vue(&#123;
-  render: h => h(App)
-&#125;).$mount('#app')
-</code></pre>
-<p><code>sub-item.vue</code></p>
-<pre class=" language-lang-html"><code class="language-lang-html"><template>
-  <div class="box">
-    <h2>子组件 sub</h2>
-    从父组件中获取的值: <label></label>
-    <br>
-    <button>值-1</button>
-  </div>
-</template>
-
-<script>
-export default &#123;
-  name: 'SubItem'
-&#125;
-</script>
-
-<style lang="css" scoped>
-.box&#123;
-  border: 3px solid #ccc;
-  width: 200px;
-  padding: 10px;
-  margin: 20px;
-&#125;
-h2 &#123;
-  margin-top: 10px;
-&#125;
-</style>
-</code></pre>
-<p><code>add-item.vue</code></p>
-<pre class=" language-lang-html"><code class="language-lang-html"><template>
-  <div class="box">
-    <h2>子组件 add</h2>
-    从父组件中获取的值:<label></label>
-    <br />
-    <button>值+1</button>
-  </div>
-</template>
-
-<script>
-export default &#123;
-  name: 'AddItem'
-&#125;
-</script>
-
-<style lang="css" scoped>
-.box &#123;
-  border: 3px solid #ccc;
-  width: 200px;
-  padding: 10px;
-  margin: 20px;
-&#125;
-h2 &#123;
-  margin-top: 10px;
-&#125;
-</style>
-</code></pre>
-<h2 id="vuex-的使用-创建仓库"><a href="#vuex-的使用-创建仓库" class="headerlink" title="vuex 的使用 - 创建仓库"></a>vuex 的使用 - 创建仓库</h2><p>1 安装 vuex, 与vue-router类似，vuex是一个独立存在的插件，如果脚手架初始化没有选 vuex，就需要额外安装。</p>
-<pre><code>yarn add vuex
-</code></pre><p>2 新建 <code>store/index.js</code> 专门存放 vuex</p>
-<p>​    为了维护项目目录的整洁，在src目录下新建一个store目录其下放置一个index.js文件。 (和 <code>router/index.js</code> 类似)</p>
-<p>3 创建仓库 <code>store/index.js</code> </p>
-<pre class=" language-lang-jsx"><code class="language-lang-jsx">// 导入 vue
-import Vue from 'vue'
-// 导入 vuex
-import Vuex from 'vuex'
-// vuex也是vue的插件, 需要use一下, 进行插件的安装初始化
-Vue.use(Vuex)
-
-// 创建仓库 store
-const store = new Vuex.Store()
-
-// 导出仓库
-export default store
-</code></pre>
-<p>4 在 main.js 中导入挂载到 Vue 实例上</p>
-<pre class=" language-lang-js"><code class="language-lang-js">import Vue from 'vue'
-import App from './App.vue'
-import store from './store'
-
-Vue.config.productionTip = false
-
-new Vue(&#123;
-  render: h => h(App),
-  store
-&#125;).$mount('#app')
-</code></pre>
-<p>此刻起, 就成功创建了一个空仓库!!</p>
-<h2 id="核心概念-state-状态"><a href="#核心概念-state-状态" class="headerlink" title="核心概念 - state 状态"></a>核心概念 - state 状态</h2><p>State提供唯一的公共数据源，所有共享的数据都要统一放到Store中的State中存储。</p>
-<p>打开项目中的store.js文件，在state对象中可以添加我们要共享的数据。</p>
-<pre class=" language-lang-jsx"><code class="language-lang-jsx">// 创建仓库 store
-const store = new Vuex.Store(&#123;
-  // state 状态, 即数据, 类似于vue组件中的data,
-  // 区别在于 data 是组件自己的数据, 而 state 中的数据整个vue项目的组件都能访问到
-  state: &#123;
-    count: 101
-  &#125;
-&#125;)
-</code></pre>
-<p>问题: 如何在组件中获取count?</p>
-<ol>
-<li>插值表达式 =》  </li>
-<li>mapState 映射计算属性 =》  </li>
-</ol>
-<p><strong>1 原始形式- 插值表达式</strong></p>
-<p><strong><code>App.vue</code></strong></p>
-<p>组件中可以使用  <strong>this.$store</strong> 获取到vuex中的store对象实例，可通过<strong>state</strong>属性属性获取<strong>count</strong>， 如下</p>
-<pre class=" language-lang-vue"><code class="language-lang-vue"><h1>state的数据 - &#123;&#123; $store.state.count &#125;&#125;</h1>
-</code></pre>
-<p><strong>计算属性</strong> - 将state属性定义在计算属性中 <a target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/guide/state.html">https://vuex.vuejs.org/zh/guide/state.html</a></p>
-<pre class=" language-lang-js"><code class="language-lang-js">// 把state中数据，定义在组件内的计算属性中
-  computed: &#123;
-    count () &#123;
-      return this.$store.state.count
-    &#125;
-  &#125;
-</code></pre>
-<pre class=" language-lang-vue"><code class="language-lang-vue"><h1>state的数据 - &#123;&#123; count &#125;&#125;</h1>
-</code></pre>
-<p>但是每次, 都这样一个个的提供计算属性, 太麻烦了, 所以我们需要辅助函数 mapState 帮我们简化语法</p>
-<p><strong>2 辅助函数  - mapState</strong></p>
-<blockquote>
-<p>mapState是辅助函数，帮助我们把store中的数据映射到 组件的计算属性中, 它属于一种方便的用法</p>
+<h1 id="2-git分支操作"><a href="#2-git分支操作" class="headerlink" title="2. git分支操作"></a>2. git分支操作</h1><p>分支就是科幻电影里面的平行宇宙，当你正在电脑前努力学习Git的时候，另一个你正在另一个平行宇宙里努力学习SVN。</p>
+<p>如果两个平行宇宙互不干扰，那对现在的你也没啥影响。不过，在某个时间点，两个平行宇宙合并了，结果，你既学会了Git又学会了SVN！</p>
+<p><img src="/images/fenzhi.png" alt></p>
+<h2 id="2-1-为什么要有分支？"><a href="#2-1-为什么要有分支？" class="headerlink" title="2.1 为什么要有分支？"></a>2.1 为什么要有分支？</h2><ul>
+<li>如果你要开发一个新的功能，需要2周时间，第一周你只能写50%代码，如果此时立即提交，代码没写完，不完整的代码会影响到别人无法工作。如果等代码写完再提交，代码很容易丢失，风险很大。</li>
+<li>有了分支，你就可以创建一个属于自己的分支，别人看不到，也不影响别人，你在自己的分支上工作，提交到自己的分支上，等到功能开发完毕，一次性的合并到原来的分支。这样既安全，又不影响他人工作。</li>
+</ul>
+<h2 id="2-2-git分支命令"><a href="#2-2-git分支命令" class="headerlink" title="2.2 git分支命令"></a>2.2 git分支命令</h2><blockquote>
+<p>在git中，分支实质上仅仅是一个指针，每次代码提交后，这个分支指针就会向后移动，保证一直指向最后一次提交的的版本。git中使用HEAD指向当前分支</p>
 </blockquote>
-<p>用法 ： </p>
-<p>第一步：导入mapState (mapState是vuex中的一个函数)</p>
-<pre class=" language-lang-js"><code class="language-lang-js">import &#123; mapState &#125; from 'vuex'
+<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><ul>
+<li><code>git branch 分支名称</code>创建分支，分支中的代码，在创建时与当前分支的内容完全相同。</li>
+<li>git在第一次提交时，就有了一个叫<code>master</code>的主分支。</li>
+<li><code>git branch dev</code>，创建了一个叫做dev的分支</li>
+</ul>
+<h3 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h3><ul>
+<li><code>git branch</code>可以查看所有的分支</li>
+<li>在当前分支的前面会有一个<code>*</code></li>
+<li>在git中，有一个特殊指针<code>HEAD</code>,永远会指向当前分支</li>
+</ul>
+<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><ul>
+<li><code>git checkout 分支名称</code>切换分支  HEAD指针指向了另一个分支</li>
+<li>在当前分支的任何操作，都不会影响到其他的分支，除非进行了分支合并。</li>
+<li>提交代码时，会生产版本号，当前分支会指向最新的版本号。</li>
+</ul>
+<h3 id="创建并切换分支"><a href="#创建并切换分支" class="headerlink" title="创建并切换分支"></a>创建并切换分支</h3><ul>
+<li><code>git checkout -b 分支名称</code> 创建并切换分支</li>
+<li>切换分支会做两件事情<ul>
+<li>创建一个新分支</li>
+<li>把head指针指向当前的分支</li>
+</ul>
+</li>
+</ul>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><ul>
+<li><code>git branch -d 分支名称</code> 可以删除分支</li>
+<li>注意：不能在当前分支删除当前分支，需要切换到其他分支才能删除。</li>
+<li>注意：<code>master</code>分支是可以删除的，但是不推荐那么做。</li>
+</ul>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><ul>
+<li><code>git merge 分支名称</code> 将其他分支的内容合并到当前分支。</li>
+<li>在<code>master</code>分支中执行<code>git merge dev</code> 将<code>dev</code>分支中的代码合并到<code>master</code>分支</li>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6">分支合并</a></li>
+</ul>
+<h2 id="2-3-git合并冲突"><a href="#2-3-git合并冲突" class="headerlink" title="2.3 git合并冲突"></a>2.3 git合并冲突</h2><ul>
+<li>对于同一个文件，如果有多个分支需要合并时，容易出现冲突。</li>
+<li>合并分支时，如果出现冲突，只能手动处理，再次提交，一般的作法，把自己的代码放到冲突代码的后面即可。</li>
+</ul>
+<h1 id="3-git远程仓库"><a href="#3-git远程仓库" class="headerlink" title="3. git远程仓库"></a>3. git远程仓库</h1><h2 id="3-1-github与git"><a href="#3-1-github与git" class="headerlink" title="3.1 github与git"></a>3.1 github与git</h2><p>git与github没有直接的关系。</p>
+<ul>
+<li>git是一个版本控制工具。</li>
+<li>github是一个<strong>代码托管平台</strong>，开源社区，是git的一个远程代码仓库。</li>
+</ul>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//1. gitHub是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名gitHub。
+//2. github免费，代码所有人都能看到，但是只有你自己能修改。付费的可以隐藏。
+//3. 创建git项目时，不能有中文。
 </code></pre>
-<p>第二步：采用数组形式引入state属性</p>
-<pre class=" language-lang-js"><code class="language-lang-js">mapState(['count'])
+<p><a target="_blank" rel="noopener" href="https://github.com/">github官网</a></p>
+<p><a target="_blank" rel="noopener" href="https://git.oschina.net/">开源中国-git</a></p>
+<p><img src="/images/image-20200722113838573.png" alt="image-20200722113838573"></p>
+<h2 id="3-2-git-clone"><a href="#3-2-git-clone" class="headerlink" title="3.2 git clone"></a>3.2 git clone</h2><ul>
+<li>作用：克隆远程仓库的代码到本地</li>
+<li>git clone [远程仓库地址]</li>
+<li><code>git clone https://github.com/itcastAAA666/myCode68.git</code>会在本地新建一个<code>test</code>文件夹，在test中包含了一个<code>.git</code>目录，用于保存所有的版本记录，同时test文件中还有最新的代码，你可以直接进行后续的开发和使用。</li>
+<li>git克隆默认会使用远程仓库的项目名字，也可以自己指定。需要是使用以下命令：<code>git clone [远程仓库地址] [本地项目名]</code></li>
+</ul>
+<h2 id="3-3-git-push"><a href="#3-3-git-push" class="headerlink" title="3.3 git push"></a>3.3 git push</h2><ul>
+<li>作用：将本地仓库中代码提交到远程仓库</li>
+<li><code>git push 仓库地址 master</code> 在代码提交到远程仓库，注意master分支必须写，不能省略</li>
+<li>例子：<code>git push https://github.com/itcastAAA666/myCode68.git master</code> 如果第一次使用，需要填写github的用户名和密码</li>
+</ul>
+<h2 id="3-4-git-pull"><a href="#3-4-git-pull" class="headerlink" title="3.4 git pull"></a>3.4 git pull</h2><ul>
+<li>作用：将远程的代码下载到本地</li>
+</ul>
+<ul>
+<li>通常在push前，需要先pull一次。</li>
+</ul>
+<pre class=" language-lang-bash"><code class="language-lang-bash"># 获取远程仓库的更新，并且与本地的分支进行合并
+git pull
 </code></pre>
-<blockquote>
-<p>上面代码的最终得到的是 <strong>类似于</strong></p>
-</blockquote>
-<pre class=" language-lang-js"><code class="language-lang-js">count () &#123;
-    return this.$store.state.count
-&#125;
-</code></pre>
-<p>第三步：利用<strong>展开运算符</strong>将导出的状态映射给计算属性</p>
-<pre class=" language-lang-js"><code class="language-lang-js">  computed: &#123;
-    ...mapState(['count'])
-  &#125;
-</code></pre>
-<pre class=" language-lang-vue"><code class="language-lang-vue"> <div> state的数据：&#123;&#123; count &#125;&#125;</div>
-</code></pre>
-<h2 id="核心概念-mutations"><a href="#核心概念-mutations" class="headerlink" title="核心概念 - mutations"></a>核心概念 - mutations</h2><h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><p>通过 <code>strict: true</code> 可以开启严格模式</p>
-<blockquote>
-<p><strong>state数据的修改只能通过mutations，并且mutations必须是同步的</strong></p>
-</blockquote>
-<p><strong>定义mutations</strong></p>
-<pre class=" language-lang-js"><code class="language-lang-js">const store  = new Vuex.Store(&#123;
-  state: &#123;
-    count: 0
-  &#125;,
-  // 定义mutations
-  mutations: &#123;
+<h2 id="3-5-SSH免密码登陆"><a href="#3-5-SSH免密码登陆" class="headerlink" title="3.5 SSH免密码登陆"></a>3.5 SSH免密码登陆</h2><p>git支持多种数据传输协议：</p>
+<ul>
+<li>https协议：<code>https://github.com/你的注册名/test.git</code>  需要输入用户名和密码</li>
+<li>ssh协议：<code>git@github.com:你的注册名/test.git</code>   可以配置免密码登录</li>
+</ul>
+<p>每次push或者pull代码，如果使用https协议，那么都需要输入用户名和密码进行身份的确认，非常麻烦。</p>
+<ul>
+<li>github为了账户的安全，需要对每一次push请求都要验证用户的身份，只有合法的用户才可以push</li>
+<li>使用ssh协议，配置ssh免密码，可以做到免密码往github推送代码</li>
+</ul>
+<h2 id="3-6-SSH免密码登录配置"><a href="#3-6-SSH免密码登录配置" class="headerlink" title="3.6 SSH免密码登录配置"></a>3.6 SSH免密码登录配置</h2><p>注意：这些命令需要在bash中敲</p>
+<ul>
+<li>1 创建SSH Key：<code>ssh-keygen -t rsa</code>  <ul>
+<li>key 钥匙的意思</li>
+<li>gen— generate 生成，产生的意思</li>
+</ul>
+</li>
+<li>2 在文件路径 <code>C:\用户\当前用户名\</code> 找到 <code>.ssh</code> 文件夹</li>
+<li>3 文件夹中有两个文件：<ul>
+<li>私钥：<code>id_rsa</code></li>
+<li>公钥：<code>id_rsa.pub</code>   将公钥添加到github当中</li>
+</ul>
+</li>
+<li>4 在 <code>github -&gt; settings -&gt; SSH and GPG keys</code>页面中，新创建SSH key</li>
+<li>5 粘贴 公钥 <code>id_rsa.pub</code> 内容到对应文本框中</li>
+<li>5 在github中新建仓库或者使用现在仓库，拿到<code>git@github.com:用户名/仓库名.git</code></li>
+<li>6 此后，再次SSH方式与github“通信”，不用输入密码确认身份了</li>
+</ul>
+<h2 id="3-7-git-remote"><a href="#3-7-git-remote" class="headerlink" title="3.7 git remote"></a>3.7 git remote</h2><p>每次push操作都需要带上远程仓库的地址，非常的麻烦，我们可以给仓库地址设置一个别名</p>
+<pre class=" language-lang-bash"><code class="language-lang-bash"># 给远程仓库设置一个别名
+git remote add 仓库别名 仓库地址
+git remote add pinyougou git@github.com:你的注册名/test.git
 
-  &#125;
-&#125;)
-</code></pre>
-<p><strong>格式说明</strong></p>
-<p>mutations是一个对象，对象中存放修改state的方法</p>
-<pre class=" language-lang-js"><code class="language-lang-js">mutations: &#123;
-    // 方法里参数 第一个参数是当前store的state属性
-    // payload 载荷 运输参数 调用mutaiions的时候 可以传递参数 传递载荷
-    addCount (state) &#123;
-      state.count += 1
-    &#125;
-  &#125;,
-</code></pre>
-<p>组件中提交 mutations</p>
-<pre class=" language-lang-jsx"><code class="language-lang-jsx">this.$store.commit('addCount')
-</code></pre>
-<p><strong>解决问题: 两个子组件, 添加操作 add,  addN 实现</strong></p>
-<h3 id="带参数的-mutation"><a href="#带参数的-mutation" class="headerlink" title="带参数的 mutation"></a>带参数的 mutation</h3><p>需求: 父组件也希望能改到数据</p>
-<p>提交 mutation 是可以传递参数的  <code>this.$store.commit(&#39;xxx&#39;,  参数)</code></p>
-<p>1 提供mutation函数</p>
-<pre class=" language-lang-js"><code class="language-lang-js">mutations: &#123;
-  ...
-  inputCount (state, count) &#123;
-    state.count = count
-  &#125;
-&#125;,
-</code></pre>
-<p>2 注册事件</p>
-<pre class=" language-lang-jsx"><code class="language-lang-jsx"><input type="text" :value="count" @input="handleInput">
-</code></pre>
-<p>3 提交mutation</p>
-<pre class=" language-lang-jsx"><code class="language-lang-jsx">handleInput (e) &#123;
-  this.$store.commit('inputCount', +e.target.value)
-&#125;
-</code></pre>
-<p><strong>小tips: 提交的参数只能是一个, 如果有多个参数要传, 可以传递一个对象</strong></p>
-<pre class=" language-lang-jsx"><code class="language-lang-jsx">this.$store.commit('inputCount', &#123;
-  count: e.target.value
-&#125;)
-</code></pre>
-<p><strong>解决问题:  addN 的实现</strong></p>
-<h3 id="辅助函数-mapMutations"><a href="#辅助函数-mapMutations" class="headerlink" title="辅助函数 - mapMutations"></a><strong>辅助函数</strong> - mapMutations</h3><blockquote>
-<p>mapMutations和mapState很像，它把位于mutations中的方法提取了出来，我们可以将它导入</p>
-</blockquote>
-<pre class=" language-lang-js"><code class="language-lang-js">import  &#123; mapMutations &#125; from 'vuex'
-methods: &#123;
-    ...mapMutations(['addCount'])
-&#125;
-</code></pre>
-<blockquote>
-<p>上面代码的含义是将mutations的方法导入了methods中，等价于</p>
-</blockquote>
-<pre class=" language-lang-js"><code class="language-lang-js">methods: &#123;
-      // commit(方法名, 载荷参数)
-      addCount () &#123;
-          this.$store.commit('addCount')
-      &#125;
- &#125;
-</code></pre>
-<p>此时，就可以直接通过this.addCount调用了</p>
-<pre class=" language-lang-jsx"><code class="language-lang-jsx"><button @click="addCount()">值+1</button>
-</code></pre>
-<p>但是请注意： Vuex中mutations中要求不能写异步代码，如果有异步的ajax请求，应该放置在actions中</p>
-<h2 id="核心概念-actions"><a href="#核心概念-actions" class="headerlink" title="核心概念-actions"></a>核心概念-actions</h2><blockquote>
-<p>state是存放数据的，mutations是同步更新数据 (便于监测数据的变化, 更新视图等, 方便于调试工具查看变化)，</p>
-<p>actions则负责进行异步操作</p>
-</blockquote>
-<p><strong>需求: 一秒钟之后, 要给一个数 去修改state</strong></p>
-<p><img src="/asset/image-20201029074727223.png" alt="image-20201029074727223"></p>
-<p><strong>定义actions</strong></p>
-<pre class=" language-lang-js"><code class="language-lang-js">actions: &#123;
-  setAsyncCount (context, num) &#123;
-    // 一秒后, 给一个数, 去修改 num
-    setTimeout(() => &#123;
-      context.commit('inputCount', num)
-    &#125;, 1000)
-  &#125;
-&#125;,
-</code></pre>
-<p><strong>原始调用</strong> - $store (支持传参)</p>
-<pre class=" language-lang-js"><code class="language-lang-js">setAsyncCount () &#123;
-  this.$store.dispatch('setAsyncCount', 200)
-&#125;
-</code></pre>
-<p><strong>辅助函数</strong> -mapActions</p>
-<blockquote>
-<p>actions也有辅助函数，可以将action导入到组件中</p>
-</blockquote>
-<pre class=" language-lang-js"><code class="language-lang-js">import &#123; mapActions &#125; from 'vuex'
-methods: &#123;
-    ...mapActions(['setAsyncCount'])
-&#125;
-</code></pre>
-<p>直接通过 this.方法 就可以调用</p>
-<pre class=" language-lang-vue"><code class="language-lang-vue"><button @click="setAsyncCount(200)">+异步</button>
-</code></pre>
-<h2 id="核心概念-getters"><a href="#核心概念-getters" class="headerlink" title="核心概念-getters"></a>核心概念-getters</h2><blockquote>
-<p>除了state之外，有时我们还需要从state中派生出一些状态，这些状态是依赖state的，此时会用到getters</p>
-</blockquote>
-<p>例如，state中定义了list，为1-10的数组，</p>
-<pre class=" language-lang-js"><code class="language-lang-js">state: &#123;
-    list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-&#125;
-</code></pre>
-<p>组件中，需要显示所有大于5的数据，正常的方式，是需要list在组件中进行再一步的处理，但是getters可以帮助我们实现它</p>
-<p><strong>定义getters</strong></p>
-<pre class=" language-lang-js"><code class="language-lang-js">  getters: &#123;
-    // getters函数的第一个参数是 state
-    // 必须要有返回值
-     filterList:  state =>  state.list.filter(item => item > 5)
-  &#125;
-</code></pre>
-<p>使用getters</p>
-<p><strong>原始方式</strong> -$store</p>
-<pre class=" language-lang-vue"><code class="language-lang-vue"><div>&#123;&#123; $store.getters.filterList &#125;&#125;</div>
-</code></pre>
-<p><strong>辅助函数</strong> - mapGetters</p>
-<pre class=" language-lang-js"><code class="language-lang-js">computed: &#123;
-    ...mapGetters(['filterList'])
-&#125;
-</code></pre>
-<pre class=" language-lang-vue"><code class="language-lang-vue"> <div>&#123;&#123; filterList &#125;&#125;</div>
-</code></pre>
-<h2 id="核心概念-模块-module-进阶拓展"><a href="#核心概念-模块-module-进阶拓展" class="headerlink" title="核心概念 - 模块 module (进阶拓展)"></a>核心概念 - 模块 module (进阶拓展)</h2><blockquote>
-<p><strong>由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。</strong></p>
-</blockquote>
-<p>这句话的意思是，如果把所有的状态都放在state中，当项目变得越来越大的时候，Vuex会变得越来越难以维护</p>
-<p>由此，又有了Vuex的模块化</p>
-<p><img src="/asset/image-20201029155607101.png" alt="image-20201029155607101"></p>
-<h3 id="模块定义-准备-state"><a href="#模块定义-准备-state" class="headerlink" title="模块定义 - 准备 state"></a><strong>模块定义</strong> - 准备 state</h3><p>定义两个模块   <strong>user</strong> 和  <strong>setting</strong></p>
-<p>user中管理用户的信息状态  userInfo  <code>modules/user.js</code></p>
-<pre class=" language-lang-jsx"><code class="language-lang-jsx">const state = &#123;
-  userInfo: &#123;
-    name: 'zs',
-    age: 18
-  &#125;
-&#125;
+# 使用如下来推送数据
+git push pinyougou master
 
-const mutations = &#123;&#125;
-
-const actions = &#123;&#125;
-
-const getters = &#123;&#125;
-
-export default &#123;
-  state,
-  mutations,
-  actions,
-  getters
-&#125;
-</code></pre>
-<p>setting中管理项目应用的名称 title, desc  <code>modules/setting.js</code></p>
-<pre class=" language-lang-jsx"><code class="language-lang-jsx">const state = &#123;
-  title: '这是大标题',
-  desc: '描述真呀真不错'
-&#125;
-
-const mutations = &#123;&#125;
-
-const actions = &#123;&#125;
-
-const getters = &#123;&#125;
-
-export default &#123;
-  state,
-  mutations,
-  actions,
-  getters
-&#125;
-</code></pre>
-<p>使用模块中的数据,  可以直接通过模块名访问 <code>$store.state.模块名.xxx</code>  =&gt;  <code>$store.state.setting.title</code></p>
-<h3 id="命名空间-namespaced"><a href="#命名空间-namespaced" class="headerlink" title="命名空间 namespaced"></a>命名空间 namespaced</h3><p>默认情况下，模块内部的 action、mutation 和 getter 是注册在<strong>全局命名空间</strong>的</p>
-<p>这句话的意思是 刚才的user模块还是setting模块，它的 action、mutation 和 getter 其实并没有区分，都可以直接通过全局的方式调用, 如下图所示:</p>
-<p><img src="/asset/image-20201029163627229.png" alt="image-20201029163627229"></p>
-<p>但是，如果我们想保证内部模块的高封闭性，我们可以采用namespaced来进行设置</p>
-<p><code>modules/user.js</code></p>
-<pre class=" language-lang-jsx"><code class="language-lang-jsx">const state = &#123;
-  userInfo: &#123;
-    name: 'zs',
-    age: 18
-  &#125;,
-  myMsg: '我的数据'
-&#125;
-
-const mutations = &#123;
-  updateMsg (state, msg) &#123;
-    state.myMsg = msg
-  &#125;
-&#125;
-
-const actions = &#123;&#125;
-
-const getters = &#123;&#125;
-
-export default &#123;
-  namespaced: true,
-  state,
-  mutations,
-  actions,
-  getters
-&#125;
-</code></pre>
-<p>提交模块中的mutation</p>
-<pre class=" language-lang-jsx"><code class="language-lang-jsx">全局的:   this.$store.commit('mutation函数名', 参数)
-
-模块中的: this.$store.commit('模块名/mutation函数名', 参数)
-</code></pre>
-<p>namespaced: true 后, 要添加映射, 可以加上模块名, 找对应模块的 state/mutations/actions/getters</p>
-<pre class=" language-lang-jsx"><code class="language-lang-jsx">computed: &#123;
-  // 全局的
-  ...mapState(['count']),
-  // 模块中的
-  ...mapState('user', ['myMsg']),
-&#125;,
-methods: &#123;
-  // 全局的
-  ...mapMutations(['addCount'])
-  // 模块中的
-  ...mapMutations('user', ['updateMsg'])
-&#125;
+# 删除PPXCode这个别名
+git remote remove pinyougou
 </code></pre>
 
             </div>
@@ -1002,7 +692,7 @@ methods: &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://tianzhen001.github.io/vuex/">http://tianzhen001.github.io/vuex/</a>
+                    <a href="http://tianzhen001.github.io/git-de-ji-ben-shi-yong/">http://tianzhen001.github.io/git-de-ji-ben-shi-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1040,8 +730,8 @@ methods: &#123;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/vuex/">
-                                    <span class="chip bg-color">vuex</span>
+                                <a href="/tags/git%E5%91%BD%E4%BB%A4/">
+                                    <span class="chip bg-color">git命令</span>
                                 </a>
                             
                         </div>
@@ -1209,48 +899,46 @@ methods: &#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/vuex/">
+                <a href="/webpack-pei-zhi-zhi-nan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="vue的状态管理工具之vuex">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="webpack配置指南">
                         
-                        <span class="card-title">vue的状态管理工具之vuex</span>
+                        <span class="card-title">webpack配置指南</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            深入浅出详解vuex
+                            前端大型项目打包上线必备
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-10
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/vue%E5%85%A8%E5%AE%B6%E6%A1%B6/" class="post-category">
-                                    vue全家桶
+                            <a href="/categories/%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    打包工具
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/vuex/">
-                        <span class="chip bg-color">vuex</span>
+                    <a href="/tags/webpack/">
+                        <span class="chip bg-color">webpack</span>
                     </a>
                     
                 </div>
@@ -1264,31 +952,31 @@ methods: &#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/vue-ru-he-gei-ge-ge-zu-jian-she-zhi-title/">
+                <a href="/es6-yu-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="vue如何给各个组件设置title">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="ES6语法">
                         
-                        <span class="card-title">vue如何给各个组件设置title</span>
+                        <span class="card-title">ES6语法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            你知道如何给vue组件设置标题吗?
+                            你知道ES6有哪些新语法吗,本篇文章将介绍一些常用的语法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/vue/" class="post-category">
-                                    vue
+                            <a href="/categories/%E8%AF%AD%E6%B3%95/" class="post-category">
+                                    语法
                                 </a>
                             
                             
@@ -1298,8 +986,8 @@ methods: &#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BB%84%E4%BB%B6/">
-                        <span class="chip bg-color">组件</span>
+                    <a href="/tags/ES6/">
+                        <span class="chip bg-color">ES6</span>
                     </a>
                     
                 </div>

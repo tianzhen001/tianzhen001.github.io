@@ -6,7 +6,7 @@
   <link href="http://tianzhen001.github.io/atom.xml" rel="self"/>
   
   <link href="http://tianzhen001.github.io/"/>
-  <updated>2020-11-11T12:41:08.658Z</updated>
+  <updated>2020-11-11T13:09:02.879Z</updated>
   <id>http://tianzhen001.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://tianzhen001.github.io/vuex/"/>
     <id>http://tianzhen001.github.io/vuex/</id>
     <published>2020-10-10T14:29:41.000Z</published>
-    <updated>2020-11-11T12:41:08.658Z</updated>
+    <updated>2020-11-11T13:09:02.879Z</updated>
     
     
       
@@ -48,7 +48,7 @@
     <link href="http://tianzhen001.github.io/vue-ru-he-gei-ge-ge-zu-jian-she-zhi-title/"/>
     <id>http://tianzhen001.github.io/vue-ru-he-gei-ge-ge-zu-jian-she-zhi-title/</id>
     <published>2020-08-10T04:05:03.000Z</published>
-    <updated>2020-11-10T04:09:42.287Z</updated>
+    <updated>2020-11-11T13:08:57.218Z</updated>
     
     
       
@@ -91,6 +91,109 @@
     
     
     <category term="webpack" scheme="http://tianzhen001.github.io/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git的基本使用</title>
+    <link href="http://tianzhen001.github.io/git-de-ji-ben-shi-yong/"/>
+    <id>http://tianzhen001.github.io/git-de-ji-ben-shi-yong/</id>
+    <published>2020-04-16T12:55:24.000Z</published>
+    <updated>2020-11-11T12:59:22.559Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-git基础入门&quot;&gt;&lt;a href=&quot;#1-git基础入门&quot; class=&quot;headerlink&quot; title=&quot;1. git基础入门&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="http://tianzhen001.github.io/categories/Git/"/>
+    
+    
+    <category term="git命令" scheme="http://tianzhen001.github.io/tags/git%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6语法</title>
+    <link href="http://tianzhen001.github.io/es6-yu-fa/"/>
+    <id>http://tianzhen001.github.io/es6-yu-fa/</id>
+    <published>2020-02-11T13:03:54.000Z</published>
+    <updated>2020-11-11T13:09:54.208Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;基本介绍&quot;&gt;&lt;a href=&quot;#基本介绍&quot; class=&quot;headerlink&quot; title=&quot;基本介绍&quot;&gt;&lt;/a&gt;基本介绍&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;ECMAScript 6.0（以下简称 ES6）是 JavaScript</summary>
+        
+      
+    
+    
+    
+    <category term="语法" scheme="http://tianzhen001.github.io/categories/%E8%AF%AD%E6%B3%95/"/>
+    
+    
+    <category term="ES6" scheme="http://tianzhen001.github.io/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Js高级语法及进阶之路</title>
+    <link href="http://tianzhen001.github.io/js-gao-ji-yu-fa-ji-jin-jie-zhi-lu/"/>
+    <id>http://tianzhen001.github.io/js-gao-ji-yu-fa-ji-jin-jie-zhi-lu/</id>
+    <published>2019-07-26T13:13:36.000Z</published>
+    <updated>2020-11-11T13:31:11.704Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;推荐学习资源&quot;&gt;&lt;a href=&quot;#推荐学习资源&quot; class=&quot;headerlink&quot; title=&quot;推荐学习资源&quot;&gt;&lt;/a&gt;推荐学习资源&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;JavaScript</summary>
+        
+      
+    
+    
+    
+    <category term="js" scheme="http://tianzhen001.github.io/categories/js/"/>
+    
+    
+    <category term="Js高级" scheme="http://tianzhen001.github.io/tags/Js%E9%AB%98%E7%BA%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最好用的js库之jQuery</title>
+    <link href="http://tianzhen001.github.io/zui-hao-yong-de-js-ku-zhi-jquery/"/>
+    <id>http://tianzhen001.github.io/zui-hao-yong-de-js-ku-zhi-jquery/</id>
+    <published>2018-12-01T13:23:22.000Z</published>
+    <updated>2020-11-11T13:30:41.656Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;jQuery-初体验&quot;&gt;&lt;a href=&quot;#jQuery-初体验&quot; class=&quot;headerlink&quot; title=&quot;jQuery 初体验&quot;&gt;&lt;/a&gt;jQuery 初体验&lt;/h2&gt;&lt;p&gt;【02-让 div 显示与设置内容.html】&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="js库" scheme="http://tianzhen001.github.io/categories/js%E5%BA%93/"/>
+    
+    
+    <category term="jQuery" scheme="http://tianzhen001.github.io/tags/jQuery/"/>
     
   </entry>
   
