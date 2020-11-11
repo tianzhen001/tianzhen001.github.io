@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 记录、分享、感悟
-subtitle: '一路高歌'
+title: 一路高歌
+subtitle: '分享、感悟、热爱'
 description: '技术分享,快乐传递'
 keywords: 'html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序'
 author: 田振
@@ -95,6 +95,9 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
+
+
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
