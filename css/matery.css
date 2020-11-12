@@ -579,8 +579,10 @@ header .go-back i {
 }
 
 .bg-cover:after {
+    background-color: rgba(183, 18, 211, .5);
+    /* 控制封面背景色的动画效果
     -webkit-animation: rainbow 60s infinite;
-    animation: rainbow 60s infinite;
+    animation: rainbow 60s infinite; */
 }
 
 .bg-cover:before,
