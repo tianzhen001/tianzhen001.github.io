@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ES6语法, html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序">
+    <meta name="keywords" content="最好用的js库之jQuery, html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序">
     <meta name="description" content="技术分享,快乐传递">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ES6语法 | 一路高歌</title>
+    <title>最好用的js库之jQuery | 一路高歌</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -292,7 +292,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ES6语法</h1>
+                    <h1 class="description center-align post-title">最好用的js库之jQuery</h1>
                 </div>
             </div>
         </div>
@@ -409,8 +409,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ES6/">
-                                <span class="chip bg-color">ES6</span>
+                            <a href="/tags/jQuery/">
+                                <span class="chip bg-color">jQuery</span>
                             </a>
                         
                     </div>
@@ -421,8 +421,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AF%AD%E6%B3%95/" class="post-category">
-                                语法
+                            <a href="/categories/js%E5%BA%93/" class="post-category">
+                                js库
                             </a>
                         
                     </div>
@@ -434,7 +434,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-11
+                    2018-12-01
                 </div>
                 
 
@@ -450,454 +450,582 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h1><blockquote>
-<p>ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。</p>
+                <h2 id="jQuery-初体验"><a href="#jQuery-初体验" class="headerlink" title="jQuery 初体验"></a>jQuery 初体验</h2><p>【02-让 div 显示与设置内容.html】</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">$(document).ready(function () &#123;
+  $("#btn1").click(function () &#123;
+    // 隐式迭代：偷偷的遍历，在jQuery中，不需要手动写for循环了，会自动进行遍历。
+    $("div").show(200);
+  &#125;);
+  $("#btn2").click(function () &#123;
+    $("div").text("我是内容");
+  &#125;);
+&#125;);
+</code></pre>
+<p>使用 jQuery 的优点</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//1. 获取元素的方式非常的简单，而且非常的丰富
+//2. jQuery的隐式迭代特性，不再需要书写for循环语句。
+//3. 使用jQuery完全不用考虑兼容性问题。
+//4. jQuery提供了一系列动画相关的函数，使用非常方便。
+//5. 代码简单、粗暴。
+</code></pre>
+<p><strong>没有对比，就没有伤害，有了对比，处处戳中要害。</strong></p>
+<h2 id="什么是-jQuery"><a href="#什么是-jQuery" class="headerlink" title="什么是 jQuery?"></a>什么是 jQuery?</h2><blockquote>
+<p>jQuery 是一个快速的、轻量的、功能丰富的 js 库。</p>
 </blockquote>
-<h2 id="javascript的诞生"><a href="#javascript的诞生" class="headerlink" title="javascript的诞生"></a>javascript的诞生</h2><ul>
-<li>1992年底，美国国家超级电脑应用中心（NCSA）开始开发一个独立的浏览器，叫做 Mosaic。这是人类历史上第一个浏览器，从此网页可以在图形界面的窗口浏览。 </li>
-<li>1994年10月，  Netscape （网景）公司，就是在 Mosaic 的基础上，开发面向普通用户的新一代的浏览器 Netscape Navigator。 </li>
-<li><p>1994年12月，Navigator 发布了1.0版，市场份额一举超过90%。 </p>
-</li>
-<li><p>Netscape 公司很快发现，Navigator 浏览器需要一种可以嵌入网页的脚本语言，用来控制浏览器行为。 因为当时网速特别的慢，很多表单的校验不适合放在服务器端进行校验。管理层对于这种脚本语言的设想是：<strong>功能不需要太强大，语法要简单，容易学习和使用</strong></p>
-</li>
-<li><p>1995年，Netscape 公司雇佣了程序员<code>Brendan Eich 布兰登·艾奇</code> 开发这种网页脚本语言。 </p>
-</li>
-<li><p>1995年5月，Brendan Eich 只用了10天，就设计完成了这种语言的第一版，叫做<code>LiveScript</code>。它是一个大杂烩，语法有多个来源。</p>
-<ul>
-<li>基本语法：借鉴 C 语言和 Java 语言。</li>
-<li>数据结构：借鉴 Java 语言，包括将值分成原始值和对象两大类。</li>
-<li>函数的用法：借鉴 Scheme 语言和 Awk 语言，将函数当作第一等公民，并引入闭包。</li>
-<li>原型继承模型：借鉴 Self 语言（Smalltalk 的一种变种）。</li>
-<li>正则表达式：借鉴 Perl 语言。</li>
-<li>字符串和数组处理：借鉴 Python 语言。</li>
-</ul>
-</li>
-<li>为了保持简单，这种脚本语言缺少一些关键的功能，比如块级作用域、模块、子类型（subtyping）等等，但是可以利用现有功能找出解决办法。 <strong>后果：对于其他的编程语言，你需要只需要学习该语言提供的各种语法即可。对于javascript，你需要学习解决问题的各种模式，比如原型，原型链实现继承，闭包等等</strong></li>
-<li>1995年 12月，Netscape 公司与 Sun 公司合作，后者允许将这种语言叫做 JavaScript。把LiveScript改名成了Javascript</li>
-<li><strong>注意：javascript实质上和java没有什么关系</strong></li>
-</ul>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/./images/java和javascript的区别.png" alt></p>
-<h2 id="ECMAScript与Javascript的关系"><a href="#ECMAScript与Javascript的关系" class="headerlink" title="ECMAScript与Javascript的关系"></a>ECMAScript与Javascript的关系</h2><p>1996年11月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给国际标准化组织ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript ，这个版本就是1.0版。</p>
-<p>该标准从一开始就是针对 JavaScript 语言制定的，但是之所以不叫 JavaScript ，有两个原因。一是商标，Java是 Sun 公司的商标，根据授权协议，只有 Netscape 公司可以合法地使用 JavaScript 这个名字，且 JavaScript 本身也已经被 Netscape 公司注册为商标。二是想体现这门语言的制定者是 ECMA ，不是 Netscape ，这样有利于保证这门语言的开放性和中立性。</p>
-<p>ECMAScript，简称ES，是由Ecma国际（欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）按照标准制定的一种脚本语言规范。</p>
-<p>JavaScript是按ECMAScript规范实现的一种脚本语言，JavaScript除了实现了ECMAScript规范，还提供了BOM和DOM的操作。</p>
-<h2 id="ECMAScript版本历史"><a href="#ECMAScript版本历史" class="headerlink" title="ECMAScript版本历史"></a>ECMAScript版本历史</h2><ul>
-<li>ES1.0, 1997年06月发布</li>
-<li>ES2.0, 1998年06月发布</li>
-<li><p>ES3.0, 1999年12月发布</p>
-</li>
-<li><p>ES4.0,  由于关于语言的复杂性出现了分歧。放弃发布</p>
-</li>
-<li>ES5.0, 2009年12月发布， 增加了严格模式，增加了少量语法，为ES6铺路</li>
-<li>ES6.0, 2015年6月发布，增加了大量的新概念和语法特性<ul>
-<li><strong>第六版的名字， 可以叫做ECMAScript6.0(ES), 也可以叫做ECMAScript 2015（ES2015）</strong></li>
-<li>ECMA组织决定以后每年6月份都会发布一版新的语法标准，比如ES7(ECMAScript 2016) </li>
-<li><strong>通过我们说的ES6泛指ES5之后的下一代标准，涵盖了ES6, ES7, ES8….</strong>  </li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>参考书籍： <a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/">https://es6.ruanyifeng.com/</a> </li>
-</ul>
-<h1 id="ES5-数组的新方法"><a href="#ES5-数组的新方法" class="headerlink" title="ES5-数组的新方法"></a>ES5-数组的新方法</h1><h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h2><p><code>forEach()</code> 方法对数组的每个元素执行一次提供的函数。功能等同于<code>for</code>循环.</p>
-<p>应用场景：为一些相同的元素，绑定事件处理器！强调的是数组中每一项都要遍历</p>
-<p>作用：</p>
-<ul>
-<li>1.只能是用来遍历 </li>
-<li>2.一旦开始了遍历就停不下来</li>
-<li>3.返回值是undefined  对于我们来说没有用</li>
-</ul>
-<p><strong>需求：遍历数组[“张飞”,”关羽”,”赵云”,”马超”]</strong></p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = ["张飞","关羽","赵云","马超"];
-//第一个参数：element，数组的每一项元素
-//第二个参数：index，数组的下标
-//第三个参数：array，正在遍历的数组
-arr.forEach(function(element, index, array)&#123;
-  console.log(element, index, array);
-&#125;);
+<p>jQuery 的官网 <a target="_blank" rel="noopener" href="http://jquery.com/">http://jquery.com/</a></p>
+<p>jQuery 就是一个 js 库，使用 jQuery 的话，会比使用 JavaScript 更简单。</p>
+<p>js 库：把一些常用到的方法写到一个单独的 js 文件，使用的时候直接去引用这 js 文件就可以了。（animate.js、common.js）</p>
+<h2 id="入口函数"><a href="#入口函数" class="headerlink" title="入口函数"></a>入口函数</h2><p>入口函数的好处：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">1. 等待文档加载完成，保证能够获取到元素
+2. 形成了一个沙箱，防止全局变量污染。
 </code></pre>
-<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p><code>map()</code> 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。</p>
-<p><strong>需求：遍历数组，求每一项的平方存在于一个数组中</strong></p>
-<p><strong>作用：</strong></p>
-<ul>
-<li>1.可以循环遍历数组中的每一项数据</li>
-<li>2.可以对循环遍历到的每一项数据进行操作</li>
-<li>3.<strong>==重点应用场景: 对数组中的每一项数据进行操作,比如：给每数组中的每一项添加一个相同的样式==</strong></li>
-</ul>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [1,2,3,4,5];  // 1 4 9 16 25
-//第一个参数：element，数组的每一项元素
-//第二个参数：index，数组的下标
-//第三个参数：array，正在遍历的数组
-//返回值：一个新数组，每个元素都是回调函数的结果。
-var newArray = arr.map(function(element, index, array)&#123;
-  return element * element;
-&#125;);
-console.log(newArray);//[1,4,9,16,25]
-
-
-// 学了箭头函数之后的简写如下:
-var res = nums.map(item => item * item )
+<p>两种写法：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//第一种写法
+$(document).ready(function () &#123;&#125;);
+//第二种写法
+$(function () &#123;&#125;);
 </code></pre>
-<p>案例：获取所有的名字</p>
-<pre class=" language-lang-js"><code class="language-lang-js">let list = [
-      &#123; name: 'tom', age: 20 &#125;,
-      &#123; name: 'rose', age: 21 &#125;,
-      &#123; name: 'jack', age: 22 &#125;,
-      &#123; name: 'jerry', age: 19 &#125;
-    ]
-    let res = list.map(item => item.name)
-    console.log(res)
+<p>jQuery 入口函数与 js 入口函数的对比</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">1.    JavaScript的入口函数要等到页面中所有资源（包括图片、文件）加载完成才开始执行。
+2.    jQuery的入口函数只会等待文档树加载完成就开始执行，并不会等待图片、文件的加载。
 </code></pre>
-<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><p><code>filter</code>用于过滤掉“不合格”的元素<br>返回一个新数组，如果在回调函数中返回true，那么就留下来，如果返回false，就扔掉</p>
-<p><strong>需求：遍历数组，将数组中工资超过5000的值找出来[1000, 5000, 20000, 3000, 10000, 800, 1500]</strong></p>
-<p><strong>作用:</strong></p>
-<ul>
-<li>1.可以循环遍历数组中的每一项</li>
-<li>2.可以对循环遍历到的数据进行判断</li>
-<li>3.当条件成立时,使用了return true后会将满足条件的那一项存到一个新的数组当中</li>
-<li>4.<strong>==重点应用场景:根据条件过滤数组中的数据==</strong></li>
-</ul>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [1000, 5000, 20000, 3000, 10000, 800, 1500];
-//第一个参数：element，数组的每一项元素
-//第二个参数：index，数组的下标
-//第三个参数：array，正在遍历的数组
-//返回值：一个新数组，存储了所有返回true的元素
-var newArray = arr.filter(function(element, index, array)&#123;
-  if(element > 5000) &#123;
-    return false;
-  &#125;else &#123;
-    return true;
-  &#125;
-&#125;);
-console.log(newArray);//[1000, 5000, 3000, 800, 1500]
-
-// 学了箭头函数之后的简写如下:
-var res = nums.filter(item => item > 5000)
-</code></pre>
-<h2 id="some"><a href="#some" class="headerlink" title="some"></a>some</h2><p><code>some</code>用于遍历数组，如果有至少一个满足条件，就返回true，否则返回false。</p>
-<p>**需求：遍历数组，查找数组中的某条数据 比如：查找[10, 20, 30, 40, 50, 60] 中的30</p>
-<p>作用:</p>
-<ul>
-<li>1.可以用来循环遍历数组中的每一项</li>
-<li>2.在回调函数中进行条件判断，如果return true执行之后，会阻止后续代码的遍历执行</li>
-<li>3.重点应用场景: <strong>==条件成立时不再执行后续的循环==</strong></li>
-</ul>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript"> // 查找数组有没有30 如果有，就不要再向下遍历了
-    let nums = [10, 20, 30, 40, 50, 60]
-
-    nums.some(function (item, index, arr) &#123;
-      // console.log(item,index,arr);
-      if (item == 30) &#123;
-        return true
-      &#125;
-      console.log(item);
-    &#125;)
-</code></pre>
-<h2 id="every"><a href="#every" class="headerlink" title="every"></a>every</h2><p><code>every</code>用于遍历数组，只有当所有的元素返回true，才返回true，否则返回false。</p>
-<p><strong>需求：遍历数组，判断==整体==是否都满足条件</strong></p>
-<p>作用：</p>
-<ul>
-<li>1.可以对数组中的每一项进行遍历，但是只打印第一项</li>
-<li>2.对数组中的每一项进行判断，都满足条件则返回true,如果有一项不满足条件则返回false</li>
-<li>3.==应用场景：重点是强调整体的一个处理结果，比如，某班考试成绩是否都合格==</li>
-</ul>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">// every 比如说: 考试完成之后,判断一下成绩当中是否有不及格的 如果都满足条件则返回true,有一个不满足条件则返回false
-    // var score = [100,99,96,93,65,74,41,25,62,18];
-    var score = [100,99,62,25,88];
-
-   var flag =  score.every(function(item,index,arr)&#123;
-      // console.log(item,index,arr);
-      return item > 60
-    &#125;)
-    console.log(flag);
-
-// 学了箭头函数之后的简写如下:
-var res = nums.every(item => item > 60)
-</code></pre>
-<h2 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h2><blockquote>
-<p> <code>**reduce()**</code> 方法对数组中的每个元素执行一个由您提供的<strong>reducer</strong>函数，将其结果汇总为单个返回值 </p>
-</blockquote>
-<p>语法：<code>reduce(callback, initValue)</code></p>
-<p>callback: 每个元素都会执行一次的回调函数</p>
-<p>initValue: 初始值</p>
-<p>callback的4个参数</p>
-<ul>
-<li>prev： 上一次的值，第一次为初始值</li>
-<li>item:  当前值</li>
-<li>index: 下标</li>
-<li>arr: 数组</li>
-</ul>
-<p>案例：计算数组所有值的和</p>
-<pre class=" language-lang-js"><code class="language-lang-js">let nums = [10, 20, 30, 40, 50, 60]
-var res = nums.reduce(function (prev, item) &#123;
-      // console.log(prev, item);
-      return prev + item
- &#125;, 0)
-
-console.log(res);
-
-// 学了箭头函数之后的简写如下:
-var res = nums.reduce((prev,item)=>prev + item)
-</code></pre>
-<h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><blockquote>
-<p>ES6中提供了两个声明变量的关键字：const和let </p>
-</blockquote>
-<h3 id="let的使用"><a href="#let的使用" class="headerlink" title="let的使用"></a>let的使用</h3><p>ES6 新增了<code>let</code>命令，用来声明变量。它的用法类似于<code>var</code>。</p>
-<ul>
-<li>let声明的变量只有在当前作用域有效</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">&#123;
-  let a = 10;
-  var b = 1;
-&#125;
-
-a // ReferenceError: a is not defined.
-b // 1
-</code></pre>
-<ul>
-<li>不存在变量提升</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">// let 的情况
-console.log(bar); // 报错ReferenceError
-let bar = 2;
-</code></pre>
-<ul>
-<li>不允许重复声明</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">let a = 10;
-let a = 1;//报错 Identifier 'a' has already been declared
-</code></pre>
-<h3 id="const的使用"><a href="#const的使用" class="headerlink" title="const的使用"></a>const的使用</h3><p><code>const</code>声明一个只读的常量。常量：值不可以改变的量 </p>
-<ul>
-<li>const声明的量不可以改变</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">const PI = 3.1415;
-PI = 3; //报错
-</code></pre>
-<ul>
-<li>const声明的变量必须赋值</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">const num;
-</code></pre>
-<ul>
-<li>如果const声明了一个对象，仅仅保证地址不变</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">const obj = &#123;name:'zs'&#125;;
-obj.age = 18;//正确
-obj = &#123;&#125;;//报错
-</code></pre>
-<ul>
-<li>其他用法和let一样</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">1. 只能在当前代码块中使用
-2. 不会提升
-3. 不能重复
-</code></pre>
-<h3 id="let与const的使用场景"><a href="#let与const的使用场景" class="headerlink" title="let与const的使用场景"></a>let与const的使用场景</h3><pre class=" language-lang-js"><code class="language-lang-js">1. 如果声明的变量不需要改变，那么使用const
-2. 如果声明的变量需要改变，那么用let
-3. 学了const和let之后，尽量别用var
-</code></pre>
-<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><h3 id="数组解构"><a href="#数组解构" class="headerlink" title="数组解构"></a>数组解构</h3><p>以前，为变量赋值，只能直接指定值。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">let a = 1;
-let b = 2;
-let c = 3;
-</code></pre>
-<p>ES6 允许写成下面这样。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">let [a, b, c] = [1, 2, 3];
-</code></pre>
-<p>解构默认值</p>
-<pre class=" language-lang-js"><code class="language-lang-js">let [a = 0, b, c] = [1, 2, 3];
-</code></pre>
-<h3 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h3><p>解构不仅可以用于数组，还可以用于对象。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">let &#123; foo, bar &#125; = &#123; foo: 'aaa', bar: 'bbb' &#125;;
-foo // "aaa"
-bar // "bbb"
-</code></pre>
-<p>如果变量名与属性名不一致，必须写成下面这样。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">let &#123; foo: baz &#125; = &#123; foo: 'aaa', bar: 'bbb' &#125;;
-baz // "aaa"
-
-let obj = &#123; first: 'hello', last: 'world' &#125;;
-let &#123; first: f, last: l &#125; = obj;
-f // 'hello'
-l // 'world'
-</code></pre>
-<p>函数的参数也可以使用解构赋值。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function add([x, y])&#123;
-  return x + y;
-&#125;
-
-add([1, 2]); // 3
-</code></pre>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="模版字符串"><a href="#模版字符串" class="headerlink" title="模版字符串"></a>模版字符串</h3><p>传统的 JavaScript 语言，输出模板通常是这样写的（下面使用了 jQuery 的方法）。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">$('#result').append(
-  'There are <b>' + basket.count + '</b> ' +
-  'items in your basket, ' +
-  '<em>' + basket.onSale +
-  '</em> are on sale!'
-);
-</code></pre>
-<p>上面这种写法相当繁琐不方便，ES6 引入了模板字符串解决这个问题。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">$('#result').append(`
-  There are <b>$&#123;basket.count&#125;</b> items
-   in your basket, <em>$&#123;basket.onSale&#125;</em>
-  are on sale!
-`);
-</code></pre>
-<p>字符串模版的优点</p>
-<ul>
-<li>允许换行</li>
-<li>可以使用插值  <code>$&#123;&#125;</code></li>
-</ul>
-<h3 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h3><ul>
-<li><strong>includes()</strong>：返回布尔值，表示是否找到了参数字符串。</li>
-<li><strong>startsWith()</strong>：返回布尔值，表示参数字符串是否在原字符串的头部。</li>
-<li><strong>endsWith()</strong>：返回布尔值，表示参数字符串是否在原字符串的尾部。</li>
-</ul>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><p><strong>find是ES6新增的语法</strong></p>
-<p><code>find()</code> 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>。 </p>
-<pre class=" language-lang-js"><code class="language-lang-js">// 获取第一个大于10的数
-var array1 = [5, 12, 8, 130, 44];
-
-var found = array1.find(function(element) &#123;
-  return element > 10;
-&#125;);
-console.log(found);
-</code></pre>
-<h3 id="findexIndex"><a href="#findexIndex" class="headerlink" title="findexIndex"></a>findexIndex</h3><p><strong>findIndex是ES6新增的语法</strong></p>
-<p><code>findIndex()</code>方法返回数组中满足提供的测试函数的第一个元素的<strong>索引</strong>。否则返回-1。 </p>
-<pre class=" language-lang-js"><code class="language-lang-js">// 获取第一个大于10的下标
-var array1 = [5, 12, 8, 130, 44];
-
-function findFirstLargeNumber(element) &#123;
-  return element > 13;
-&#125;
-
-console.log(array1.findIndex(findFirstLargeNumber));
-</code></pre>
-<h2 id="includes"><a href="#includes" class="headerlink" title="includes"></a>includes</h2><h2 id="函数-箭头函数"><a href="#函数-箭头函数" class="headerlink" title="函数-箭头函数"></a>函数-箭头函数</h2><p>ES6标准新增了一种新的函数：Arrow Function（箭头函数）。</p>
-<p>为什么叫Arrow Function？因为它的定义用的就是一个箭头：</p>
-<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><pre class=" language-lang-js"><code class="language-lang-js">var fn = function(x, y) &#123;
-    console.log(x + y);
-&#125;
-
-相当于
-//语法： (参数列表) => &#123;函数体&#125;
-var fn = (x, y) => &#123;
-    console.log(x + y);
-&#125;
-</code></pre>
-<h3 id="参数详解"><a href="#参数详解" class="headerlink" title="参数详解"></a>参数详解</h3><ul>
-<li>如果没有参数列表，使用()表示参数列表</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">var sum = () => &#123;
-    console.log('哈哈')
-&#125;;
-// 等同于：
-var sum = function() &#123;    
-    console.log('哈哈')
-&#125;;
-</code></pre>
-<ul>
-<li>如果只有一个参数，可以省略()</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">// 等同于：
-var sum = function(n1) &#123;    
-    console.log('哈哈')
-&#125;;
-
-var sum = n1 => &#123;
-    console.log('哈哈')
-&#125;;
-</code></pre>
-<ul>
-<li>如果有多个参数，需要使用()把参数列表括起来</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">var sum = function(n1, n2) &#123;    
-    console.log('哈哈')
-&#125;;
-
-var sum = (n1, n2) => &#123;
-    console.log('哈哈')
-&#125;;
-</code></pre>
-<h3 id="返回值详解"><a href="#返回值详解" class="headerlink" title="返回值详解"></a>返回值详解</h3><ul>
-<li>如果箭头函数的代码块部分多于一条语句，就要使用大括号将它们括起来</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">var sum = function(n1) &#123;    
-    console.log('哈哈')
-&#125;;
-
-var sum = n1 => &#123;
-    console.log('哈哈')
-&#125;;
-</code></pre>
-<ul>
-<li>如果函数体只有一行一句，那么可以省略{}和return</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">var fn = function(n1, n2) &#123;
-    return n1 + n2;
-&#125;
-
-var fn = (n1, n2) => n1 + n2;
-</code></pre>
-<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><ol>
-<li>有一个数组<code>[1,3,5,7,9,2,4,6,8,10]</code>,请对数组进行排序</li>
-<li>有一个数组<code>[&#39;a&#39;,&#39;ccc&#39;,&#39;bb&#39;,&#39;dddd&#39;]</code>,请按照字符串长度对数组进行排序</li>
-<li>有一个数组，<code>[57,88,99,100,33,77]</code>,请保留60分以上的成绩，返回一个新的数组</li>
+<h2 id="jQuery-使用步骤"><a href="#jQuery-使用步骤" class="headerlink" title="jQuery 使用步骤"></a>jQuery 使用步骤</h2><ol>
+<li>引包（引入 js 文件）</li>
 </ol>
-<h3 id="箭头函数的注意点"><a href="#箭头函数的注意点" class="headerlink" title="箭头函数的注意点"></a>箭头函数的注意点</h3><ol>
-<li>箭头函数内部没有this，因此箭头函数内部的this指向了外部的this</li>
-<li>箭头函数不能作为构造函数，因为箭头函数没有this</li>
+<pre class=" language-lang-html"><code class="language-lang-html"><script src="jquery-1.11.1.js"></script>
+</code></pre>
+<ol>
+<li>写上入口函数</li>
 </ol>
-<p>【定义一个对象，定时器打招呼】</p>
-<p><strong>苦口婆心一下：箭头函数刚开始用，肯定会有点不习惯，但是任何东西都有一个习惯的过程，慢慢接受就好了，多用，多练</strong></p>
-<h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><p>ES6 允许为函数的参数设置默认值，即直接写在参数定义的后面。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function log(x, y = 'World') &#123;
-  console.log(x, y);
-&#125;
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">$(document).ready(function () &#123;&#125;);
 
-log('Hello') // Hello World
-log('Hello', 'China') // Hello China
-log('Hello', '') // Hello
+// 或者
+$(function () &#123;&#125;);
 </code></pre>
-<h3 id="rest参数"><a href="#rest参数" class="headerlink" title="rest参数"></a>rest参数</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">function add(...values) &#123;
-
-&#125;
-
-add(2, 5, 3) // 10
+<ol>
+<li>在入口函数内部实现功能</li>
+</ol>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">$("#btnShowDiv").click(function () &#123;
+  $("div").show(1000);
+&#125;);
 </code></pre>
-<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><h3 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h3><p>属性简写</p>
-<p>方法简写</p>
-<h3 id="展开运算符-…"><a href="#展开运算符-…" class="headerlink" title="展开运算符 …"></a>展开运算符 …</h3><p>扩展运算符（spread）是三个点（<code>...</code>）, 可用于 数组 / 对象 /Set 等结构；</p>
-<p>下面开始在数组中应用扩展运算符</p>
-<p><strong>（1）简单的应用</strong></p>
-<pre class=" language-lang-js"><code class="language-lang-js">var arr = [1,2,3];
-
-console.log(...arr); // 输出 1,2,3
+<h2 id="jQuery-对象与-DOM-对象-重点"><a href="#jQuery-对象与-DOM-对象-重点" class="headerlink" title="jQuery 对象与 DOM 对象(重点)"></a>jQuery 对象与 DOM 对象(重点)</h2><p>基本概念：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">1. DOM对象：使用JavaScript中的方法获取页面中的元素返回的对象就是dom对象。
+2. jQuery对象：jquery对象就是使用jquery的方法获取页面中的元素返回的对象就是jQuery对象。
+3. jQuery对象其实就是DOM对象的包装集（包装了DOM对象的集合（伪数组））
 </code></pre>
-<p><strong>（2）复制数组</strong></p>
-<pre class=" language-lang-js"><code class="language-lang-js">var arr = [1,2,3];
-
-// 1.使用concat合并数组会返回一个新的数组
-// 由于传的是空数组，所以返回的数组元素都是arr的，
-// 所以相当于复制出来一份arr数组, 并赋值给arr2
-var arr2 = arr.concat([]);
-
-// 2.ES6 的方法
-// 把arr数组展开到一个新的空数组中
-var arr3 = [...arr];
+<p>jQuery 对象与 DOM 对象的区别：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">1. DOM对象与jQuery对象的方法不能混用。
+2. DOM对象可以和jQuery对象相互转化
 </code></pre>
-<p><strong>（3）合并数组</strong></p>
-<pre class=" language-lang-js"><code class="language-lang-js">var arr = [1,2,3];
-var arr2 = [4,5,6];
-
-// 1.es5的方法，使用数组原生的concat
-arr.concat(arr2) // 输出 [1, 2, 3, 4, 5, 6]
-
-// 2.ES6 的合并数组
-[...arr, ...arr2]
+<p>DOM 对象转换成 jQuery 对象：【联想记忆：花钱】</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var $obj = $(domObj);
+// $(document).ready(function()&#123;&#125;); 就是典型的DOM对象转jQuery对象
 </code></pre>
+<p>jQuery 对象转换成 DOM 对象：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var $li = $("li");
+
+//第一种方法（推荐使用）
+$li[0]
+
+//第二种方法
+$li.get(0)
+</code></pre>
+<h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><h2 id="什么是-jQuery-选择器"><a href="#什么是-jQuery-选择器" class="headerlink" title="什么是 jQuery 选择器"></a>什么是 jQuery 选择器</h2><p>jQuery 选择器是 jQuery 为我们提供的一组方法，让我们更加方便的获取到页面中的元素。注意：jQuery 选择器返回的是 jQuery 对象。</p>
+<p>jQuery 选择器有很多，基本兼容了 CSS1 到 CSS3 所有的选择器，并且 jQuery 还添加了很多更加复杂的选择器。【查看 jQuery 文档】</p>
+<p>jQuery 选择器虽然很多，但是选择器之间可以相互替代，就是说获取一个元素，你会有很多种方法获取到。所以我们平时真正能用到的只是少数的最常用的选择器。</p>
+<h2 id="css-选择器"><a href="#css-选择器" class="headerlink" title="css 选择器"></a>css 选择器</h2><blockquote>
+<p>jQuery 完全兼容 css 选择器</p>
+</blockquote>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>用法</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID 选择器</td>
+<td>$(“#id”);</td>
+<td style="text-align:left">获取指定 ID 的元素</td>
+</tr>
+<tr>
+<td>类选择器</td>
+<td>$(“.class”);</td>
+<td style="text-align:left">获取同一类 class 的元素</td>
+</tr>
+<tr>
+<td>标签选择器</td>
+<td>$(“div”);</td>
+<td style="text-align:left">获取同一类标签的所有元素</td>
+</tr>
+<tr>
+<td>并集选择器</td>
+<td>$(“div,p,li”);</td>
+<td style="text-align:left">使用逗号分隔，只要符合条件之一就可。</td>
+</tr>
+<tr>
+<td>交集选择器</td>
+<td>$(“div.redClass”);</td>
+<td style="text-align:left">获取 class 为 redClass 的 div 元素</td>
+</tr>
+<tr>
+<td>子代选择器</td>
+<td>$(“ul&gt;li”);</td>
+<td style="text-align:left">使用&gt;号，获取儿子层级的元素，注意，并不会获取孙子层级的元素</td>
+</tr>
+<tr>
+<td>后代选择器</td>
+<td>$(“ul li”);</td>
+<td style="text-align:left">使用空格，代表后代选择器，获取 ul 下的所有 li 元素，包括孙子等</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>跟 CSS 的选择器一模一样。</p>
+</blockquote>
+<h2 id="过滤选择器"><a href="#过滤选择器" class="headerlink" title="过滤选择器"></a>过滤选择器</h2><blockquote>
+<p>这类选择器都带冒号:</p>
+</blockquote>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>用法</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:eq（index）</td>
+<td>$(“li:eq(2)”).css(“color”, ”red”);</td>
+<td style="text-align:left">获取到的 li 元素中，选择索引号为 2 的元素，索引号 index 从 0 开始。</td>
+</tr>
+<tr>
+<td>:odd</td>
+<td>$(“li:odd”).css(“color”, ”red”);</td>
+<td style="text-align:left">获取到的 li 元素中，选择索引号为奇数的元素</td>
+</tr>
+<tr>
+<td>:even</td>
+<td>$(“li:even”).css(“color”, ”red”);</td>
+<td style="text-align:left">获取到的 li 元素中，选择索引号为偶数的元素</td>
+</tr>
+<tr>
+<td>:first</td>
+<td>$(“li:first”).css(“color”, ”red”);</td>
+<td style="text-align:left">获取到的 li 元素中的第一个</td>
+</tr>
+<tr>
+<td>:last</td>
+<td>$(“li:last”).css(“color”, ”red”);</td>
+<td style="text-align:left">获取到的 li 元素中的最后一个</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="筛选选择器-方法"><a href="#筛选选择器-方法" class="headerlink" title="筛选选择器(方法)"></a>筛选选择器(方法)</h2><blockquote>
+<p>筛选选择器的功能与过滤选择器有点类似，但是用法不一样，<code>筛选选择器</code>主要是方法。</p>
+</blockquote>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>用法</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>children(selector)</td>
+<td>$(“ul”).children(“li”)</td>
+<td style="text-align:left">获取当前元素的所有子元素中的 li 元素</td>
+</tr>
+<tr>
+<td>find(selector)</td>
+<td>$(“ul”).find(“li”);</td>
+<td style="text-align:left">获取当前元素中的后代元素中的 li 元素</td>
+</tr>
+<tr>
+<td>siblings(selector)</td>
+<td>$(“#first”).siblings(“li”);</td>
+<td style="text-align:left">查找兄弟节点，不包括自己本身。</td>
+</tr>
+<tr>
+<td>parent()</td>
+<td>$(“#first”).parent();</td>
+<td style="text-align:left">查找父亲</td>
+</tr>
+<tr>
+<td>eq(index)</td>
+<td>$(“li”).eq(2);</td>
+<td style="text-align:left">相当于<code>$(&quot;li:eq(2)&quot;)</code>,index 从 0 开始</td>
+</tr>
+<tr>
+<td>next()</td>
+<td>$(“li”).next()</td>
+<td style="text-align:left">找下一个兄弟</td>
+</tr>
+<tr>
+<td>prev()</td>
+<td>$(“li”).prev()</td>
+<td style="text-align:left">找上一次兄弟</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="其他补充-mouseover-与-mouseenter"><a href="#其他补充-mouseover-与-mouseenter" class="headerlink" title="其他补充: mouseover 与 mouseenter"></a>其他补充: mouseover 与 mouseenter</h2><blockquote>
+<p>mouseover 和 mouseoverenter 都有鼠标经过的意思，但是在注册鼠标经过事件的时候，推荐使用<code>mouseenter</code></p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tiy/t.asp?f=jquery_event_mouseenter_mouseover">mouseenter 与 mouseover 的不同</a></p>
+<ol>
+<li>mouseover 与 mouseout 是一对事件，当鼠标经过当前元素或者当前元素的子元素的时候，mouseover 事件都会触发【事件冒泡】。</li>
+<li>mouseenter 与 mouseleave 是一对事件，只有当鼠标经过当前元素时，事件会触发，鼠标经过子元素，mousenter 事件是不会触发的。</li>
+</ol>
+<h2 id="index-方法"><a href="#index-方法" class="headerlink" title="index 方法"></a>index 方法</h2><blockquote>
+<p><code>index()</code>方法返回的是当前元素在所有兄弟元素里面的索引。</p>
+</blockquote>
+<pre class=" language-lang-html"><code class="language-lang-html"><ul>
+  <li><a href="#">我是链接</a></li>
+  <li><a href="#">我是链接</a></li>
+  <li><a href="#">我是链接</a></li>
+  <li><a href="#">我是链接</a></li>
+  <li><a href="#">我是链接</a></li>
+  <li><a href="#">我是链接</a></li>
+  <li><a href="#">我是链接</a></li>
+  <li><a href="#">我是链接</a></li>
+  <li><a href="#">我是链接</a></li>
+</ul>
+</code></pre>
+<p><strong>当碰到这种结构的时候，推荐给 li 注册事件，这样通过 index 方法才能获取到正确的索引值。</strong></p>
+<h2 id="区分-jQuery-与-Javascript"><a href="#区分-jQuery-与-Javascript" class="headerlink" title="区分 jQuery 与 Javascript"></a>区分 jQuery 与 Javascript</h2><p>JavaScript 是一门编程语言，jQuery 仅仅是用 JavaScript 实现的一个 JavaScript 库，目的是简化我们的开发。</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/1.png" alt></p>
+<h1 id="jQuery操作样式"><a href="#jQuery操作样式" class="headerlink" title="jQuery操作样式"></a>jQuery操作样式</h1><h2 id="css操作"><a href="#css操作" class="headerlink" title="css操作"></a>css操作</h2><blockquote>
+<p>功能：设置或者修改样式，操作的是style属性。</p>
+<p>操作单个样式</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//name：需要设置的样式名称
+//value：对应的样式值
+css(name, value);
+//使用案例
+$("#one").css("background","gray");//将背景色修改为灰色
+</code></pre>
+<blockquote>
+<p>设置多个样式</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//参数是一个对象，对象中包含了需要设置的样式名和样式值
+css(obj);
+//使用案例
+$("#one").css(&#123;
+    "background":"gray",
+    "width":"400px",
+    "height":"200px"
+&#125;);
+</code></pre>
+<blockquote>
+<p>获取样式</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//name:需要获取的样式名称
+css(name);
+//案例
+$("div").css("background-color");
+</code></pre>
+<p>注意：获取样式操作只会返回第一个元素对应的样式值。</p>
+<ol>
+<li>设置操作的时候，如果是多个元素，那么给所有的元素设置相同的值</li>
+<li>获取操作的时候，如果是多个元素，那么只会返回第一个元素的值。</li>
+</ol>
+<h2 id="class操作"><a href="#class操作" class="headerlink" title="class操作"></a>class操作</h2><blockquote>
+<p>添加样式类</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//name：需要添加的样式类名，注意参数不要带点.
+addClass(name);
+//例子,给所有的div添加one的样式。
+$(“div”).addClass(“one”);
+</code></pre>
+<blockquote>
+<p>移除样式类</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//name:需要移除的样式类名
+removeClass(“name”);
+//例子，移除div中one的样式类名
+$(“div”).removeClass(“one”);
+</code></pre>
+<blockquote>
+<p>判断是否有某个样式类</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//name: 用于判断的样式类名，返回值为true false
+hasClass(name)
+//例子，判断是否有one的样式类
+$(“div”).hasClass(“one”);
+</code></pre>
+<blockquote>
+<p>切换样式类</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//name:需要切换的样式类名，如果有，移除该样式，如果没有，添加该样式。
+toggleClass(name);
+//例子
+$(“div”).toggleClass(“one”);
+</code></pre>
+<h1 id="jQuery操作属性"><a href="#jQuery操作属性" class="headerlink" title="jQuery操作属性"></a>jQuery操作属性</h1><h2 id="attr操作"><a href="#attr操作" class="headerlink" title="attr操作"></a>attr操作</h2><blockquote>
+<p>设置单个属性</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//第一个参数：需要设置的属性名
+//第二个参数：对应的属性值
+attr(name, value);
+//用法举例
+$(“img”).attr(“title”,”哎哟，不错哦”);
+$(“img”).attr(“alt”,“哎哟，不错哦”);
+</code></pre>
+<blockquote>
+<p>设置多个属性</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//参数是一个对象，包含了需要设置的属性名和属性值
+attr(obj)
+//用法举例
+$("img").attr(&#123;
+    title:"哎哟，不错哦",
+    alt:"哎哟，不错哦",
+    style:"opacity:.5"
+&#125;);
+</code></pre>
+<blockquote>
+<p>获取属性</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//传需要获取的属性名称，返回对应的属性值
+attr(name)
+//用法举例
+var oTitle = $("img").attr("title");
+alert(oTitle);
+</code></pre>
+<blockquote>
+<p>移除属性</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//参数：需要移除的属性名，
+removeAttr(name);
+//用法举例
+$("img").removeAttr("title");
+</code></pre>
+<h2 id="prop操作"><a href="#prop操作" class="headerlink" title="prop操作"></a>prop操作</h2><blockquote>
+<p>在jQuery1.6之后，对于checked、selected、disabled这类boolean类型的属性来说，不能用attr方法，只能用prop方法。</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//设置属性
+$(“input:checked”).prop(“checked”,true);
+//获取属性
+$(“input:checked”).prop(“checked”);//返回true或者false
+</code></pre>
+<h1 id="jQuery动画"><a href="#jQuery动画" class="headerlink" title="jQuery动画"></a>jQuery动画</h1><blockquote>
+<p>jquery提供了三组基本动画，这些动画都是标准的、有规律的效果，jquery还提供了自定义动画的功能。【演示动画例子】</p>
+</blockquote>
+<h2 id="三组基本动画"><a href="#三组基本动画" class="headerlink" title="三组基本动画"></a>三组基本动画</h2><blockquote>
+<p>显示(show)与隐藏(hide)是一组动画：<br>滑入(slideUp)与滑出(slideDown)与切换(slideToggle)，效果与卷帘门类似<br>淡入(fadeIn)与淡出(fadeOut)与切换(fadeToggle)</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">show([speed], [easing], [callback]);
+//speed(可选)：动画的执行时间
+     //1.如果不传，就没有动画效果。如果是slide和fade系列，会默认为normal
+     //2.毫秒值(比如1000),动画在1000毫秒执行完成(推荐)
+     //3.固定字符串，slow(200)、normal(400)、fast(600)，如果传其他字符串，则默认为normal。
+// easing(可选)： 动画效果，默认是swing，秋千，提供了一个linear 匀速的效果
+//callback(可选):执行完动画后执行的回调函数
+</code></pre>
+<h2 id="自定义动画"><a href="#自定义动画" class="headerlink" title="自定义动画"></a>自定义动画</h2><blockquote>
+<p>animate: 自定义动画</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">$(selector).animate(&#123;params&#125;,[speed],[easing],[callback]);
+// &#123;params&#125;：要执行动画的CSS属性，带数字（必选）
+// speed：执行动画时长（可选）
+// easing: 执行效果，默认为swing（缓动）  可以是linear（匀速）
+// callback：动画执行完后立即执行的回调函数（可选）
+</code></pre>
+<h2 id="动画队列与停止动画"><a href="#动画队列与停止动画" class="headerlink" title="动画队列与停止动画"></a>动画队列与停止动画</h2><blockquote>
+<p>在同一个元素上执行多个动画，那么对于这个动画来说，后面的动画会被放到动画队列中，等前面的动画执行完成了才会执行。</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//stop方法：停止动画效果
+stop(clearQueue, jumpToEnd);
+//第一个参数：是否清除队列
+//第二个参数：是否跳转到最终效果
+</code></pre>
+<h1 id="jQuery节点操作"><a href="#jQuery节点操作" class="headerlink" title="jQuery节点操作"></a>jQuery节点操作</h1><h2 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h2><pre class=" language-lang-javascript"><code class="language-lang-javascript">//$(htmlStr)
+//htmlStr：html格式的字符串
+$("<span>这是一个span元素</span>");
+</code></pre>
+<h2 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h2><pre class=" language-lang-javascript"><code class="language-lang-javascript">// append  appendTo   都是添加到元素内部的最后面
+// prepend prependTo  都是添加到元素内部的最前面
+// before          添加到元素前面，做兄弟
+// after        添加到元素后面，做兄弟
+</code></pre>
+<h2 id="清空节点与删除节点"><a href="#清空节点与删除节点" class="headerlink" title="清空节点与删除节点"></a>清空节点与删除节点</h2><blockquote>
+<p>empty：清空指定节点的所有元素，自身保留(清理门户)</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">$(“div”).empty();//清空div的所有内容
+</code></pre>
+<blockquote>
+<p>remove：相比于empty，自身也删除（自杀）</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">$(“div”).remove();
+</code></pre>
+<h2 id="克隆节点"><a href="#克隆节点" class="headerlink" title="克隆节点"></a>克隆节点</h2><blockquote>
+<p>作用：复制匹配的元素</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">// 复制$(selector)所匹配到的元素（深度复制）
+// cloneNode(true)
+// 返回值为复制的新元素，和原来的元素没有任何关系了。即修改新元素，不会影响到原来的元素。
+$(selector).clone();
+</code></pre>
+<h1 id="jQuery-特殊属性操作"><a href="#jQuery-特殊属性操作" class="headerlink" title="jQuery 特殊属性操作"></a>jQuery 特殊属性操作</h1><h2 id="val-方法"><a href="#val-方法" class="headerlink" title="val 方法"></a>val 方法</h2><blockquote>
+<p>val 方法用于设置和获取表单元素的值，例如 input、textarea 的值</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//设置值
+$("#name").val(“张三”);
+//获取值
+$("#name").val();
+</code></pre>
+<h2 id="html-方法与-text-方法"><a href="#html-方法与-text-方法" class="headerlink" title="html 方法与 text 方法"></a>html 方法与 text 方法</h2><blockquote>
+<p>html 方法相当于 innerHTML text 方法相当于 innerText</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//设置内容
+$("div").html("<span>这是一段内容</span>");
+//获取内容
+$("div").html();
+
+//设置内容
+$("div").text("<span>这是一段内容</span>");
+//获取内容
+$("div").text();
+</code></pre>
+<p>区别：html 方法会识别 html 标签，text 方法会将内容直接当成字符串，并不会识别 html 标签。</p>
+<h2 id="width-方法与-height-方法"><a href="#width-方法与-height-方法" class="headerlink" title="width 方法与 height 方法"></a>width 方法与 height 方法</h2><blockquote>
+<p>设置或者获取高度</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//带参数表示设置高度
+$(“img”).height(200);
+//不带参数获取高度
+$(“img”).height();
+</code></pre>
+<p>获取网页的可视区宽高</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//获取可视区宽度
+$(window).width();
+//获取可视区高度
+$(window).height();
+</code></pre>
+<h2 id="scrollTop-与-scrollLeft"><a href="#scrollTop-与-scrollLeft" class="headerlink" title="scrollTop 与 scrollLeft"></a>scrollTop 与 scrollLeft</h2><blockquote>
+<p>设置或者获取垂直滚动条的位置</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//获取页面被卷曲的高度
+$(window).scrollTop();
+//获取页面被卷曲的宽度
+$(window).scrollLeft();
+</code></pre>
+<h1 id="jQuery-事件机制"><a href="#jQuery-事件机制" class="headerlink" title="jQuery 事件机制"></a>jQuery 事件机制</h1><blockquote>
+<p>JavaScript 中已经学习过了事件，但是 jQuery 对 JavaScript 事件进行了封装，增加并扩展了事件处理机制。jQuery 不仅提供了更加优雅的事件处理语法，而且极大的增强了事件的处理能力。</p>
+</blockquote>
+<h2 id="jQuery-事件"><a href="#jQuery-事件" class="headerlink" title="jQuery 事件"></a>jQuery 事件</h2><blockquote>
+<p>简单事件注册</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">click(handler)            单击事件
+mouseenter(handler)        鼠标进入事件
+mouseleave(handler)        鼠标离开事件
+</code></pre>
+<p>缺点：不能同时注册多个事件 &amp;&amp; 不支持动态绑定</p>
+<h2 id="on-注册事件-重点"><a href="#on-注册事件-重点" class="headerlink" title="on 注册事件(重点)"></a>on 注册事件(重点)</h2><blockquote>
+<p>jQuery1.7 之后，jQuery 用 on 来注册事件， 最现代的方式，强烈建议使用。</p>
+</blockquote>
+<p>on 注册简单事件</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">// 表示给$(selector)绑定事件，并且由自己触发，不支持动态绑定。
+$(selector).on("click", function () &#123;&#125;);
+</code></pre>
+<p>on 注册委托事件</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">// 表示给$(selector)绑定代理事件，当必须是它的内部元素span才能触发这个事件，支持动态绑定
+$(selector).on( "click",“span”, function() &#123;&#125;);
+</code></pre>
+<p>on 注册事件的语法：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">// 第一个参数：events，绑定事件的名称可以是由空格分隔的多个事件（标准事件或者自定义事件）
+// 第二个参数：selector, 执行事件的后代元素（可选），如果没有后代元素，那么事件将有自己执行。
+// 第三个参数：data，传递给处理函数的数据，事件触发的时候通过event.data来使用（不常使用）
+// 第四个参数：handler，事件处理函数
+$(selector).on(events[,selector][,data],handler);
+</code></pre>
+<h2 id="事件解绑"><a href="#事件解绑" class="headerlink" title="事件解绑"></a>事件解绑</h2><blockquote>
+<p>off 方式（推荐）</p>
+</blockquote>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">// 解绑匹配元素的所有事件
+$(selector).off();
+// 解绑匹配元素的所有click事件
+$(selector).off("click");
+</code></pre>
+<h2 id="触发事件"><a href="#触发事件" class="headerlink" title="触发事件"></a>触发事件</h2><pre class=" language-lang-javascript"><code class="language-lang-javascript">$(selector).click(); //触发 click事件
+$(selector).trigger("click");
+</code></pre>
+<h2 id="jQuery-事件对象"><a href="#jQuery-事件对象" class="headerlink" title="jQuery 事件对象"></a>jQuery 事件对象</h2><p>jQuery 事件对象其实就是 js 事件对象的一个封装，处理了兼容性。</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//screenX和screenY    对应屏幕最左上角的值
+//clientX和clientY    距离页面左上角的位置（忽视滚动条）
+//pageX和pageY    距离页面最顶部的左上角的位置（会计算滚动条的距离）
+
+//event.keyCode    按下的键盘代码
+//event.data    存储绑定事件时传递的附加数据
+
+//event.stopPropagation()    阻止事件冒泡行为
+//event.preventDefault()    阻止浏览器默认行为
+//return false 既能阻止事件冒泡，又能阻止浏览器默认行为。
+</code></pre>
+<h1 id="jQuery补充知识点"><a href="#jQuery补充知识点" class="headerlink" title="jQuery补充知识点"></a>jQuery补充知识点</h1><h2 id="隐式迭代"><a href="#隐式迭代" class="headerlink" title="隐式迭代"></a>隐式迭代</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><blockquote>
+<p>隐式迭代：jQuery在设置属性时会自动的遍历，因此我们不需要再遍历</p>
+</blockquote>
+<ol>
+<li>jQuery在执行设置性操作时，会给所有的元素都设置上相同的值。</li>
+<li>jQuery在执行获取性操作时，只会返回第一个元素对应的值。</li>
+<li>如果想要给每一个元素都设置不同的值，需要手动进行遍历jQuery对象。</li>
+</ol>
+<h3 id="each方法"><a href="#each方法" class="headerlink" title="each方法"></a>each方法</h3><blockquote>
+<p>遍历jQuery对象集合，为每个匹配的元素执行一个函数</p>
+</blockquote>
+<p>语法：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">// 参数一表示当前元素在所有匹配元素中的索引号
+// 参数二表示当前元素, 在function中this也表示当前元素。
+$(selector).each(function(index,element)&#123;&#125;);
+</code></pre>
+<h2 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h2><blockquote>
+<p>链式编程的原理：设置性操作会返回一个jQuery对象，因此可以继续调用jQuery的方法。</p>
+</blockquote>
+<ol>
+<li>设置操作的时候，可以使用链式编程。</li>
+<li>获取操作的时候，无法使用链式编程。</li>
+</ol>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">end(); // 上一次返回的jq对象
+</code></pre>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">prevAll();//获取前面所有的兄弟元素
+nextAll();//获取后面所有的兄弟元素
+siblings();//获取所有的兄弟元素
+prev();//获取前一个兄弟
+next();//获取后一个兄弟。
+</code></pre>
+<h1 id="jQuery插件"><a href="#jQuery插件" class="headerlink" title="jQuery插件"></a>jQuery插件</h1><blockquote>
+<p>插件：jquery不可能包含所有的功能，我们可以通过插件扩展jquery的功能。</p>
+</blockquote>
+<p>jQuery有着丰富的插件，使用这些插件能给jQuery提供一些额外的功能。</p>
+<h2 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h2><pre class=" language-lang-javascript"><code class="language-lang-javascript">1. 引入jQuery文件
+2. 引入插件（如果有用到css的话，需要引入css）
+3. 使用插件
+</code></pre>
+<p>常用插件的使用</p>
+<ul>
+<li>jquery.color.js的使用<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/jquery/jquery-color">https://github.com/jquery/jquery-color</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>jquery.lazyload.js的使用<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/tuupola/jquery_lazyload">https://github.com/tuupola/jquery_lazyload</a></li>
+</ul>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -923,7 +1051,7 @@ arr.concat(arr2) // 输出 [1, 2, 3, 4, 5, 6]
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://tianzhen001.github.io/es6-yu-fa/">http://tianzhen001.github.io/es6-yu-fa/</a>
+                    <a href="http://tianzhen001.github.io/articles/8e14.html">http://tianzhen001.github.io/articles/8e14.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -961,8 +1089,8 @@ arr.concat(arr2) // 输出 [1, 2, 3, 4, 5, 6]
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ES6/">
-                                    <span class="chip bg-color">ES6</span>
+                                <a href="/tags/jQuery/">
+                                    <span class="chip bg-color">jQuery</span>
                                 </a>
                             
                         </div>
@@ -1134,56 +1262,7 @@ arr.concat(arr2) // 输出 [1, 2, 3, 4, 5, 6]
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/git-de-ji-ben-shi-yong/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="Git的基本使用">
-                        
-                        <span class="card-title">Git的基本使用</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Git/" class="post-category">
-                                    Git
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/git%E5%91%BD%E4%BB%A4/">
-                        <span class="chip bg-color">git命令</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/js-gao-ji-yu-fa-ji-jin-jie-zhi-lu/">
+                <a href="/articles/2a35.html">
                     <div class="card-image">
                         
                         
@@ -1199,9 +1278,9 @@ arr.concat(arr2) // 输出 [1, 2, 3, 4, 5, 6]
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-07-26
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1219,6 +1298,56 @@ arr.concat(arr2) // 输出 [1, 2, 3, 4, 5, 6]
                     
                     <a href="/tags/Js%E9%AB%98%E7%BA%A7/">
                         <span class="chip bg-color">Js高级</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/articles/8e14.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="最好用的js库之jQuery">
+                        
+                        <span class="card-title">最好用的js库之jQuery</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            jQuery是一个快速，小型且功能丰富的JavaScript库。借助易于使用的API，使HTML文档的遍历和操纵，事件处理，动画和Ajax等事情变得更加简单
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-12-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/js%E5%BA%93/" class="post-category">
+                                    js库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/jQuery/">
+                        <span class="chip bg-color">jQuery</span>
                     </a>
                     
                 </div>
@@ -1360,60 +1489,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
     <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
     
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
@@ -1596,6 +1671,10 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
 
 <script>
             window.imageLazyLoadSetting = {

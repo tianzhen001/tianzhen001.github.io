@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vue如何给各个组件设置title, html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序">
+    <meta name="keywords" content="ES6语法, html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序">
     <meta name="description" content="技术分享,快乐传递">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>vue如何给各个组件设置title | 一路高歌</title>
+    <title>ES6语法 | 一路高歌</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -287,12 +287,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vue如何给各个组件设置title</h1>
+                    <h1 class="description center-align post-title">ES6语法</h1>
                 </div>
             </div>
         </div>
@@ -409,8 +409,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BB%84%E4%BB%B6/">
-                                <span class="chip bg-color">组件</span>
+                            <a href="/tags/ES6/">
+                                <span class="chip bg-color">ES6</span>
                             </a>
                         
                     </div>
@@ -421,8 +421,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/vue/" class="post-category">
-                                vue
+                            <a href="/categories/%E8%AF%AD%E6%B3%95/" class="post-category">
+                                语法
                             </a>
                         
                     </div>
@@ -434,7 +434,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-02-11
                 </div>
                 
 
@@ -450,76 +450,454 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="vue如何给各个组件设置头部"><a href="#vue如何给各个组件设置头部" class="headerlink" title="vue如何给各个组件设置头部"></a>vue如何给各个组件设置头部</h3><h4 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h4><ol>
-<li><p><strong>首先安装依赖</strong></p>
-<pre><code>npm install vue-wechat-title --save
-</code></pre></li>
-<li><p><strong>在Vue.use里面使用</strong></p>
-<pre class=" language-lang-js"><code class="language-lang-js">//在main.js文件中配置
-import vueWeChatTitle from 'vue-wechat-title'
-Vue.use(vueWeChatTitle)
+                <h1 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h1><blockquote>
+<p>ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。</p>
+</blockquote>
+<h2 id="javascript的诞生"><a href="#javascript的诞生" class="headerlink" title="javascript的诞生"></a>javascript的诞生</h2><ul>
+<li>1992年底，美国国家超级电脑应用中心（NCSA）开始开发一个独立的浏览器，叫做 Mosaic。这是人类历史上第一个浏览器，从此网页可以在图形界面的窗口浏览。 </li>
+<li>1994年10月，  Netscape （网景）公司，就是在 Mosaic 的基础上，开发面向普通用户的新一代的浏览器 Netscape Navigator。 </li>
+<li><p>1994年12月，Navigator 发布了1.0版，市场份额一举超过90%。 </p>
+</li>
+<li><p>Netscape 公司很快发现，Navigator 浏览器需要一种可以嵌入网页的脚本语言，用来控制浏览器行为。 因为当时网速特别的慢，很多表单的校验不适合放在服务器端进行校验。管理层对于这种脚本语言的设想是：<strong>功能不需要太强大，语法要简单，容易学习和使用</strong></p>
+</li>
+<li><p>1995年，Netscape 公司雇佣了程序员<code>Brendan Eich 布兰登·艾奇</code> 开发这种网页脚本语言。 </p>
+</li>
+<li><p>1995年5月，Brendan Eich 只用了10天，就设计完成了这种语言的第一版，叫做<code>LiveScript</code>。它是一个大杂烩，语法有多个来源。</p>
+<ul>
+<li>基本语法：借鉴 C 语言和 Java 语言。</li>
+<li>数据结构：借鉴 Java 语言，包括将值分成原始值和对象两大类。</li>
+<li>函数的用法：借鉴 Scheme 语言和 Awk 语言，将函数当作第一等公民，并引入闭包。</li>
+<li>原型继承模型：借鉴 Self 语言（Smalltalk 的一种变种）。</li>
+<li>正则表达式：借鉴 Perl 语言。</li>
+<li>字符串和数组处理：借鉴 Python 语言。</li>
+</ul>
+</li>
+<li>为了保持简单，这种脚本语言缺少一些关键的功能，比如块级作用域、模块、子类型（subtyping）等等，但是可以利用现有功能找出解决办法。 <strong>后果：对于其他的编程语言，你需要只需要学习该语言提供的各种语法即可。对于javascript，你需要学习解决问题的各种模式，比如原型，原型链实现继承，闭包等等</strong></li>
+<li>1995年 12月，Netscape 公司与 Sun 公司合作，后者允许将这种语言叫做 JavaScript。把LiveScript改名成了Javascript</li>
+<li><strong>注意：javascript实质上和java没有什么关系</strong></li>
+</ul>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/./images/java和javascript的区别.png" alt></p>
+<h2 id="ECMAScript与Javascript的关系"><a href="#ECMAScript与Javascript的关系" class="headerlink" title="ECMAScript与Javascript的关系"></a>ECMAScript与Javascript的关系</h2><p>1996年11月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给国际标准化组织ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript ，这个版本就是1.0版。</p>
+<p>该标准从一开始就是针对 JavaScript 语言制定的，但是之所以不叫 JavaScript ，有两个原因。一是商标，Java是 Sun 公司的商标，根据授权协议，只有 Netscape 公司可以合法地使用 JavaScript 这个名字，且 JavaScript 本身也已经被 Netscape 公司注册为商标。二是想体现这门语言的制定者是 ECMA ，不是 Netscape ，这样有利于保证这门语言的开放性和中立性。</p>
+<p>ECMAScript，简称ES，是由Ecma国际（欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）按照标准制定的一种脚本语言规范。</p>
+<p>JavaScript是按ECMAScript规范实现的一种脚本语言，JavaScript除了实现了ECMAScript规范，还提供了BOM和DOM的操作。</p>
+<h2 id="ECMAScript版本历史"><a href="#ECMAScript版本历史" class="headerlink" title="ECMAScript版本历史"></a>ECMAScript版本历史</h2><ul>
+<li>ES1.0, 1997年06月发布</li>
+<li>ES2.0, 1998年06月发布</li>
+<li><p>ES3.0, 1999年12月发布</p>
+</li>
+<li><p>ES4.0,  由于关于语言的复杂性出现了分歧。放弃发布</p>
+</li>
+<li>ES5.0, 2009年12月发布， 增加了严格模式，增加了少量语法，为ES6铺路</li>
+<li>ES6.0, 2015年6月发布，增加了大量的新概念和语法特性<ul>
+<li><strong>第六版的名字， 可以叫做ECMAScript6.0(ES), 也可以叫做ECMAScript 2015（ES2015）</strong></li>
+<li>ECMA组织决定以后每年6月份都会发布一版新的语法标准，比如ES7(ECMAScript 2016) </li>
+<li><strong>通过我们说的ES6泛指ES5之后的下一代标准，涵盖了ES6, ES7, ES8….</strong>  </li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>参考书籍： <a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/">https://es6.ruanyifeng.com/</a> </li>
+</ul>
+<h1 id="ES5-数组的新方法"><a href="#ES5-数组的新方法" class="headerlink" title="ES5-数组的新方法"></a>ES5-数组的新方法</h1><h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h2><p><code>forEach()</code> 方法对数组的每个元素执行一次提供的函数。功能等同于<code>for</code>循环.</p>
+<p>应用场景：为一些相同的元素，绑定事件处理器！强调的是数组中每一项都要遍历</p>
+<p>作用：</p>
+<ul>
+<li>1.只能是用来遍历 </li>
+<li>2.一旦开始了遍历就停不下来</li>
+<li>3.返回值是undefined  对于我们来说没有用</li>
+</ul>
+<p><strong>需求：遍历数组[“张飞”,”关羽”,”赵云”,”马超”]</strong></p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = ["张飞","关羽","赵云","马超"];
+//第一个参数：element，数组的每一项元素
+//第二个参数：index，数组的下标
+//第三个参数：array，正在遍历的数组
+arr.forEach(function(element, index, array)&#123;
+  console.log(element, index, array);
+&#125;);
+</code></pre>
+<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p><code>map()</code> 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。</p>
+<p><strong>需求：遍历数组，求每一项的平方存在于一个数组中</strong></p>
+<p><strong>作用：</strong></p>
+<ul>
+<li>1.可以循环遍历数组中的每一项数据</li>
+<li>2.可以对循环遍历到的每一项数据进行操作</li>
+<li>3.<strong>==重点应用场景: 对数组中的每一项数据进行操作,比如：给每数组中的每一项添加一个相同的样式==</strong></li>
+</ul>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [1,2,3,4,5];  // 1 4 9 16 25
+//第一个参数：element，数组的每一项元素
+//第二个参数：index，数组的下标
+//第三个参数：array，正在遍历的数组
+//返回值：一个新数组，每个元素都是回调函数的结果。
+var newArray = arr.map(function(element, index, array)&#123;
+  return element * element;
+&#125;);
+console.log(newArray);//[1,4,9,16,25]
 
-//引入模块 
-import Entrance from 'vue-wechat-title'
 
-//在router的index.js文件中配置
-&#123;
-    path: '/',
-    //路由名称
-    name: 'Entrance',
-    //Entrance 引入模块名称
-    component: Entrance,
-    meta: &#123;
-        //声明title
-        title: '首页入口'    
-    &#125;
+// 学了箭头函数之后的简写如下:
+var res = nums.map(item => item * item )
+</code></pre>
+<p>案例：获取所有的名字</p>
+<pre class=" language-lang-js"><code class="language-lang-js">let list = [
+      &#123; name: 'tom', age: 20 &#125;,
+      &#123; name: 'rose', age: 21 &#125;,
+      &#123; name: 'jack', age: 22 &#125;,
+      &#123; name: 'jerry', age: 19 &#125;
+    ]
+    let res = list.map(item => item.name)
+    console.log(res)
+</code></pre>
+<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><p><code>filter</code>用于过滤掉“不合格”的元素<br>返回一个新数组，如果在回调函数中返回true，那么就留下来，如果返回false，就扔掉</p>
+<p><strong>需求：遍历数组，将数组中工资超过5000的值找出来[1000, 5000, 20000, 3000, 10000, 800, 1500]</strong></p>
+<p><strong>作用:</strong></p>
+<ul>
+<li>1.可以循环遍历数组中的每一项</li>
+<li>2.可以对循环遍历到的数据进行判断</li>
+<li>3.当条件成立时,使用了return true后会将满足条件的那一项存到一个新的数组当中</li>
+<li>4.<strong>==重点应用场景:根据条件过滤数组中的数据==</strong></li>
+</ul>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">var arr = [1000, 5000, 20000, 3000, 10000, 800, 1500];
+//第一个参数：element，数组的每一项元素
+//第二个参数：index，数组的下标
+//第三个参数：array，正在遍历的数组
+//返回值：一个新数组，存储了所有返回true的元素
+var newArray = arr.filter(function(element, index, array)&#123;
+  if(element > 5000) &#123;
+    return false;
+  &#125;else &#123;
+    return true;
+  &#125;
+&#125;);
+console.log(newArray);//[1000, 5000, 3000, 800, 1500]
+
+// 学了箭头函数之后的简写如下:
+var res = nums.filter(item => item > 5000)
+</code></pre>
+<h2 id="some"><a href="#some" class="headerlink" title="some"></a>some</h2><p><code>some</code>用于遍历数组，如果有至少一个满足条件，就返回true，否则返回false。</p>
+<p>**需求：遍历数组，查找数组中的某条数据 比如：查找[10, 20, 30, 40, 50, 60] 中的30</p>
+<p>作用:</p>
+<ul>
+<li>1.可以用来循环遍历数组中的每一项</li>
+<li>2.在回调函数中进行条件判断，如果return true执行之后，会阻止后续代码的遍历执行</li>
+<li>3.重点应用场景: <strong>==条件成立时不再执行后续的循环==</strong></li>
+</ul>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript"> // 查找数组有没有30 如果有，就不要再向下遍历了
+    let nums = [10, 20, 30, 40, 50, 60]
+
+    nums.some(function (item, index, arr) &#123;
+      // console.log(item,index,arr);
+      if (item == 30) &#123;
+        return true
+      &#125;
+      console.log(item);
+    &#125;)
+</code></pre>
+<h2 id="every"><a href="#every" class="headerlink" title="every"></a>every</h2><p><code>every</code>用于遍历数组，只有当所有的元素返回true，才返回true，否则返回false。</p>
+<p><strong>需求：遍历数组，判断==整体==是否都满足条件</strong></p>
+<p>作用：</p>
+<ul>
+<li>1.可以对数组中的每一项进行遍历，但是只打印第一项</li>
+<li>2.对数组中的每一项进行判断，都满足条件则返回true,如果有一项不满足条件则返回false</li>
+<li>3.==应用场景：重点是强调整体的一个处理结果，比如，某班考试成绩是否都合格==</li>
+</ul>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">// every 比如说: 考试完成之后,判断一下成绩当中是否有不及格的 如果都满足条件则返回true,有一个不满足条件则返回false
+    // var score = [100,99,96,93,65,74,41,25,62,18];
+    var score = [100,99,62,25,88];
+
+   var flag =  score.every(function(item,index,arr)&#123;
+      // console.log(item,index,arr);
+      return item > 60
+    &#125;)
+    console.log(flag);
+
+// 学了箭头函数之后的简写如下:
+var res = nums.every(item => item > 60)
+</code></pre>
+<h2 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h2><blockquote>
+<p> <code>**reduce()**</code> 方法对数组中的每个元素执行一个由您提供的<strong>reducer</strong>函数，将其结果汇总为单个返回值 </p>
+</blockquote>
+<p>语法：<code>reduce(callback, initValue)</code></p>
+<p>callback: 每个元素都会执行一次的回调函数</p>
+<p>initValue: 初始值</p>
+<p>callback的4个参数</p>
+<ul>
+<li>prev： 上一次的值，第一次为初始值</li>
+<li>item:  当前值</li>
+<li>index: 下标</li>
+<li>arr: 数组</li>
+</ul>
+<p>案例：计算数组所有值的和</p>
+<pre class=" language-lang-js"><code class="language-lang-js">let nums = [10, 20, 30, 40, 50, 60]
+var res = nums.reduce(function (prev, item) &#123;
+      // console.log(prev, item);
+      return prev + item
+ &#125;, 0)
+
+console.log(res);
+
+// 学了箭头函数之后的简写如下:
+var res = nums.reduce((prev,item)=>prev + item)
+</code></pre>
+<h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><blockquote>
+<p>ES6中提供了两个声明变量的关键字：const和let </p>
+</blockquote>
+<h3 id="let的使用"><a href="#let的使用" class="headerlink" title="let的使用"></a>let的使用</h3><p>ES6 新增了<code>let</code>命令，用来声明变量。它的用法类似于<code>var</code>。</p>
+<ul>
+<li>let声明的变量只有在当前作用域有效</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">&#123;
+  let a = 10;
+  var b = 1;
+&#125;
+
+a // ReferenceError: a is not defined.
+b // 1
+</code></pre>
+<ul>
+<li>不存在变量提升</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">// let 的情况
+console.log(bar); // 报错ReferenceError
+let bar = 2;
+</code></pre>
+<ul>
+<li>不允许重复声明</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">let a = 10;
+let a = 1;//报错 Identifier 'a' has already been declared
+</code></pre>
+<h3 id="const的使用"><a href="#const的使用" class="headerlink" title="const的使用"></a>const的使用</h3><p><code>const</code>声明一个只读的常量。常量：值不可以改变的量 </p>
+<ul>
+<li>const声明的量不可以改变</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">const PI = 3.1415;
+PI = 3; //报错
+</code></pre>
+<ul>
+<li>const声明的变量必须赋值</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">const num;
+</code></pre>
+<ul>
+<li>如果const声明了一个对象，仅仅保证地址不变</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">const obj = &#123;name:'zs'&#125;;
+obj.age = 18;//正确
+obj = &#123;&#125;;//报错
+</code></pre>
+<ul>
+<li>其他用法和let一样</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">1. 只能在当前代码块中使用
+2. 不会提升
+3. 不能重复
+</code></pre>
+<h3 id="let与const的使用场景"><a href="#let与const的使用场景" class="headerlink" title="let与const的使用场景"></a>let与const的使用场景</h3><pre class=" language-lang-js"><code class="language-lang-js">1. 如果声明的变量不需要改变，那么使用const
+2. 如果声明的变量需要改变，那么用let
+3. 学了const和let之后，尽量别用var
+</code></pre>
+<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><h3 id="数组解构"><a href="#数组解构" class="headerlink" title="数组解构"></a>数组解构</h3><p>以前，为变量赋值，只能直接指定值。</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">let a = 1;
+let b = 2;
+let c = 3;
+</code></pre>
+<p>ES6 允许写成下面这样。</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">let [a, b, c] = [1, 2, 3];
+</code></pre>
+<p>解构默认值</p>
+<pre class=" language-lang-js"><code class="language-lang-js">let [a = 0, b, c] = [1, 2, 3];
+</code></pre>
+<h3 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h3><p>解构不仅可以用于数组，还可以用于对象。</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">let &#123; foo, bar &#125; = &#123; foo: 'aaa', bar: 'bbb' &#125;;
+foo // "aaa"
+bar // "bbb"
+</code></pre>
+<p>如果变量名与属性名不一致，必须写成下面这样。</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">let &#123; foo: baz &#125; = &#123; foo: 'aaa', bar: 'bbb' &#125;;
+baz // "aaa"
+
+let obj = &#123; first: 'hello', last: 'world' &#125;;
+let &#123; first: f, last: l &#125; = obj;
+f // 'hello'
+l // 'world'
+</code></pre>
+<p>函数的参数也可以使用解构赋值。</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">function add([x, y])&#123;
+  return x + y;
+&#125;
+
+add([1, 2]); // 3
+</code></pre>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="模版字符串"><a href="#模版字符串" class="headerlink" title="模版字符串"></a>模版字符串</h3><p>传统的 JavaScript 语言，输出模板通常是这样写的（下面使用了 jQuery 的方法）。</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">$('#result').append(
+  'There are <b>' + basket.count + '</b> ' +
+  'items in your basket, ' +
+  '<em>' + basket.onSale +
+  '</em> are on sale!'
+);
+</code></pre>
+<p>上面这种写法相当繁琐不方便，ES6 引入了模板字符串解决这个问题。</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">$('#result').append(`
+  There are <b>$&#123;basket.count&#125;</b> items
+   in your basket, <em>$&#123;basket.onSale&#125;</em>
+  are on sale!
+`);
+</code></pre>
+<p>字符串模版的优点</p>
+<ul>
+<li>允许换行</li>
+<li>可以使用插值  <code>$&#123;&#125;</code></li>
+</ul>
+<h3 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h3><ul>
+<li><strong>includes()</strong>：返回布尔值，表示是否找到了参数字符串。</li>
+<li><strong>startsWith()</strong>：返回布尔值，表示参数字符串是否在原字符串的头部。</li>
+<li><strong>endsWith()</strong>：返回布尔值，表示参数字符串是否在原字符串的尾部。</li>
+</ul>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><p><strong>find是ES6新增的语法</strong></p>
+<p><code>find()</code> 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>。 </p>
+<pre class=" language-lang-js"><code class="language-lang-js">// 获取第一个大于10的数
+var array1 = [5, 12, 8, 130, 44];
+
+var found = array1.find(function(element) &#123;
+  return element > 10;
+&#125;);
+console.log(found);
+</code></pre>
+<h3 id="findexIndex"><a href="#findexIndex" class="headerlink" title="findexIndex"></a>findexIndex</h3><p><strong>findIndex是ES6新增的语法</strong></p>
+<p><code>findIndex()</code>方法返回数组中满足提供的测试函数的第一个元素的<strong>索引</strong>。否则返回-1。 </p>
+<pre class=" language-lang-js"><code class="language-lang-js">// 获取第一个大于10的下标
+var array1 = [5, 12, 8, 130, 44];
+
+function findFirstLargeNumber(element) &#123;
+  return element > 13;
+&#125;
+
+console.log(array1.findIndex(findFirstLargeNumber));
+</code></pre>
+<h2 id="includes"><a href="#includes" class="headerlink" title="includes"></a>includes</h2><h2 id="函数-箭头函数"><a href="#函数-箭头函数" class="headerlink" title="函数-箭头函数"></a>函数-箭头函数</h2><p>ES6标准新增了一种新的函数：Arrow Function（箭头函数）。</p>
+<p>为什么叫Arrow Function？因为它的定义用的就是一个箭头：</p>
+<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><pre class=" language-lang-js"><code class="language-lang-js">var fn = function(x, y) &#123;
+    console.log(x + y);
+&#125;
+
+相当于
+//语法： (参数列表) => &#123;函数体&#125;
+var fn = (x, y) => &#123;
+    console.log(x + y);
 &#125;
 </code></pre>
-</li>
-<li><p><strong>调用</strong></p>
-<pre class=" language-lang-js"><code class="language-lang-js">//调用 在router-view视图中添加修改title的指令
-<router-view v-wechat-title="$route.meta.title" />
+<h3 id="参数详解"><a href="#参数详解" class="headerlink" title="参数详解"></a>参数详解</h3><ul>
+<li>如果没有参数列表，使用()表示参数列表</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">var sum = () => &#123;
+    console.log('哈哈')
+&#125;;
+// 等同于：
+var sum = function() &#123;    
+    console.log('哈哈')
+&#125;;
 </code></pre>
-</li>
-</ol>
-<h4 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h4><ol>
-<li><p><strong>首先安装依赖</strong></p>
-<pre><code>npm install vue-wechat-title --save
-</code></pre></li>
-<li><p><strong>配置 main.js</strong></p>
-<pre><code>//设置title
-import vueWeChatTitle from &#39;vue-wechat-title&#39;
-Vue.use(vueWeChatTitle)
+<ul>
+<li>如果只有一个参数，可以省略()</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">// 等同于：
+var sum = function(n1) &#123;    
+    console.log('哈哈')
+&#125;;
 
-router.beforeEach(to, form, next) =&gt; &#123;
-    //路由发生变化时，修改页面title
-    if （to.meta.title) &#123;
-        document.title = to.meta.title
-    &#125;
-    next()
-&#125;
-</code></pre></li>
-</ol>
-<ol>
-<li><p><strong>在你需要改变的页面 第一个div 上加上v-wechat-title=”this.title”, title 是下面再 data 里面定义的数据.</strong></p>
-<pre><code>&lt;div v-wechat-title=&quot;this.title&quot;&gt;
-&lt;/div&gt;
-</code></pre></li>
-<li><p>动态的改变title</p>
-<pre class=" language-lang-js"><code class="language-lang-js">export default &#123;
-    data()&#123;
-        return &#123;
-            title: '你好啊'
-        &#125;
-    &#125;,
-    created()&#123;
-        //动态修改 使用方法写获取数据的方法 获取完成之后把文章的标题给title
-        this.title= 'sss'
-    &#125;
-&#125;
+var sum = n1 => &#123;
+    console.log('哈哈')
+&#125;;
 </code></pre>
-</li>
+<ul>
+<li>如果有多个参数，需要使用()把参数列表括起来</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">var sum = function(n1, n2) &#123;    
+    console.log('哈哈')
+&#125;;
+
+var sum = (n1, n2) => &#123;
+    console.log('哈哈')
+&#125;;
+</code></pre>
+<h3 id="返回值详解"><a href="#返回值详解" class="headerlink" title="返回值详解"></a>返回值详解</h3><ul>
+<li>如果箭头函数的代码块部分多于一条语句，就要使用大括号将它们括起来</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">var sum = function(n1) &#123;    
+    console.log('哈哈')
+&#125;;
+
+var sum = n1 => &#123;
+    console.log('哈哈')
+&#125;;
+</code></pre>
+<ul>
+<li>如果函数体只有一行一句，那么可以省略{}和return</li>
+</ul>
+<pre class=" language-lang-js"><code class="language-lang-js">var fn = function(n1, n2) &#123;
+    return n1 + n2;
+&#125;
+
+var fn = (n1, n2) => n1 + n2;
+</code></pre>
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><ol>
+<li>有一个数组<code>[1,3,5,7,9,2,4,6,8,10]</code>,请对数组进行排序</li>
+<li>有一个数组<code>[&#39;a&#39;,&#39;ccc&#39;,&#39;bb&#39;,&#39;dddd&#39;]</code>,请按照字符串长度对数组进行排序</li>
+<li>有一个数组，<code>[57,88,99,100,33,77]</code>,请保留60分以上的成绩，返回一个新的数组</li>
 </ol>
+<h3 id="箭头函数的注意点"><a href="#箭头函数的注意点" class="headerlink" title="箭头函数的注意点"></a>箭头函数的注意点</h3><ol>
+<li>箭头函数内部没有this，因此箭头函数内部的this指向了外部的this</li>
+<li>箭头函数不能作为构造函数，因为箭头函数没有this</li>
+</ol>
+<p>【定义一个对象，定时器打招呼】</p>
+<p><strong>苦口婆心一下：箭头函数刚开始用，肯定会有点不习惯，但是任何东西都有一个习惯的过程，慢慢接受就好了，多用，多练</strong></p>
+<h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><p>ES6 允许为函数的参数设置默认值，即直接写在参数定义的后面。</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">function log(x, y = 'World') &#123;
+  console.log(x, y);
+&#125;
+
+log('Hello') // Hello World
+log('Hello', 'China') // Hello China
+log('Hello', '') // Hello
+</code></pre>
+<h3 id="rest参数"><a href="#rest参数" class="headerlink" title="rest参数"></a>rest参数</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">function add(...values) &#123;
+
+&#125;
+
+add(2, 5, 3) // 10
+</code></pre>
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><h3 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h3><p>属性简写</p>
+<p>方法简写</p>
+<h3 id="展开运算符-…"><a href="#展开运算符-…" class="headerlink" title="展开运算符 …"></a>展开运算符 …</h3><p>扩展运算符（spread）是三个点（<code>...</code>）, 可用于 数组 / 对象 /Set 等结构；</p>
+<p>下面开始在数组中应用扩展运算符</p>
+<p><strong>（1）简单的应用</strong></p>
+<pre class=" language-lang-js"><code class="language-lang-js">var arr = [1,2,3];
+
+console.log(...arr); // 输出 1,2,3
+</code></pre>
+<p><strong>（2）复制数组</strong></p>
+<pre class=" language-lang-js"><code class="language-lang-js">var arr = [1,2,3];
+
+// 1.使用concat合并数组会返回一个新的数组
+// 由于传的是空数组，所以返回的数组元素都是arr的，
+// 所以相当于复制出来一份arr数组, 并赋值给arr2
+var arr2 = arr.concat([]);
+
+// 2.ES6 的方法
+// 把arr数组展开到一个新的空数组中
+var arr3 = [...arr];
+</code></pre>
+<p><strong>（3）合并数组</strong></p>
+<pre class=" language-lang-js"><code class="language-lang-js">var arr = [1,2,3];
+var arr2 = [4,5,6];
+
+// 1.es5的方法，使用数组原生的concat
+arr.concat(arr2) // 输出 [1, 2, 3, 4, 5, 6]
+
+// 2.ES6 的合并数组
+[...arr, ...arr2]
+</code></pre>
 
             </div>
             <hr/>
@@ -545,7 +923,7 @@ router.beforeEach(to, form, next) =&gt; &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://tianzhen001.github.io/vue-ru-he-gei-ge-ge-zu-jian-she-zhi-title/">http://tianzhen001.github.io/vue-ru-he-gei-ge-ge-zu-jian-she-zhi-title/</a>
+                    <a href="http://tianzhen001.github.io/articles/8daa.html">http://tianzhen001.github.io/articles/8daa.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -583,8 +961,8 @@ router.beforeEach(to, form, next) =&gt; &#123;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BB%84%E4%BB%B6/">
-                                    <span class="chip bg-color">组件</span>
+                                <a href="/tags/ES6/">
+                                    <span class="chip bg-color">ES6</span>
                                 </a>
                             
                         </div>
@@ -756,31 +1134,31 @@ router.beforeEach(to, form, next) =&gt; &#123;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/vuex/">
+                <a href="/articles/b9d3.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/11.jpg" class="responsive-img" alt="vue的状态管理工具之vuex">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="Git的基本使用">
                         
-                        <span class="card-title">vue的状态管理工具之vuex</span>
+                        <span class="card-title">Git的基本使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            深入浅出详解vuex
+                            Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-10
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/vue%E5%85%A8%E5%AE%B6%E6%A1%B6/" class="post-category">
-                                    vue全家桶
+                            <a href="/categories/Git/" class="post-category">
+                                    Git
                                 </a>
                             
                             
@@ -790,8 +1168,8 @@ router.beforeEach(to, form, next) =&gt; &#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/vuex/">
-                        <span class="chip bg-color">vuex</span>
+                    <a href="/tags/git%E5%91%BD%E4%BB%A4/">
+                        <span class="chip bg-color">git命令</span>
                     </a>
                     
                 </div>
@@ -805,31 +1183,31 @@ router.beforeEach(to, form, next) =&gt; &#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/webpack-pei-zhi-zhi-nan/">
+                <a href="/articles/2a35.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="webpack配置指南">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="Js高级语法及进阶之路">
                         
-                        <span class="card-title">webpack配置指南</span>
+                        <span class="card-title">Js高级语法及进阶之路</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前端大型项目打包上线必备
+                            提升自己---你必须要知道的js高级语法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    打包工具
+                            <a href="/categories/js/" class="post-category">
+                                    js
                                 </a>
                             
                             
@@ -839,8 +1217,8 @@ router.beforeEach(to, form, next) =&gt; &#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/webpack/">
-                        <span class="chip bg-color">webpack</span>
+                    <a href="/tags/Js%E9%AB%98%E7%BA%A7/">
+                        <span class="chip bg-color">Js高级</span>
                     </a>
                     
                 </div>
@@ -982,60 +1360,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
     <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
     
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
@@ -1218,6 +1542,10 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
 
 <script>
             window.imageLazyLoadSetting = {

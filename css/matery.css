@@ -604,7 +604,7 @@ header .go-back i {
 }
 
 .bg-cover .title {
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1.85em;
     margin-bottom: 20px;
     position: relative;
@@ -744,7 +744,7 @@ header .go-back i {
 
 .music-player,
 .video-player {
-    margin-top: 10px;
+    margin-top: 100px;
     margin-bottom: 50px;
 }
 
@@ -1701,6 +1701,7 @@ thead {
 
 #aboutme .introduction {
     margin: 1.5rem auto 3rem;
+    width: 400px;
     max-width: 600px;
     color: #999;
 }
