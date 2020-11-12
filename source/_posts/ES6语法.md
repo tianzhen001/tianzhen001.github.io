@@ -1,10 +1,12 @@
 ---
 title: ES6语法
-date: 2020-2-11 21:03:54
-tags: ES6
+tags: 
+- ES6
+- javascript
 categories: 语法
-summary:  你知道ES6有哪些新语法吗,本篇文章将介绍一些常用的语法
-
+summary: '你知道ES6有哪些新语法吗,本篇文章将介绍一些常用的语法'
+abbrlink: 8daa
+date: 2020-02-11 21:03:54
 ---
 # 基本介绍
 

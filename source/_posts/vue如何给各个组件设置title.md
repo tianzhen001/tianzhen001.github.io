@@ -1,10 +1,10 @@
 ---
 title: vue如何给各个组件设置title
-date: 2020-8-10 12:05:03
 tags: 组件
 categories: vue
 summary: 你知道如何给vue组件设置标题吗?
-
+abbrlink: f8d7
+date: 2020-08-10 12:05:03
 ---
 ### vue如何给各个组件设置头部
 

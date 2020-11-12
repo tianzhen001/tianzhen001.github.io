@@ -1,9 +1,10 @@
 ---
 title: Git的基本使用
-date: 2020-4-16 20:55:24
 tags: git命令
 categories: Git
-summary:  Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
+summary: Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
+abbrlink: b9d3
+date: 2020-04-16 20:55:24
 ---
 # 1. git基础入门
 

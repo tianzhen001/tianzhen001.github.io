@@ -1,9 +1,12 @@
 ---
 title: Js高级语法及进阶之路
-date: 2019-7-26 21:13:36
-tags: Js高级
+tags: 
+- Js高级
+- javascript
 categories: js
 summary: 提升自己---你必须要知道的js高级语法
+abbrlink: 2a35
+date: 2019-07-26 21:13:36
 ---
 
 ## 推荐学习资源

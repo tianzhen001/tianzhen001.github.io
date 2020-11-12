@@ -15,11 +15,11 @@ timezone: ''
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
 url: http://tianzhen001.github.io
 root: /
-permalink: :title/
+permalink: articles/:abbrlink.html  # 此处可以自己设置，也可以直接使用 :/abbrlink
 permalink_defaults:
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: false # Set to false to remove trailing '.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -75,17 +75,20 @@ wordCount:
 # 是否在首页显示音乐.
 music:
   enable: true
-  showTitle: false
-  title: 听听音乐
-  fixed: false # 是否开启吸底模式
-  autoplay: false # 是否自动播放
-  theme: '#42b983'
-  loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
-  order: 'list' # 音频循环顺序, 可选值: 'list', 'random'
-  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
-  volume: 0.7 # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
-  listFolded: false # 列表默认折叠
-  listMaxHeight: # 列表最大高度
+  title:            #非吸底模式有效
+    enable: true
+    show: 既然来了,就听首音乐吧
+  server: netease   #require music platform: netease, tencent, kugou, xiami, baidu
+  type: playlist    #require song, playlist, album, search, artist
+  id: 2060008608     #require song id / playlist id / album id / search keyword
+  fixed: true      # 开启吸底模式
+  autoplay: false   # 是否自动播放
+  theme: '#4cdbec'
+  loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
+  order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
+  preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  listFolded: true  # 列表默认折叠
 feed:
   type: atom
   path: atom.xml
@@ -97,14 +100,22 @@ feed:
   order_by: -date
 
 
-
+#图片懒加载
+lazyload:
+  enable: true  # 是否开启图片懒加载
+  onlypost: false  # 是否只对文章的图片做懒加载
+  loadingImg: # eg ./images/loading.gif
+#文章生成永久链接
+abbrlink:
+  alg: crc16   #算法： crc16(default) and crc32
+  rep: hex   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 12
+  per_page: 6
   order_by: -date
 
 # Category & Tag

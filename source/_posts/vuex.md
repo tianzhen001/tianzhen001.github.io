@@ -1,10 +1,10 @@
 ---
 title: vue的状态管理工具之vuex
-date: 2020-10-10 22:29:41
 tags: vuex
 categories: vue全家桶
 summary: 深入浅出详解vuex
-
+abbrlink: a957
+date: 2020-10-10 22:29:41
 ---
 # vuex 概述
 

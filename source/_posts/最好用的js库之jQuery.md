@@ -1,9 +1,10 @@
 ---
 title: 最好用的js库之jQuery
-date: 2018-12-01 21:23:22
 tags: jQuery
 categories: js库
 summary: jQuery是一个快速，小型且功能丰富的JavaScript库。借助易于使用的API，使HTML文档的遍历和操纵，事件处理，动画和Ajax等事情变得更加简单
+abbrlink: '8e14'
+date: 2018-12-01 21:23:22
 ---
 
 ## jQuery 初体验

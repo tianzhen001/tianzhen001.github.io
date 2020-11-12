@@ -1,9 +1,12 @@
 ---
 title: webpack配置指南
-date: 2020-05-08 22:13:35
-tags: webpack
+tags: 
+- webpack
+- 打包工具
 categories: 打包工具
 summary: 前端大型项目打包上线必备
+abbrlink: dfd4
+date: 2020-05-08 22:13:35
 ---
 ## webpack概述
 
