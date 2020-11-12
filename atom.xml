@@ -6,7 +6,7 @@
   <link href="http://tianzhen001.github.io/atom.xml" rel="self"/>
   
   <link href="http://tianzhen001.github.io/"/>
-  <updated>2020-11-12T04:35:28.545Z</updated>
+  <updated>2020-11-12T07:46:21.439Z</updated>
   <id>http://tianzhen001.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端工程化</title>
+    <link href="http://tianzhen001.github.io/articles/91c6.html"/>
+    <id>http://tianzhen001.github.io/articles/91c6.html</id>
+    <published>2020-10-19T02:05:14.000Z</published>
+    <updated>2020-11-12T07:46:21.439Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;webpack&quot;&gt;&lt;a href=&quot;#webpack&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="大前端" scheme="http://tianzhen001.github.io/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="webpack" scheme="http://tianzhen001.github.io/tags/webpack/"/>
+    
+    <category term="大前端" scheme="http://tianzhen001.github.io/tags/%E5%A4%A7%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="工程化" scheme="http://tianzhen001.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>vue的状态管理工具之vuex</title>
@@ -73,7 +102,7 @@
     <link href="http://tianzhen001.github.io/articles/dfd4.html"/>
     <id>http://tianzhen001.github.io/articles/dfd4.html</id>
     <published>2020-05-08T14:13:35.000Z</published>
-    <updated>2020-11-12T04:35:28.586Z</updated>
+    <updated>2020-11-12T07:14:09.385Z</updated>
     
     
       
@@ -91,6 +120,8 @@
     
     
     <category term="webpack" scheme="http://tianzhen001.github.io/tags/webpack/"/>
+    
+    <category term="打包工具" scheme="http://tianzhen001.github.io/tags/%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -124,7 +155,7 @@
     <link href="http://tianzhen001.github.io/articles/8daa.html"/>
     <id>http://tianzhen001.github.io/articles/8daa.html</id>
     <published>2020-02-11T13:03:54.000Z</published>
-    <updated>2020-11-12T04:35:28.604Z</updated>
+    <updated>2020-11-12T07:13:18.495Z</updated>
     
     
       
@@ -143,6 +174,8 @@
     
     <category term="ES6" scheme="http://tianzhen001.github.io/tags/ES6/"/>
     
+    <category term="javascript" scheme="http://tianzhen001.github.io/tags/javascript/"/>
+    
   </entry>
   
   <entry>
@@ -150,7 +183,7 @@
     <link href="http://tianzhen001.github.io/articles/2a35.html"/>
     <id>http://tianzhen001.github.io/articles/2a35.html</id>
     <published>2019-07-26T13:13:36.000Z</published>
-    <updated>2020-11-12T04:35:28.614Z</updated>
+    <updated>2020-11-12T07:12:29.837Z</updated>
     
     
       
@@ -167,7 +200,34 @@
     <category term="js" scheme="http://tianzhen001.github.io/categories/js/"/>
     
     
+    <category term="javascript" scheme="http://tianzhen001.github.io/tags/javascript/"/>
+    
     <category term="Js高级" scheme="http://tianzhen001.github.io/tags/Js%E9%AB%98%E7%BA%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FormData的使用</title>
+    <link href="http://tianzhen001.github.io/articles/2162.html"/>
+    <id>http://tianzhen001.github.io/articles/2162.html</id>
+    <published>2019-06-18T01:31:55.000Z</published>
+    <updated>2020-11-12T07:33:29.852Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;FormData使用方法详解&quot;&gt;&lt;a href=&quot;#FormData使用方法详解&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据处理" scheme="http://tianzhen001.github.io/categories/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="JavaScript" scheme="http://tianzhen001.github.io/tags/JavaScript/"/>
     
   </entry>
   

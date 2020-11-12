@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>前端工程化</title>
+      <link href="articles/91c6.html"/>
+      <url>articles/91c6.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><p>是一个流行的前端项目构建工具（打包工具），可以解决当前web开发过程中所面临的困境。</p><p>webpack提供了有好的<strong>模块化支持</strong>，以及<strong>代码的压缩混淆、处理js兼容问题、性能优化</strong>等强大的功能，从而让程序员把工作的重心放到具体的功能实现上，提高了开发的效率和项目的可维护性。</p><pre><code>npm i webpack webpack-cli -D 开发依赖在项目目录中，创建名为 webpack.config.js 的webpack 配置文件在webpack的配置文件中，初始化如下基本设置：module.exports = &#123;    mode: &#39;development&#39;     // 指定构建模式 production 上线阶段&#125;在package.json配置文件中，新增 dev 脚本如下：&quot;scripts&quot;: &#123;    &quot;dev&quot;:&quot;webpack&quot;      // npm run dev可以启动webpack进行项目的打包&#125;</code></pre><p>生成的资源被默认放在 dist 目录下，入口文件为 index.js 默认输出为 main.js</p><h4 id="配置-webpack-打包的入口与出口"><a href="#配置-webpack-打包的入口与出口" class="headerlink" title="配置 webpack 打包的入口与出口"></a>配置 webpack 打包的入口与出口</h4><p>可以在 webpack.config.js 中新增如下配置信息：</p><pre><code>const path = require(&#39;path&#39;)module.exports = &#123;    mode: &#39;development&#39;,     // 指定构建模式 production 上线阶段    entry: path.join(__dirName,&#39;./src/index.js&#39;),    output: &#123;        path: path.join(__dirName,&#39;./dist&#39;),        // 输出文件的存放路径        filename: &#39;bundle.js&#39; // 输出文件的名称    &#125;&#125;</code></pre><h4 id="配置-webpack-的自动打包功能"><a href="#配置-webpack-的自动打包功能" class="headerlink" title="配置 webpack 的自动打包功能"></a>配置 webpack 的自动打包功能</h4><p>npm i webpack-dev-server -D 安装支持项目自动打包的工具<br>修改 package.json中的 dev 命令</p><pre><code>&quot;scripts&quot;: &#123;    &quot;dev&quot;: &quot;webpack-dev-server&quot;&#125;</code></pre><p>将 src -&gt; index.html 中 script 脚本的引用路径修改为 “bundle.js”</p><p>运行 npm run dev 命令，进行打包，即能实现自动打包效果</p><p><strong>1. webpack-dev-server 会启动一个实时打包的 http 服务器</strong></p><p><strong>2.webpack-dev-server打包生成的输出文件，默认放到了项目根目录中，而且是虚拟的、看不见的</strong></p><p>注意：访问 localhost:8080相当于访问了此服务器根的目录</p><h4 id="配置-html-webpack-plugin-生成预览页面"><a href="#配置-html-webpack-plugin-生成预览页面" class="headerlink" title="配置 html-webpack-plugin 生成预览页面"></a>配置 html-webpack-plugin 生成预览页面</h4><p>npm i html-webpack-plugin -D  属于开发依赖，是生成预览页面的插件</p><p>修改 webpack.config.js 文件头部区域，添加如下配置信息：</p><pre><code>// 导入生成预览页面的插件，得到一个构造函数const HtmlWebpackPlugin = require(&#39;html-webpack-plugin&#39;)const htmlPlugin = new HtmlWebpackPlugin(&#123; // 创建插件实例    template: &#39;./src/index.html&#39;, // 指定要用到的模板文件    filename: &#39;index.html&#39; // 指定生成（拷贝）的文件名称，该文件存在于内存中，在目录中不显示&#125;)module.exports = &#123;    plugins: [ htmlPlugin ] // plugins 数组是 webpack 打包期间会用到的一些插件列表&#125;</code></pre><h4 id="设置自动打包相关的参数-实现自动打开浏览器"><a href="#设置自动打包相关的参数-实现自动打开浏览器" class="headerlink" title="设置自动打包相关的参数 实现自动打开浏览器"></a>设置自动打包相关的参数 实现自动打开浏览器</h4><p>package.json中配置</p><p>—open 打包完成后自动打开浏览器页面</p><p>—host 配置 IP 地址</p><p>—port 配置端口号</p><pre><code>&quot;webpack-dev-server --open --host 127.0.0.1 --port 3001&quot;</code></pre><h4 id="通过-loader-生态打包非-js-模块"><a href="#通过-loader-生态打包非-js-模块" class="headerlink" title="通过 loader 生态打包非 js 模块"></a>通过 loader 生态打包非 js 模块</h4><p>在实际开发过程中，webpack  默认只能打包以 .js 后缀名结尾的模块，其他非 .js 后缀名结尾的模块，webpack 默认处理不了，需要调用 loader 加载器才可以正常打包，否则会报错。</p><p>loader 加载器可以协助 webpack 打包处理特定的文件模块，比如：</p><p>less-loader 可以打包处理 .less相关的文件</p><p>sass-loader 可以打包处理 .scss相关的文件</p><p>url-loader 可以打包处理 css 中与 url 路径相关的文件</p><p>babel-loader 高级JS语法处理为普通js</p><h4 id="webpack-中加载器的基本使用"><a href="#webpack-中加载器的基本使用" class="headerlink" title="webpack 中加载器的基本使用"></a>webpack 中加载器的基本使用</h4><h5 id="打包处理css-less-scss-css的兼容性-文件"><a href="#打包处理css-less-scss-css的兼容性-文件" class="headerlink" title="打包处理css\less\scss\css的兼容性 文件"></a>打包处理css\less\scss\css的兼容性 文件</h5><p>运行 npm i style-loader css-loader -D  安装处理css文件的loader</p><p>在 webpack.config.js的 module -&gt; rules 数组中，添加 loader 规则如下：</p><pre><code>// 所有第三方文件模块的匹配规则module： &#123;    rules： [        &#123;test: /\.css$/, use: [&#39;style-loader&#39;,&#39;css-loader&#39;]&#125;，        &#123;test: /\.less$/,use: [&#39;style-loader&#39;,&#39;css-loader&#39;,&#39;less-loader&#39;]&#125;,        &#123;test: /\.scss$/, use: [&#39;style-loader&#39;, &#39;css-loader&#39;, &#39;sass-loader&#39;]&#125;    ]&#125;</code></pre><p> test表示匹配的文件类型，use 表示对应要调用的 loader</p><p>use数组中指定的 loader 顺序是固定的，多个loader的调用顺序是从后往前调用  类似gulp的task()也是一步步进行的</p><p>配置postCSS自动添加css的兼容前缀</p><p>运行npm i postcss-loader autoprefixer -D</p><p>在项目的根目录中创建 postcss 的配置文件 postcss.config.js,并初始化如下配置：</p><pre><code>// 导入自动添加前缀的插件const autoprefixer = require(&#39;autoprefixer&#39;)module.exports = &#123;    plugins: [ autoprefixer ] // 挂载插件&#125;</code></pre><p>在 webpack.config.js 的 module -&gt; rules 数组中，修改 css 的loader规则为：</p><pre><code>module： &#123;    rules： [        &#123;test: /\.css$/, use: [&#39;style-loader&#39;,&#39;css-loader&#39;, &#39;postcss-loader&#39;]&#125;     ]</code></pre><h4 id="打包样式表中的图片（路径）和字体文件"><a href="#打包样式表中的图片（路径）和字体文件" class="headerlink" title="打包样式表中的图片（路径）和字体文件"></a>打包样式表中的图片（路径）和字体文件</h4><p>npm i url-loader file-loader -D 其中file-loader是url-loader的内置依赖项，只需下载无需配置</p><p>在 webpack.config.js 的 module -&gt; rules 数组中，添加 loader 规则如下：</p><pre><code>module: &#123;    rules: [        &#123;            test: /\.jpg|png|gif|bmp|webp|ttf|eot|svg|woff|woff2$/,            use: &#39;url-loader?limit=16940&#39;        &#125;    ]&#125;</code></pre><p>其中 ？ 之后的是loader 的参数项，limit 用来指定图片的大小，单位是字节（byte）,只有小于 limit 大小的图片才会被转为 base64 图片</p><h4 id="打包处理js文件中的高级语法"><a href="#打包处理js文件中的高级语法" class="headerlink" title="打包处理js文件中的高级语法"></a>打包处理js文件中的高级语法</h4><p>安装babel转换器相关的包：</p><p>npm i babel-loader @babel/core @babel/runtime -D</p><p>安装babel语法插件相关的包：</p><p>npm i  @babel/preset-env @babel/plugin-transform-runtime @babel/plugin-proposal-class-properties -D</p><p>在项目中，创建 babel 配置文件 babel.config.js 并初始化基本配置如下：</p><pre><code>module.exports = &#123;    presets: [ &#39;@babel/preset-env&#39; ],    plugins: [&#39;@babel/plugin-transform-runtime&#39;, &#39;@babel/plugin-proposal-class-properties&#39;]&#125;</code></pre><p>在webpack.config.js 的 module -&gt; rules 数组中，添加 loader 规则如下： </p><pre><code>// exclude 为排除项，表示 babel-loader 不需要处理 node_modules中的 js 文件&#123;test: /\.js$/,use: &#39;babel-loader&#39;,exclude: /node_modules/&#125;</code></pre><h3 id="Vue-单文件组件"><a href="#Vue-单文件组件" class="headerlink" title="Vue 单文件组件"></a>Vue 单文件组件</h3><h5 id="webpack中配置vue组件的加载器"><a href="#webpack中配置vue组件的加载器" class="headerlink" title="webpack中配置vue组件的加载器"></a>webpack中配置vue组件的加载器</h5><p>运行 npm i vue-loader vue-template-compiler -D</p><p>在 webpack.config.js 配置文件中添加 vue-loader 的配置项如下：</p><pre><code>const vueLoaderPlugin = require(&#39;vue-loader/lib/plugin&#39;)module.exports = &#123;    module: &#123;        rules: [            &#123;test: /\.vue$/, use: &#39;vue-loader&#39;&#125;        ]    &#125;,    plugins: [        ...其他插件,        new vueLoaderPlugin()    ]&#125;</code></pre><h5 id="在webpack项目中使用vue"><a href="#在webpack项目中使用vue" class="headerlink" title="在webpack项目中使用vue"></a>在webpack项目中使用vue</h5><p>运行 npm i vue -S 安装vue</p><p>在src -&gt; index.js 入口文件中，通过 import Vue from ‘vue’ 来导入vue构造函数</p><p>创建 vue 实例对象，并指定要控制的 el 区域</p><p>通过 render 函数渲染 App根组件(阉割版的vue使用render函数渲染)</p><pre><code>import App from &#39;components/App.vue&#39;const vm = new Vue(&#123;    el: &#39;#app&#39;,    render: h =&gt; h(App)&#125;)</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> webpack </tag>
+            
+            <tag> 大前端 </tag>
+            
+            <tag> 工程化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue的状态管理工具之vuex</title>
       <link href="articles/a957.html"/>
       <url>articles/a957.html</url>
@@ -72,6 +101,8 @@
             
             <tag> webpack </tag>
             
+            <tag> 打包工具 </tag>
+            
         </tags>
       
     </entry>
@@ -122,6 +153,8 @@
             
             <tag> ES6 </tag>
             
+            <tag> javascript </tag>
+            
         </tags>
       
     </entry>
@@ -145,7 +178,34 @@
       
         <tags>
             
+            <tag> javascript </tag>
+            
             <tag> Js高级 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>FormData的使用</title>
+      <link href="articles/2162.html"/>
+      <url>articles/2162.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="FormData使用方法详解"><a href="#FormData使用方法详解" class="headerlink" title="FormData使用方法详解"></a>FormData使用方法详解</h1><p>FormData的主要用途有两个：</p><h6 id="1、将form表单元素的name与value进行组合，实现表单数据的序列化，从而减少表单元素的拼接，提高工作效率。"><a href="#1、将form表单元素的name与value进行组合，实现表单数据的序列化，从而减少表单元素的拼接，提高工作效率。" class="headerlink" title="1、将form表单元素的name与value进行组合，实现表单数据的序列化，从而减少表单元素的拼接，提高工作效率。"></a>1、将form表单元素的name与value进行组合，实现表单数据的序列化，从而减少表单元素的拼接，提高工作效率。</h6><h6 id="2、异步上传文件"><a href="#2、异步上传文件" class="headerlink" title="2、异步上传文件"></a>2、异步上传文件</h6><h4 id="一、创建formData对象"><a href="#一、创建formData对象" class="headerlink" title="一、创建formData对象"></a>一、创建formData对象</h4><h6 id="1、创建一个空对象："><a href="#1、创建一个空对象：" class="headerlink" title="1、创建一个空对象："></a>1、创建一个空对象：</h6><pre class=" language-lang-js"><code class="language-lang-js">//通过FormData构造函数创建一个空对象var formdata=new FormData();//可以通过append()方法来追加数据formdata.append("name","laotie");//通过get方法对值进行读取console.log(formdata.get("name"));//laotie//通过set方法对值进行设置formdata.set("name","laoliu");console.log(formdata.get("name"));//laoliu</code></pre><h6 id="2、通过表单对formData进行初始化"><a href="#2、通过表单对formData进行初始化" class="headerlink" title="2、通过表单对formData进行初始化"></a>2、通过表单对formData进行初始化</h6><p>创建表单：</p><pre><code>  &lt;form id=&quot;advForm&quot;&gt;    &lt;p&gt;广告名称：&lt;input type=&quot;text&quot; name=&quot;advName&quot; value=&quot;xixi&quot;&gt;&lt;/p&gt;    &lt;p&gt;广告类别：&lt;select name=&quot;advType&quot;&gt;        &lt;option value=&quot;1&quot;&gt;轮播图&lt;/option&gt;        &lt;option value=&quot;2&quot;&gt;轮播图底部广告&lt;/option&gt;        &lt;option value=&quot;3&quot;&gt;热门回收广告&lt;/option&gt;        &lt;option value=&quot;4&quot;&gt;优品精选广告&lt;/option&gt;      &lt;/select&gt;&lt;/p&gt;    &lt;p&gt;&lt;input type=&quot;button&quot; id=&quot;btn&quot; value=&quot;添加&quot;&gt;&lt;/p&gt;  &lt;/form&gt;</code></pre><p>通过表单元素作为参数，实现对formData的初始化：</p><pre class=" language-lang-js"><code class="language-lang-js">//获得表单按钮元素var btn=document.querySelector("#btn");//为按钮添加点击事件btn.onclick=function()&#123;    //根据ID获得页面当中的form表单元素    var form=document.querySelector("#advForm");    //将获得的表单元素作为参数，对formData进行初始化    var formdata=new FormData(form);    //通过get方法获得name为advName元素的value值    console.log(formdata.get("advName"));//xixi    //通过get方法获得name为advType元素的value值    console.log(formdata.get("advType"));//1&#125;</code></pre><h4 id="二、操作方法"><a href="#二、操作方法" class="headerlink" title="二、操作方法"></a>二、操作方法</h4><h6 id="1、通过get-key-与getAll-key-来获取相对应的值"><a href="#1、通过get-key-与getAll-key-来获取相对应的值" class="headerlink" title="1、通过get(key)与getAll(key)来获取相对应的值"></a>1、通过get(key)与getAll(key)来获取相对应的值</h6><pre class=" language-lang-js"><code class="language-lang-js">// 获取key为age的第一个值formdata.get("age");// 获取key为age的所有值，返回值为数组类型formdata.getAll("age");</code></pre><h6 id="2、通过append-key-value-在数据末尾追加数据"><a href="#2、通过append-key-value-在数据末尾追加数据" class="headerlink" title="2、通过append(key,value)在数据末尾追加数据"></a>2、通过append(key,value)在数据末尾追加数据</h6><pre class=" language-lang-js"><code class="language-lang-js">//通过FormData构造函数创建一个空对象var formdata=new FormData();//通过append()方法在末尾追加key为name值为laoliu的数据formdata.append("name","laoliu");//通过append()方法在末尾追加key为name值为laoli的数据formdata.append("name","laoli");//通过append()方法在末尾追加key为name值为laotie的数据formdata.append("name","laotie");//通过get方法读取key为name的第一个值console.log(formdata.get("name"));//laoliu//通过getAll方法读取key为name的所有console.log(formdata.getAll("name"));//["laoliu", "laoli", "laotie"]</code></pre><h6 id="3、通过set-key-value-来设置修改数据"><a href="#3、通过set-key-value-来设置修改数据" class="headerlink" title="3、通过set(key, value)来设置修改数据"></a>3、通过set(key, value)来设置修改数据</h6><p>key的值不存在，会添加一条数据</p><pre class=" language-lang-js"><code class="language-lang-js">//通过FormData构造函数创建一个空对象var formdata=new FormData();//如果key的值不存在会为数据添加一个key为name值为laoliu的数据formdata.set("name","laoli");//通过get方法读取key为name的第一个值console.log(formdata.get("name"));//laoli</code></pre><p>key的值存在，会修改对应的value值</p><pre class=" language-lang-js"><code class="language-lang-js">//通过FormData构造函数创建一个空对象var formdata=new FormData();//通过append()方法在末尾追加key为name值为laoliu的数据formdata.append("name","laoliu");//通过append()方法在末尾追加key为name值为laoliu2的数据formdata.append("name","laoliu2");//通过get方法读取key为name的第一个值console.log(formdata.get("name"));//laoliu//通过getAll方法读取key为name的所有值console.log(formdata.getAll("name"));//["laoliu", "laoliu2"]//将存在的key为name的值修改为laoliformdata.set("name","laoli");//通过get方法读取key为name的第一个值console.log(formdata.get("name"));//laoli//通过getAll方法读取key为name的所有值console.log(formdata.getAll("name"));//["laoli"]</code></pre><h6 id="4、通过has-key-来判断是否存在对应的key值"><a href="#4、通过has-key-来判断是否存在对应的key值" class="headerlink" title="4、通过has(key)来判断是否存在对应的key值"></a>4、通过has(key)来判断是否存在对应的key值</h6><pre class=" language-lang-js"><code class="language-lang-js">//通过FormData构造函数创建一个空对象var formdata=new FormData();//通过append()方法在末尾追加key为name值为laoliu的数据formdata.append("name","laoliu");//判断是否包含key为name的数据console.log(formdata.has("name"));//true//判断是否包含key为age的数据console.log(formdata.has("age"));//false</code></pre><h6 id="5、通过delete-key-可以删除数据"><a href="#5、通过delete-key-可以删除数据" class="headerlink" title="5、通过delete(key)可以删除数据"></a>5、通过delete(key)可以删除数据</h6><pre class=" language-lang-js"><code class="language-lang-js">//通过FormData构造函数创建一个空对象var formdata=new FormData();//通过append()方法在末尾追加key为name值为laoliu的数据formdata.append("name","laoliu");console.log(formdata.get("name"));//laoliu//删除key为name的值formdata.delete("name");console.log(formdata.get("name"));//null</code></pre><h4 id="三、通过XMLHttpRequest发送数据"><a href="#三、通过XMLHttpRequest发送数据" class="headerlink" title="三、通过XMLHttpRequest发送数据"></a>三、通过XMLHttpRequest发送数据</h4><p>创建表单：</p><pre><code>  &lt;form id=&quot;advForm&quot;&gt;    &lt;p&gt;广告名称：&lt;input type=&quot;text&quot; name=&quot;advName&quot; value=&quot;xixi&quot;&gt;&lt;/p&gt;    &lt;p&gt;广告类别：&lt;select name=&quot;advType&quot;&gt;        &lt;option value=&quot;1&quot;&gt;轮播图&lt;/option&gt;        &lt;option value=&quot;2&quot;&gt;轮播图底部广告&lt;/option&gt;        &lt;option value=&quot;3&quot;&gt;热门回收广告&lt;/option&gt;        &lt;option value=&quot;4&quot;&gt;优品精选广告&lt;/option&gt;      &lt;/select&gt;&lt;/p&gt;    &lt;p&gt;广告图片：&lt;input type=&quot;file&quot; name=&quot;advPic&quot;&gt;&lt;/p&gt;    &lt;p&gt;广告地址：&lt;input type=&quot;text&quot; name=&quot;advUrl&quot;&gt;&lt;/p&gt;    &lt;p&gt;广告排序：&lt;input type=&quot;text&quot; name=&quot;orderBy&quot;&gt;&lt;/p&gt;    &lt;p&gt;&lt;input type=&quot;button&quot; id=&quot;btn&quot; value=&quot;添加&quot;&gt;&lt;/p&gt;  &lt;/form&gt;</code></pre><p>发送数据：</p><pre class=" language-lang-js"><code class="language-lang-js">var btn=document.querySelector("#btn");btn.onclick=function()&#123;        var formdata=new FormData(document.getElementById("advForm"));    var xhr=new XMLHttpRequest();    xhr.open("post","http://127.0.0.1/adv");    xhr.send(formdata);    xhr.onload=function()&#123;        if(xhr.status==200)&#123;            //...        &#125;    &#125;&#125;</code></pre><p>本文引自：<a href="https://www.cnblogs.com/clj2017/p/9321652.html">https://www.cnblogs.com/clj2017/p/9321652.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据处理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
             
         </tags>
       
