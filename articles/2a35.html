@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Js高级语法及进阶之路, html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序">
+    <meta name="keywords" content="同源和跨域, html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序">
     <meta name="description" content="技术分享,快乐传递">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Js高级语法及进阶之路 | 一路高歌</title>
+    <title>同源和跨域 | 一路高歌</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -40,7 +40,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">一路高歌</span>
                 </a>
@@ -128,7 +128,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">一路高歌</div>
         <div class="logo-desc">
@@ -287,12 +287,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Js高级语法及进阶之路</h1>
+                    <h1 class="description center-align post-title">同源和跨域</h1>
                 </div>
             </div>
         </div>
@@ -409,12 +409,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/javascript/">
-                                <span class="chip bg-color">javascript</span>
+                            <a href="/tags/%E8%B7%A8%E5%9F%9F/">
+                                <span class="chip bg-color">跨域</span>
                             </a>
                         
-                            <a href="/tags/Js%E9%AB%98%E7%BA%A7/">
-                                <span class="chip bg-color">Js高级</span>
+                            <a href="/tags/Jsonp/">
+                                <span class="chip bg-color">Jsonp</span>
+                            </a>
+                        
+                            <a href="/tags/CORS/">
+                                <span class="chip bg-color">CORS</span>
                             </a>
                         
                     </div>
@@ -425,8 +429,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/js/" class="post-category">
-                                js
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/" class="post-category">
+                                网络请求
                             </a>
                         
                     </div>
@@ -438,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-26
+                    2019-06-06
                 </div>
                 
 
@@ -454,763 +458,146 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="推荐学习资源"><a href="#推荐学习资源" class="headerlink" title="推荐学习资源"></a>推荐学习资源</h2><ul>
-<li>JavaScript 高级程序设计（第三版）<ul>
-<li>前端的红宝书</li>
-<li>建议每一个前端都完整的看一遍</li>
-</ul>
-</li>
-<li>JavaScript面向对象编程指南（第2版）</li>
-<li>JavaScript面向对象精要</li>
-<li>JavaScript 权威指南</li>
-<li>JavaScript 语言精粹</li>
-<li>你不知道的 JavaScript</li>
-</ul>
-<h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/./images/mxdxkf.png" alt="面向对象编程"></p>
-<h2 id="什么是对象？"><a href="#什么是对象？" class="headerlink" title="什么是对象？"></a>什么是对象？</h2><blockquote>
-<p>Everything is object （万物皆对象）</p>
+                <h1 id="同源与跨域"><a href="#同源与跨域" class="headerlink" title="同源与跨域"></a>同源与跨域</h1><h2 id="同源"><a href="#同源" class="headerlink" title="同源"></a>同源</h2><h3 id="同源策略的基本概念"><a href="#同源策略的基本概念" class="headerlink" title="同源策略的基本概念"></a>同源策略的基本概念</h3><blockquote>
+<p>1995 年，同源政策由 Netscape 公司引入浏览器。目前，所有浏览器都实行这个政策。<br>同源策略：最初，它的含义是指，A 网页不能往 B 网页发送 ajax 请求，除非这两个网页”同源”。所谓”同源”指的是”三个相同”。</p>
 </blockquote>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/./images/20160823024542444.jpg" alt="万物皆对象"></p>
-<p>对象到底是什么，我们可以从两次层次来理解。</p>
-<p><strong>(1) 对象是具体事物的抽象。</strong></p>
-<p>一本书、一辆汽车、一个人都可以是对象，当实物被抽象成对象，实物之间的关系就变成了对象之间的关系，从而就可以模拟现实情况，针对对象进行编程。</p>
-<p>问： 书是对象吗</p>
-<p><strong>(2)对象是无序键值对的集合，其属性可以包含基本值、对象或者函数</strong></p>
-<p>每个对象都是基于一个引用类型创建的，这些类型可以是系统内置的原生类型，也可以是开发人员自定义的类型。</p>
-<h2 id="什么是面向对象？"><a href="#什么是面向对象？" class="headerlink" title="什么是面向对象？"></a>什么是面向对象？</h2><p>面向对象编程 —— <code>Object Oriented Programming</code>，简称 OOP ，是一种编程开发思想。</p>
-<p>在面向对象程序开发思想中，每一个对象都是功能中心，具有明确分工，可以完成接受信息、处理数据、发出信息等任务。<br>因此，面向对象编程具有灵活、代码可复用、高度模块化等特点，容易维护和开发，比起由一系列函数或指令组成的传统的过程式编程（procedural programming），更适合多人合作的大型软件项目。</p>
-<h2 id="面向对象编程的三大特性："><a href="#面向对象编程的三大特性：" class="headerlink" title="面向对象编程的三大特性："></a>面向对象编程的三大特性：</h2><ul>
-<li>封装性<ul>
-<li>将功能的具体实现，全部封装到对象的内部，外界使用对象时，只需要关注对象提供的方法如何使用，而不需要关心对象的内部具体实现，这就是封装。</li>
-</ul>
-</li>
-<li>继承性<ul>
-<li>在js中，继承的概念很简单，一个对象没有的一些属性和方法，另外一个对象有，拿过来用，就实现了继承。</li>
-<li><strong>注意：在其他语言里面，继承是类与类之间的关系，在js中，是对象与对象之间的关系。</strong></li>
-</ul>
-</li>
-<li>[多态性]<ul>
-<li>多态是在强类型的语言中才有的。js是弱类型语言，所以JS不支持多态</li>
-</ul>
-</li>
-</ul>
-<h1 id="对象、原型、原型链"><a href="#对象、原型、原型链" class="headerlink" title="对象、原型、原型链"></a>对象、原型、原型链</h1><h2 id="创建对象的方式"><a href="#创建对象的方式" class="headerlink" title="创建对象的方式"></a>创建对象的方式</h2><h3 id="内置构造函数创建"><a href="#内置构造函数创建" class="headerlink" title="内置构造函数创建"></a>内置构造函数创建</h3><p>我们可以直接通过 <code>new Object()</code> 创建：</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">//在js中，对象有动态特性，可以随时的给一个对象增加属性或者删除属性。
-var person = new Object()
-person.name = 'Jack'
-person.age = 18
-
-person.sayName = function () &#123;
-  console.log(this.name)
-&#125;
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">协议相同   http  https
+域名相同   www.baidu.com  www.taobao.cn  www.jd.com
+端口相同   80 81 82
 </code></pre>
-<p>缺点：麻烦，每个属性都需要添加。</p>
-<h3 id="对象字面量创建"><a href="#对象字面量创建" class="headerlink" title="对象字面量创建"></a>对象字面量创建</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">var person = &#123;
-  name: 'Jack',
-  age: 18,
-  sayName: function () &#123;
-    console.log(this.name)
+<p>举例来说，<code>http://www.example.com/dir/page.html</code>这个网址，协议是<code>http://</code>，域名是<code>www.example.com</code>，端口是<code>80</code>（默认端口可以省略）。它的同源情况如下。</p>
+<pre><code>http://www.example.com/dir2/other.html：同源
+http://example.com/dir/other.html：不同源（域名不同）
+http://v2.www.example.com/dir/other.html：不同源（域名不同）
+http://www.example.com:81/dir/other.html：不同源（端口不同）
+</code></pre><h3 id="同源策略的目的"><a href="#同源策略的目的" class="headerlink" title="同源策略的目的"></a>同源策略的目的</h3><blockquote>
+<p>同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。</p>
+</blockquote>
+<p>设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。如果其他网站可以读取A网站的 Cookie，会发生什么？</p>
+<p>很显然，如果 Cookie 包含隐私（比如存款总额），这些信息就会泄漏。更可怕的是，Cookie 往往用来保存用户的登录状态，如果用户没有退出登录，其他网站就可以冒充用户，为所欲为。</p>
+<p><strong>因此同源策略是必须的，如果 cookie 可以在不同源的网站中共享，那么互联网将毫无安全可言。</strong></p>
+<h3 id="同源策略的限制范围"><a href="#同源策略的限制范围" class="headerlink" title="同源策略的限制范围"></a>同源策略的限制范围</h3><blockquote>
+<p>随着互联网的发展，“同源策略”越来越严格，目前，如果非同源，以下三种行为都将收到限制。</p>
+</blockquote>
+<pre><code>1. Cookie、LocalStorage 和 IndexDB 无法读取。
+2. DOM 无法获得。
+3. AJAX 请求不能发送。
+</code></pre><p>虽然这些限制是很有必要的，但是也给我们日常开发带来不好的影响。比如实际开发过程中，往往都会把服务器端架设到一台甚至是一个集群的服务器中，把客户端页面放到另外一个单独的服务器。那么这时候就会出现不同源的情况，如果我们知道两个网站都是安全的话，我们是希望两个不同源的网站之间可以相互请求数据的。这就需要使用到<strong>跨域</strong> 。</p>
+<h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h2><h3 id="jsonp"><a href="#jsonp" class="headerlink" title="jsonp"></a>jsonp</h3><blockquote>
+<p>JSONP(JSON with Padding)、可用于解决主流浏览器的跨域数据访问的问题。原理：服务端返回一个预先定义好的 javascript 函数的调用，并且将服务器的数据以该函数参数的形式传递过来，这个方法需要前后端配合。</p>
+<p>jsonp: 带补丁的 json, 服务器不直接返回 json , 而是把json数据放到函数中作为实参传递</p>
+</blockquote>
+<p><code>script</code>  标签是不受同源策略的限制的，它可以载入任意地方的 JavaScript 文件，而并不要求同源。类似的还有<code>img</code>和<code>link</code>标签</p>
+<pre class=" language-lang-html"><code class="language-lang-html"><!--不受同源策略的标签-->
+<img src="http://www.api.com/1.jpg" alt="" />
+<link rel="stylesheet" href="http://www.api.com/1.css" />
+<script src="http://www.api.com/1.js"></script>
+</code></pre>
+<h4 id="jsonp-演化过程-1"><a href="#jsonp-演化过程-1" class="headerlink" title="jsonp 演化过程 1"></a>jsonp 演化过程 1</h4><p>php 文件</p>
+<pre class=" language-lang-php"><code class="language-lang-php">header("content-type:text/html;charset=utf-8");
+echo "alert(1111)";
+</code></pre>
+<p>html 文件</p>
+<pre class=" language-lang-html"><code class="language-lang-html"><script src="http://www.api.com/testjs.php"></script>
+</code></pre>
+<p>原理：其实 src 的路径是什么文件不重要，无论引入 js 文件还是 php 文件，最后返回给浏览器的都是字符串，因此我们 script 标签是可以引入一个 php 文件的。</p>
+<h4 id="jsonp-演化过程-2"><a href="#jsonp-演化过程-2" class="headerlink" title="jsonp 演化过程 2"></a>jsonp 演化过程 2</h4><p>php 代码</p>
+<pre class=" language-lang-php"><code class="language-lang-php">header("content-type:text/html;charset=utf-8");
+$arr = array(
+    "name"=>"zs",
+    "age"=>18
+);
+$result = json_encode($arr);
+//这是一段js函数的调用的代码，$result就是我们想要的数据
+echo "func($result)";
+</code></pre>
+<p>js 代码</p>
+<pre class=" language-lang-html"><code class="language-lang-html"><script>
+  function func(data) &#123;
+    console.log(data);
   &#125;
-&#125;
+</script>
+<script src="http://www.api.com/testjs.php"></script>
 </code></pre>
-<p>缺点：如果要批量生成多个对象，应该怎么办?代码很冗余</p>
-<h3 id="简单改进：工厂函数"><a href="#简单改进：工厂函数" class="headerlink" title="简单改进：工厂函数"></a>简单改进：工厂函数</h3><p>我们可以写一个函数，解决代码重复问题：</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function createPerson (name, age) &#123;
-  return &#123;
-    name: name,
-    age: age,
-    sayName: function () &#123;
-      console.log(this.name)
-    &#125;
-  &#125;
-&#125;
+<p>缺点：后端必须知道前端声明的方法的名字，后端才能调用。</p>
+<h4 id="jsonp-演化过程-3"><a href="#jsonp-演化过程-3" class="headerlink" title="jsonp 演化过程 3"></a>jsonp 演化过程 3</h4><p>php 代码</p>
+<pre class=" language-lang-php"><code class="language-lang-php">header("content-type:text/html;charset=utf-8");
+$arr = array(
+    "name"=>"zs",
+    "age"=>18
+);
+$result = json_encode($arr);
+//这是一段js函数的调用的代码，$result就是我们想要的数据
+echo $_GET['callback']."($result)";
 </code></pre>
-<p>然后生成实例对象：</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var p1 = createPerson('Jack', 18)
-var p2 = createPerson('Mike', 18)
-</code></pre>
-<p>缺点：但却没有解决对象识别的问题，创建出来的对象都是Object类型的。</p>
-<h3 id="继续改进：构造函数"><a href="#继续改进：构造函数" class="headerlink" title="继续改进：构造函数"></a>继续改进：构造函数</h3><p>构造函数是一个函数，用于实例化对象，需要配合new操作符使用。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function Person (name, age) &#123;
-  this.name = name
-  this.age = age
-  this.sayName = function () &#123;
-    console.log(this.name)
-  &#125;
+<p>javascript 代码</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">function fun(data) &#123;
+  console.log(data);
 &#125;
 
-var p1 = new Person('Jack', 18)
-p1.sayName() // => Jack
-
-var p2 = new Person('Mike', 23)
-p2.sayName() // => Mike
+var button = document.querySelector("button");
+button.onclick = function () &#123;
+  var script = document.createElement("script");
+  script.src = "http://www.api.com/testjs.php?callback=fun";
+  document.body.appendChild(script);
+&#125;;
 </code></pre>
-<p>而要创建 <code>Person</code> 实例，则必须使用 <code>new</code> 操作符。<br>以这种方式调用构造函数会经历以下 4 个步骤：</p>
-<ol>
-<li>创建一个新对象</li>
-<li>将构造函数的作用域赋给新对象（因此 this 就指向了这个新对象）</li>
-<li>执行构造函数中的代码</li>
-<li>返回新对象</li>
+<p><strong>说白了，jsonp 的原理就是 借助了 script 标签不受同源策略的限制，在服务端返回一个函数的调用，将数据作为当前调用函数的实参。 在浏览器端，需要程序要声明一个函数，通过形参就可以获取到服务端返回的对应的值。</strong></p>
+<p>jsonp 原理大家知道即可，因此 jquery 已经帮我们封装好了，我们使用起来非常的方便。</p>
+<h3 id="jquery-对于-jsonp-的封装"><a href="#jquery-对于-jsonp-的封装" class="headerlink" title="jquery 对于 jsonp 的封装"></a>jquery 对于 jsonp 的封装</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">// 使用起来相当的简单，跟普通的get请求没有任何的区别，只需要把dataType指定成jsonp即可。
+$.ajax(&#123;
+  type: "get",
+  url: "http://www.api.com/testjs.php",
+  dataType: "jsonp",
+  data: &#123;
+    uname: "hucc",
+    upass: "123456",
+  &#125;,
+  success: function (info) &#123;
+    console.log(info);
+  &#125;,
+&#125;);
+</code></pre>
+<h1 id="XMLHttpRequest2-0"><a href="#XMLHttpRequest2-0" class="headerlink" title="XMLHttpRequest2.0"></a>XMLHttpRequest2.0</h1><blockquote>
+<p>XMLHttpRequest 是一个 javascript 内置对象，使得 Javascript 可以进行异步的 HTTP 通信。2008 年 2 月，就提出了 XMLHttpRequest Level 2 草案。</p>
+</blockquote>
+<p>老版本的 XMLHttpRequest 的缺点：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">//1. 仅支持传输文本数据，无法传说二进制文件，比如图片视频等。
+//2. 受到了"同源策略"的限制
+//3. 传输数据时，没有进度信息，只能提示完成与否。
+</code></pre>
+<p>新版本的功能：</p>
+<pre class=" language-lang-javascript"><code class="language-lang-javascript">1. 可以使用formData对象管理表单数据
+2. 允许请求不同域名下的数据（跨域）
+3. 支持上传二进制文件
+</code></pre>
+<p><strong>注意：我们现在使用 new XMLHttpRequest 创建的对象就是 2.0 对象了，我们之前学的是 1.0 的语法，现在学习一些 2.0 的新特性即可。</strong></p>
+<h2 id="跨域资源共享-CORS"><a href="#跨域资源共享-CORS" class="headerlink" title="跨域资源共享(CORS)"></a>跨域资源共享(CORS)</h2><h3 id="cors-的使用"><a href="#cors-的使用" class="headerlink" title="cors 的使用"></a>cors 的使用</h3><blockquote>
+<p>新版本的 XMLHttpRequest 对象，可以向不同域名的服务器发出 HTTP 请求。这叫做<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing">“跨域资源共享”</a>（Cross-origin resource sharing，简称 CORS）。</p>
+</blockquote>
+<p>跨域资源共享（CORS）的前提</p>
+<ul>
+<li>浏览器支持这个功能</li>
+<li>服务器必须允许这种跨域。</li>
+</ul>
+<p>服务器允许跨域的代码：</p>
+<pre class=" language-lang-php"><code class="language-lang-php">//允许所有的域名访问这个接口
+header("Access-Control-Allow-Origin:*");
+
+//允许www.study.com这个域名访问这个接口
+header("Access-Control-Allow-Origin:http://www.study.com");
+</code></pre>
+<h3 id="CORS-的具体流程（了解）"><a href="#CORS-的具体流程（了解）" class="headerlink" title="CORS 的具体流程（了解）"></a>CORS 的具体流程（了解）</h3><ol>
+<li>浏览器会向发送一条请求，服务器接受到请求之后，会返回请求头信息，浏览器查看返回的响应头信息中是否设置了<code>header(&#39;Access-Control-Allow-Origin:请求源域名或者*&#39;);</code></li>
+<li>如果没有设置，说明服务器不允许使用 cors 跨域，那么浏览器会把获取到的数据拦截。</li>
+<li>如果返回的响应头中设置了<code>header(&#39;Access-Control-Allow-Origin:请求源域名或者*&#39;);</code>,浏览器会跟请求头中的<code>Origin: http://www.study.com</code>进行对比，如果满足要求，就把数据发送给用户。</li>
+<li>结论：<strong>跨域行为是浏览器行为，是浏览器阻止了 ajax 行为。服务器与服务器之间是不存在跨域的问题的</strong></li>
 </ol>
-<p><strong>构造函数需要配合new操作符使用才有意义，构造函数首字母都需要大写</strong></p>
-<h3 id="构造函数的缺点"><a href="#构造函数的缺点" class="headerlink" title="构造函数的缺点"></a>构造函数的缺点</h3><p>使用构造函数带来的最大的好处就是创建对象更方便了，但是其本身也存在一个浪费内存的问题：</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function Person (name, age) &#123;
-  this.name = name
-  this.age = age
-  this.type = 'human'
-  this.sayHello = function () &#123;
-    console.log('hello ' + this.name)
-  &#125;
-&#125;
-
-var p1 = new Person('lpz', 18)
-var p2 = new Person('Jack', 16)
-console.log(p1.sayHello === p2.sayHello) // => false
-</code></pre>
-<p>解决方案：</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function sayHello() &#123;
-  console.log('hello ' + this.name)
-&#125;
-
-function Person (name, age) &#123;
-  this.name = name
-  this.age = age
-  this.type = 'human'
-  this.sayHello = sayHello
-&#125;
-
-var p1 = new Person('lpz', 18)
-var p2 = new Person('Jack', 16)
-
-console.log(p1.sayHello === p2.sayHello) // => true
-</code></pre>
-<p>缺点：会暴漏很多的函数，容易造成全局变量污染。</p>
-<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><h3 id="原型基本概念"><a href="#原型基本概念" class="headerlink" title="原型基本概念"></a>原型基本概念</h3><p>Javascript 规定，每一个函数都有一个 <code>prototype</code> 属性，指向另一个对象。<br>这个对象的所有属性和方法，都会被构造函数的实例继承。</p>
-<p>这也就意味着，我们可以把所有对象实例需要共享的属性和方法直接定义在 <code>prototype</code> 对象上。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function Person (name, age) &#123;
-  this.name = name
-  this.age = age
-&#125;
-
-console.log(Person.prototype)
-
-Person.prototype.type = 'human'
-
-Person.prototype.sayName = function () &#123;
-  console.log(this.name)
-&#125;
-
-var p1 = new Person(...)
-var p2 = new Person(...)
-
-console.log(p1.sayName === p2.sayName) // => true
-</code></pre>
-<p>这时所有实例的 <code>type</code> 属性和 <code>sayName()</code> 方法，其实都是同一个内存地址</p>
-<h3 id="构造函数、实例、原型三者之间的关系"><a href="#构造函数、实例、原型三者之间的关系" class="headerlink" title="构造函数、实例、原型三者之间的关系"></a>构造函数、实例、原型三者之间的关系</h3><p>构造函数：构造函数就是一个函数，配合new可以新建对象。</p>
-<p>实例：通过构造函数实例化出来的对象我们把它叫做构造函数的实例。一个构造函数可以有很多实例。</p>
-<p>原型：每一个构造函数都有一个属性<code>prototype</code>，函数的prototype属性值就是原型。通过构造函数创建出来的实例能够直接使用原型上的属性和方法。</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/./images/原型三角关系.jpg" alt></p>
-<p>思考：内置对象中，有很多的方法，这些方法存在哪里？</p>
-<h3 id="proto"><a href="#proto" class="headerlink" title="__proto__"></a><code>__proto__</code></h3><p>任意一个对象，都会有<code>__proto__</code>属性，这个属性指向了构造函数的prototype属性，也就是原型对象。</p>
-<p>获取原型对象：</p>
-<ul>
-<li>通过<code>构造函数.prototype</code>可以获取</li>
-<li>通过<code>实例.__proto__</code>可以获取（隐式原型）</li>
-<li>它们指向了同一个对象<code>构造函数.prototype === 实例.__proto__</code></li>
+<h3 id="jsonp-与-cors-的对比"><a href="#jsonp-与-cors-的对比" class="headerlink" title="jsonp 与 cors 的对比"></a>jsonp 与 cors 的对比</h3><ul>
+<li>jsonp 兼容性好，老版本浏览器也支持，但是 jsonp 仅支持 get 请求，发送的数据量有限。使用麻烦</li>
+<li>cors 需要浏览器支持 cors 功能才行。但是使用简单，<strong>只要服务端设置允许跨域，对于客户端来说，跟普通的 get、post 请求并没有什么区别。</strong></li>
+<li>跨域的安全性问题：很多同学会觉得跨域能带来安全性问题，其实并不会，<strong>因为跨域是需要服务端配合的</strong> ，也就是说不论 jsonp 还是 cors，如果没有服务端的允许，浏览器是没法做到跨域的。</li>
 </ul>
-<p><strong>注意：<code>__proto__</code>是浏览器的一个隐藏（私有）属性，IE浏览器不支持，不要通过它来修改原型里的内容，如果要修改原型中的内容，使用构造函数.prototype去修改</strong></p>
-<h3 id="constructor属性"><a href="#constructor属性" class="headerlink" title="constructor属性"></a>constructor属性</h3><p>默认情况下，原型对象中只包含了一个属性：constructor，constructor属性指向了当前的构造函数。</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/./images/sanjiao.png" alt></p>
-<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><h3 id="原型链概念"><a href="#原型链概念" class="headerlink" title="原型链概念"></a>原型链概念</h3><p>任何一个对象，都有原型对象，原型对象本身又是一个对象，所以原型对象也有自己的原型对象，这样一环扣一环就形成了一个链式结构，我们把这个链式结构称为：原型链。</p>
-<p>绘制对象的原型链结构：</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">//1. var p = new Person();
-//2. var o = new Object();
-//3. var arr = new Array();
-//4. var date = new Date();
-//5. Math
-//6. 查看一个div的原型链结构
-</code></pre>
-<p>总结：Object.prototype是原型链的尽头，Object.prototype的原型是null。</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/./images/proto.png" alt></p>
-<h3 id="属性查找原则"><a href="#属性查找原则" class="headerlink" title="属性查找原则"></a>属性查找原则</h3><p>如果是获取操作</p>
-<ol>
-<li>会先在自身上查找，如果没有</li>
-<li>则根据<code>__proto__</code>对应的原型去找，如果没有</li>
-<li>一直找到<code>Object.prototyp</code>，如果没有，那就找不到了。</li>
-</ol>
-<p>测试题1</p>
-<pre class=" language-lang-js"><code class="language-lang-js">function Person(name) &#123;
-  this.name = name;
-&#125;
-
-Person.prototype.name = "ls";
-Person.prototype.money = 100;
-
-var p = new Person("zs");
-
-console.log(p.name);
-console.log(p.money);
-</code></pre>
-<p>测试题2</p>
-<pre class=" language-lang-js"><code class="language-lang-js">function Person(name) &#123;
-  this.name = name
-&#125;
-
-Person.prototype.name = "ls";
-Person.prototype.money = 100;
-
-var p = new Person();
-
-console.log(p.name);
-console.log(p.money);
-</code></pre>
-<p>测试题3</p>
-<pre class=" language-lang-js"><code class="language-lang-js">function Person(name) &#123;
-  if (name) &#123;
-    this.name = name;
-  &#125;
-&#125;
-
-Person.prototype.name = "ls";
-Person.prototype.money = 100;
-
-var p = new Person();
-
-console.log(p.name);
-console.log(p.money);
-</code></pre>
-<h3 id="属性设置原则"><a href="#属性设置原则" class="headerlink" title="属性设置原则"></a>属性设置原则</h3><p>只会修改对象自身的属性，如果自身没有这个属性，那么就会添加这个属性，并不会修改原型中的属性。</p>
-<pre class=" language-lang-js"><code class="language-lang-js">function Person() &#123;
-
-&#125;
-
-var p = new Person();
-Person.prototype.money = 200;
-
-console.log(p.money);
-
-p.money = 300;
-
-console.log(p.money);
-
-console.log(Person.prototype.money);
-</code></pre>
-<h1 id="函数进阶"><a href="#函数进阶" class="headerlink" title="函数进阶"></a>函数进阶</h1><h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><blockquote>
-<p>作用域：变量起作用的区域，也就是说：变量定义后，可以在哪个范围内使用该变量。</p>
-</blockquote>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var num = 11;//全局变量
-function fn()&#123;
-  var num1 = 22;//局部变量
-  console.log(num);  // 全局变量在任何地方都能访问到
-  console.log(num1);  
-&#125;
-console.log(num);
-</code></pre>
-<p>在js里只有全局作用域和函数作用域。</p>
-<p>函数作用域是在函数定义的时候作用域就确定下来了，和函数在哪调用无关。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var num = 123;
-function f1() &#123;
-  console.log(num);
-&#125;
-
-function f2()&#123;
-  var num = 456;
-  f1();
-&#125;
-f2();//打印啥？
-</code></pre>
-<h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><blockquote>
-<p>作用域链：只要是函数，就会形成一个作用域，如果这个函数被嵌套在其他函数中，那么外部函数也有自己的作用域，这个一直往上到全局环境，就形成了一个作用域链。</p>
-</blockquote>
-<p><code>变量的搜索原则</code>：</p>
-<ol>
-<li>从当前作用域开始查找是否声明了该变量，如果存在，那么就直接返回这个变量的值。</li>
-<li>如果不存在，就会往上一层作用域查询，如果存在，就返回。</li>
-<li>如果不存在，一直查询到全局作用域，如果存在，就返回。如果在全局中也没有找到该变量会报错</li>
-</ol>
-<h3 id="作用域链练习"><a href="#作用域链练习" class="headerlink" title="作用域链练习"></a>作用域链练习</h3><pre class=" language-lang-javascript"><code class="language-lang-javascript">// 1 
-var num = 10;
-fn1();
-function fn1() &#123;
-  console.log(num);  // ?
-  var num = 20;
-  console.log(num);  // ?
-&#125;
-console.log(num);    // ?
-
-
-// 2 -- 改造上面的面试题
-var num = 10;
-fn1();
-function fn1() &#123;
-  console.log(num);  // ?
-  num = 20;
-  console.log(num);  // ?
-&#125;
-console.log(num);    // ?
-
-
-// 3
-var num = 123
-function f1(num) &#123;
-    console.log(num) // ?
-&#125;
-
-function f2() &#123;
-    var num = 456
-    f1(num)
-&#125;
-f2()
-
-
-// 4
-var num1 = 10;
-var num2 = 20;
-function fn(num1) &#123;
-  num1 = 100;
-  num2 = 200;
-  num3 = 300;
-  console.log(num1);
-  console.log(num2);
-  console.log(num3);
-  var num3;
-&#125;
-fn();
-console.log(num1);
-console.log(num2);
-console.log(num3);
-</code></pre>
-<h2 id="函数的四种调用模式"><a href="#函数的四种调用模式" class="headerlink" title="函数的四种调用模式"></a>函数的四种调用模式</h2><blockquote>
-<p>根据函数内部this的指向不同，可以将函数的调用模式分成4种</p>
-</blockquote>
-<ol>
-<li>函数调用模式</li>
-<li>方法调用模式</li>
-<li>构造函数调用模式</li>
-<li>上下文调用模式（借用方法模式）</li>
-</ol>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">函数：当一个函数不是一个对象的属性时，我们称之为函数。
-方法：当一个函数被保存为对象的一个属性时，我们称之为方法。
-</code></pre>
-<h3 id="函数调用模式"><a href="#函数调用模式" class="headerlink" title="函数调用模式"></a>函数调用模式</h3><font color="red">如果一个函数不是一个对象的属性时，就是被当做一个函数来进行调用的。此时this指向了window</font>
-
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function fn()&#123;
-  console.log(this);//指向window
-&#125;
-fn();
-</code></pre>
-<h3 id="方法调用模式"><a href="#方法调用模式" class="headerlink" title="方法调用模式"></a>方法调用模式</h3><font color="red">当一个函数被保存为对象的一个属性时，我们称之为一个方法。当一个方法被调用时，this被绑定到当前对象</font>
-
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var obj = &#123;
-  sayHi:function()&#123;
-    console.log(this);//在方法调用模式中，this指向调用当前方法的对象。
-  &#125;
-&#125;
-obj.sayHi();
-</code></pre>
-<h3 id="构造函数调用模式"><a href="#构造函数调用模式" class="headerlink" title="构造函数调用模式"></a>构造函数调用模式</h3><font color="red">如果函数是通过new关键字进行调用的，此时this被绑定到创建出来的新对象上。</font>
-
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function Person()&#123;
-  console.log(this);
-&#125;
-Person();//this指向什么？
-var p = new Person();//this指向什么？
-</code></pre>
-<p><strong>总结：分析this的问题，主要就是区分函数的调用模式，看函数是怎么被调用的。</strong></p>
-<ul>
-<li>猜猜看：</li>
-</ul>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">// 分析思路：1. 看this是哪个函数的  2. 看这个函数是怎么调用的，处于什么调用模式
-
-// 1
-var age = 38;
-var obj = &#123;
-    age: 18,
-    getAge: function () &#123;
-        console.log(this.age);
-    &#125;
-&#125;
-
-var f = obj.getAge;
-f();//???
-
-
-// 2
-var age = 38;
-var obj = &#123;
-  age:18,
-  getAge:function () &#123;
-    console.log(this.age);//???
-    function foo()&#123;
-      console.log(this.age);//????
-    &#125;
-    foo();
-  &#125;
-&#125;
-obj.getAge();
-obj["getAge"]();
-
-
-// 3
-var length = 10
-
-function fn() &#123;
-    console.log(this.length)
-&#125;
-var obj = &#123;
-    length: 5,
-    method: function (fn) &#123;
-        fn() 
-        arguments[0]();
-    &#125;
-&#125;
-obj.method(fn, 10, 5);
-</code></pre>
-<p>几种特殊的this指向</p>
-<ul>
-<li>定时器中的this指向了window，因为定时器的function最终是由window来调用的。</li>
-<li>事件中的this指向的是当前的元素，在事件触发的时候，浏览器让当前元素调用了function</li>
-</ul>
-<h3 id="上下文调用模式"><a href="#上下文调用模式" class="headerlink" title="上下文调用模式"></a>上下文调用模式</h3><blockquote>
-<p>上下文调用模式也叫方法借用模式，分为apply与call</p>
-<p>使用方法： 函数.call() 或者 函数.apply()</p>
-</blockquote>
-<h4 id="call方法"><a href="#call方法" class="headerlink" title="call方法"></a>call方法</h4><p>call方法可以调用一个函数，并且可以指定这个函数的<code>this</code>指向</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">//所有的函数都可以使用call进行调用
-//参数1：指定函数的this，如果不传，则this指向window
-//其余参数：和函数的参数列表一模一样。
-//说白了，call方法也可以和()一样，进行函数调用，call方法的第一个参数可以指定函数内部的this指向。
-fn.call(thisArg, arg1, arg2, arg2);
-</code></pre>
-<ul>
-<li>借用对象的方法</li>
-</ul>
-<h4 id="伪数组与数组"><a href="#伪数组与数组" class="headerlink" title="伪数组与数组"></a>伪数组与数组</h4><blockquote>
-<p>伪数组也叫类数组</p>
-</blockquote>
-<ol>
-<li>伪数组其实就是一个对象，但是跟数组一样，伪数组也会有<code>length</code>属性，也有<code>0,1,2,3</code>等属性。</li>
-<li>伪数组并没有数组的方法，不能使用<code>push/pop</code>等方法</li>
-<li>伪数组可以跟数组一样进行遍历，通过下标操作。</li>
-<li>常见的伪数组：<code>arguments</code>、<code>document.getElementsByTagName的返回值</code>、<code>jQuery对象</code></li>
-</ol>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var arrayLike = &#123;
-  0:"张三",
-  1:"李四",
-  2:"王五",
-  length:3
-&#125;
-//伪数组可以和数组一样进行遍历
-</code></pre>
-<ul>
-<li>伪数组借用数组的方法</li>
-</ul>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">Array.prototype.push.call(arrLike, "赵六");
-</code></pre>
-<h4 id="apply方法"><a href="#apply方法" class="headerlink" title="apply方法"></a>apply方法</h4><p><code>apply()</code>方法的作用和 <code>call()</code>方法类似，只有一个区别，就是<code>apply()</code>方法接受的是<strong>一个包含多个参数的数组</strong>。而<code>call()</code>方法接受的是<strong>若干个参数的列表</strong></p>
-<p>call和apply的使用场景：</p>
-<ul>
-<li>如果参数比较少，使用call会更加简洁</li>
-<li>如果参数存放在数组中，此时需要使用apply</li>
-</ul>
-<h4 id="bind方法"><a href="#bind方法" class="headerlink" title="bind方法"></a>bind方法</h4><p><strong>bind()</strong>方法创建一个新的函数, 可以绑定新的函数的<code>this</code>指向</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">// 返回值：新的函数
-// 参数：新函数的this指向，当绑定了新函数的this指向后，无论使用何种调用模式，this都不会改变。
-var newFn = fn.bind(window);
-</code></pre>
-<h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><blockquote>
-<p>递归函数：函数内部直接或者间接的调用自己</p>
-</blockquote>
-<p>递归的要求：</p>
-<ol>
-<li>自己调用自己（直接或者间接）</li>
-<li>要有结束条件（出口）</li>
-</ol>
-<p>递归函数主要是<code>化归思想</code> ,将一个复杂的问题简单化，主要用于解决数学中的一些问题居多。</p>
-<ul>
-<li>把要解决的问题，归结为已经解决的问题上。</li>
-<li>一定要考虑什么时候结束让函数结束，也就是停止递归（一定要有已知条件）</li>
-</ul>
-<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><h2 id="闭包的基本概念"><a href="#闭包的基本概念" class="headerlink" title="闭包的基本概念"></a>闭包的基本概念</h2><p><code>闭包（closure）</code>是JavaScript语言的一个难点，也是JavaScript的一个特色，很多高级的应用都要依靠闭包来实现。</p>
-<h3 id="闭包的概念"><a href="#闭包的概念" class="headerlink" title="闭包的概念"></a>闭包的概念</h3><blockquote>
-<p>在<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6">计算机科学</a>中，<strong>闭包</strong>（英语：Closure），又称<strong>词法闭包</strong>（Lexical Closure）或<strong>函数闭包</strong>（function closures），是引用了自由变量的函数 </p>
-</blockquote>
-<p>在JavaScript中，在函数中可以（嵌套）定义另一个函数时，如果内部的函数引用了外部的函数的变量，则产生闭包。</p>
-<p>产生闭包的条件</p>
-<pre class=" language-lang-js"><code class="language-lang-js">当内部函数访问了外部函数的变量的时候，就会形成闭包。
-</code></pre>
-<h2 id="闭包的作用"><a href="#闭包的作用" class="headerlink" title="闭包的作用"></a>闭包的作用</h2><blockquote>
-<p>保护私有变量不被修改</p>
-</blockquote>
-<h3 id="计数器"><a href="#计数器" class="headerlink" title="计数器"></a>计数器</h3><p>需求：统计一个函数的调用次数</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var count = 0;
-function fn()&#123;
-  count++;
-  console.log("我被调用了，调用次数是"+count);
-&#125;
-fn();
-fn();
-fn();
-</code></pre>
-<p>缺点：count是全局变量，不安全。</p>
-<p>使用闭包解决这个问题！！！！</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">function outer()&#123;
-  var count = 0; // 私有变量, 将count保护起来了
-  function add()&#123;
-    count++;
-    console.log("当前count"+count);
-  &#125;
-  return add;
-&#125;
-
-var result = outer();
-result();
-</code></pre>
-<h2 id="闭包经典面试题"><a href="#闭包经典面试题" class="headerlink" title="闭包经典面试题"></a>闭包经典面试题</h2><ol>
-<li><p>点击按钮, 打印当前按钮的下标</p>
-</li>
-<li><pre class=" language-lang-js"><code class="language-lang-js">function fn() &#123;
-    var a = 0;
-
-    return function() &#123;
-        a++;
-        console.log(a);
-    &#125;
-
-&#125;
-
-var f1 = fn();
-
-f1();
-f1();
-f1();
-
-var f2 = fn();
-f2();
-f2();
-f2();
-f2();
-</code></pre>
-</li>
-<li><pre class=" language-lang-js"><code class="language-lang-js">function f1()&#123;
-    var name="abc";
-
-    return function()&#123;
-        console.log(name);
-    &#125;
-
-&#125;
-var fn = f1();
-
-var name="张三";
-
-fn();
-</code></pre>
-</li>
-</ol>
-<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><blockquote>
-<p>现实生活中的继承，子承父业, 如儿子继承了父辈的财产，公司等</p>
-<p>js中的继承，一个对象可以使用另一个对象中的方法或属性</p>
-</blockquote>
-<p>继承的目的:  方便代码的复用</p>
-<pre class=" language-lang-js"><code class="language-lang-js">var lw = &#123;
-    skill: "翻墙",
-    age: 28
-&#125;
-
-function Person()&#123;&#125;
-var xm = new Person();
-
-// 如何实现让xm可以使用到lw对象上的skill属性???
-xm.skill; // ==> 翻墙
-</code></pre>
-<h2 id="JS常见的几种继承模式"><a href="#JS常见的几种继承模式" class="headerlink" title="JS常见的几种继承模式"></a>JS常见的几种继承模式</h2><h3 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h3><p>一个对象可以访问构造函数的原型中的属性和方法，那么如果想要让一个对象增加某些属性和方法，只需要把这些属性和方法放到原型对象中即可。这样就实现了继承, 称之为原型链继承</p>
-<ul>
-<li>直接给原型增加属性和方法</li>
-<li>原型替换（注意：constructor）</li>
-</ul>
-<pre class=" language-lang-js"><code class="language-lang-js">var Person = function() &#123;&#125;;
-
-Person.prototype.n = 1;
-var p1 = new Person();
-
-Person.prototype = &#123;
-    n: 2,
-    m: 3
-&#125;
-var p2 = new Person();
-
-console.log(p1.n);
-console.log(p1.m);
-
-console.log(p2.n);
-console.log(p2.m);
-</code></pre>
-<h2 id="借用构造函数继承"><a href="#借用构造函数继承" class="headerlink" title="借用构造函数继承"></a>借用构造函数继承</h2><blockquote>
-<p>从构造函数中继承到构造函数中的成员</p>
-</blockquote>
-<pre class=" language-lang-js"><code class="language-lang-js">function Person(name, age, gender)&#123;
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-&#125;
-
-function Chinese(name, age, gender, skin)&#123;
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-    // 以上代码重复，在构造函数Person中已经给this添加
-    this.skin = skin;
-&#125;
-
-// 重写构造函数Chinese
-function Chinese(name, age, gender, skin)&#123;
-    // 借用Person构造函数，继承到name、age、gender属性
-    Person.call(this, name, age, gender);
-    this.skin = skin;
-&#125;
-</code></pre>
-<h2 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h2><blockquote>
-<p>借用构造函数 + 原型链继承组合在一起使用</p>
-</blockquote>
-<pre class=" language-lang-js"><code class="language-lang-js">function Person(name, age, gender)&#123;
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-&#125;
-
-// Person原型上的sayHi方法
-Person.prototype.sayHi = function()&#123;
-    console.log("hello, 我是" + this.name);
-&#125;
-
-function Chinese(name, age, gender, skin)&#123;
-    // 借用Person构造函数，继承到name、age、gender属性
-    Person.call(this, name, age, gender);
-    this.skin = skin;
-&#125;
-
-var xm = new Chinese("xm", 20, "male", "黄色");
-// xm有name/age/gender属性从Person构造函数中继承到的
-
-// 那么如何让Chinese的实例对象xm去继承到Person原型上的sayHi方法???
-xm.sayHi();
-</code></pre>
-<pre class=" language-lang-js"><code class="language-lang-js">function Person() &#123;
-    this.name = "is me";
-    this.color = ["lime", "red"];
-&#125;
-
-function Chinese() &#123;
-
-&#125;
-Chinese.prototype = new Person();
-
-var c1 = new Chinese();
-var c2 = new Chinese();
-
-c1.name = "change";
-c1.color.push("black");
-
-console.log(c2.name);
-console.log(c2.color);
-</code></pre>
-<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><blockquote>
-<p>正则表达式：用于匹配规律规则的表达式，正则表达式最初是科学家对人类神经系统的工作原理的早期研究，现在在编程语言中有广泛的应用，经常用于表单校验，高级搜索等。</p>
-</blockquote>
-<h2 id="创建正则表达式"><a href="#创建正则表达式" class="headerlink" title="创建正则表达式"></a>创建正则表达式</h2><p>【07-正则表达式的创建.html】</p>
-<p>构造函数的方式</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var regExp = new RegExp(/\d/);
-</code></pre>
-<p>正则字面量</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var regExp = /\d/;
-</code></pre>
-<p>正则的使用</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">/\d/.test("aaa1");
-</code></pre>
-<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><blockquote>
-<p>正则表达式由一些普通字符和元字符组成，普通字符包括大小写字母、数字等，而元字符则具有特殊的含义。</p>
-</blockquote>
-<h3 id="常见元字符"><a href="#常见元字符" class="headerlink" title="常见元字符"></a>常见元字符</h3><p><code>|</code>表示或，优先级最低</p>
-<p><code>()</code>优先级最高，表示分组</p>
-<h3 id="字符类的元字符"><a href="#字符类的元字符" class="headerlink" title="字符类的元字符"></a>字符类的元字符</h3><p><code>[]</code>在正则表达式中表示一个字符的位置，[]里面写这个位置可以出现的字符。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">console.log(/[abc]/);//匹配a,b,c
-</code></pre>
-<p><code>[^]</code>在中扩号中的^表示非的意思。</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">//^表示该位置不可以出现的字符
-console.log(/[^abc]/);//匹配除了a，b，c以外的其他字符
-</code></pre>
-<p><code>[a-z]</code> <code>[1-9]</code>表示范围</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">console.log(/[a-z]/.test("d"));//小写字母
-console.log(/[A-Z]/.test("d"));//大写字母
-console.log(/[0-9]/.test("8"));//数字
-console.log(/[a-zA-Z0-9]/);//所有的小写字母和大写字母以及数字
-</code></pre>
-<h3 id="边界类元字符"><a href="#边界类元字符" class="headerlink" title="边界类元字符"></a>边界类元字符</h3><blockquote>
-<p>我们前面学习的正则只要有满足的条件的就会返回true，并不能做到精确的匹配。</p>
-</blockquote>
-<p>【12-正则边界.html】</p>
-<p>^表示开头   <strong><em>[]里面的^表示取反</em></strong></p>
-<p>$表示结尾</p>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">console.log(/^chuan/.test("dachuan"));//必须以chuan开头
-console.log(/chuan$/.test("chuang"));//必须以chuan结尾
-console.log(/^chuan$/.test("chuan"));//精确匹配chuan
-
-//精确匹配chuan,表示必须是这个
-console.log(/^chuan$/.test("chuanchuan"));//fasle
-</code></pre>
-<h3 id="量词类元字符"><a href="#量词类元字符" class="headerlink" title="量词类元字符"></a>量词类元字符</h3><blockquote>
-<p>量词用来控制出现的次数，一般来说量词和边界会一起使用</p>
-</blockquote>
-<p>【13-正则量词.html】</p>
-<ol>
-<li><code>*</code>表示能够出现0次或者更多次，x&gt;=0;</li>
-<li><code>+</code>表示能够出现1次或者多次，x&gt;=1</li>
-<li><code>?</code>表示能够出现0次或者1次，x=0或者x=1</li>
-<li><code>&#123;n&#125;</code>表示能够出现n次</li>
-<li><code>&#123;n,&#125;</code>表示能够出现n次或者n次以上</li>
-<li><code>&#123;n,m&#125;</code>表示能够出现n-m次</li>
-</ol>
-<p>思考：如何使用{}来表示*+? </p>
-<h2 id="正则的使用"><a href="#正则的使用" class="headerlink" title="正则的使用"></a>正则的使用</h2><h3 id="正则测试"><a href="#正则测试" class="headerlink" title="正则测试"></a>正则测试</h3><ol>
-<li><p>验证QQ</p>
-<ul>
-<li>只能是数字</li>
-<li>开头不能是0</li>
-<li>长度为5-11位</li>
-</ul>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var qqReg = /^[1-9]\d&#123;4,10&#125;$/;
-</code></pre>
-</li>
-<li><p>验证手机</p>
-<ul>
-<li>11位数字组成</li>
-<li>号段13[0-9] 147 15[0-9] 17[0178] 18[0-9]</li>
-</ul>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var mobileReg = /^(13[0-9]|147|15[0-9]|17[0178]|18[0-9])\d&#123;8&#125;$/;
-</code></pre>
-</li>
-<li><p>验证邮箱</p>
-<ul>
-<li>前面是字母或者数字</li>
-<li>必须有@</li>
-<li>@后面是字母或者数字</li>
-<li>必须有.</li>
-<li>.后面是字母或者数字</li>
-</ul>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var emailReg = /^\w+@\w+(\.\w+)+$/;
-</code></pre>
-</li>
-<li><p>验证姓名</p>
-<ul>
-<li>只能是汉字</li>
-<li>长度2-6位之间</li>
-<li>汉字范围[\u4e00-\u9fa5]</li>
-</ul>
-<pre class=" language-lang-javascript"><code class="language-lang-javascript">var nameReg = /^[\u4e00-\u9fa5]&#123;2,6&#125;$/;
-</code></pre>
-</li>
-</ol>
 
             </div>
             <hr/>
@@ -1274,12 +661,16 @@ console.log(/^chuan$/.test("chuanchuan"));//fasle
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/javascript/">
-                                    <span class="chip bg-color">javascript</span>
+                                <a href="/tags/%E8%B7%A8%E5%9F%9F/">
+                                    <span class="chip bg-color">跨域</span>
                                 </a>
                             
-                                <a href="/tags/Js%E9%AB%98%E7%BA%A7/">
-                                    <span class="chip bg-color">Js高级</span>
+                                <a href="/tags/Jsonp/">
+                                    <span class="chip bg-color">Jsonp</span>
+                                </a>
+                            
+                                <a href="/tags/CORS/">
+                                    <span class="chip bg-color">CORS</span>
                                 </a>
                             
                         </div>
@@ -1409,10 +800,10 @@ console.log(/^chuan$/.test("chuanchuan"));//fasle
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1451,64 +842,11 @@ console.log(/^chuan$/.test("chuanchuan"));//fasle
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/articles/8daa.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="ES6语法">
-                        
-                        <span class="card-title">ES6语法</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            你知道ES6有哪些新语法吗,本篇文章将介绍一些常用的语法
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-11
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AF%AD%E6%B3%95/" class="post-category">
-                                    语法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/ES6/">
-                        <span class="chip bg-color">ES6</span>
-                    </a>
-                    
-                    <a href="/tags/javascript/">
-                        <span class="chip bg-color">javascript</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
                 <a href="/articles/2162.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/9.jpg" class="responsive-img" alt="FormData的使用">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="FormData的使用">
                         
                         <span class="card-title">FormData的使用</span>
                     </div>
@@ -1520,9 +858,9 @@ console.log(/^chuan$/.test("chuanchuan"));//fasle
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-06-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-06-18
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1540,6 +878,55 @@ console.log(/^chuan$/.test("chuanchuan"));//fasle
                     
                     <a href="/tags/JavaScript/">
                         <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/articles/968f.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Ajax技术原理剖析">
+                        
+                        <span class="card-title">Ajax技术原理剖析</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Ajax（Asynchronous Javascript And XML）是指一种创建交互式、快速动态网页应用的网页开发技术，无需重新加载整个网页的情况下，能够更新部分网页的技术。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/" class="post-category">
+                                    网络请求
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ajax/">
+                        <span class="chip bg-color">ajax</span>
                     </a>
                     
                 </div>
@@ -1868,11 +1255,6 @@ $(function () {
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
     <script type="text/javascript" src="/js/fireworks.js"></script>
 
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 
 </html>

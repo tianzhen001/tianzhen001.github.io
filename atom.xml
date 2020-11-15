@@ -73,6 +73,34 @@
   </entry>
   
   <entry>
+    <title>你了解前端路由吗</title>
+    <link href="http://tianzhen001.github.io/articles/2eb8.html"/>
+    <id>http://tianzhen001.github.io/articles/2eb8.html</id>
+    <published>2020-08-15T14:01:46.000Z</published>
+    <updated>2020-11-15T14:12:19.425Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前端路由基础&quot;&gt;&lt;a href=&quot;#前端路由基础&quot; class=&quot;headerlink&quot; title=&quot;前端路由基础&quot;&gt;&lt;/a&gt;前端路由基础&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt; &lt;strong&gt;传统多页应用&lt;/strong&gt; -</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="http://tianzhen001.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端路由" scheme="http://tianzhen001.github.io/tags/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1/"/>
+    
+    <category term="VueRouter" scheme="http://tianzhen001.github.io/tags/VueRouter/"/>
+    
+  </entry>
+  
+  <entry>
     <title>vue如何给各个组件设置title</title>
     <link href="http://tianzhen001.github.io/articles/f8d7.html"/>
     <id>http://tianzhen001.github.io/articles/f8d7.html</id>
@@ -179,6 +207,34 @@
   </entry>
   
   <entry>
+    <title>PHP基础</title>
+    <link href="http://tianzhen001.github.io/articles/a6c6.html"/>
+    <id>http://tianzhen001.github.io/articles/a6c6.html</id>
+    <published>2019-07-26T13:13:36.000Z</published>
+    <updated>2020-11-15T12:56:09.977Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;PHP基础&quot;&gt;&lt;a href=&quot;#PHP基础&quot; class=&quot;headerlink&quot; title=&quot;PHP基础&quot;&gt;&lt;/a&gt;PHP基础&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;文件以.php后缀结尾，所有程序包含在&lt;code&gt;&amp;lt;?php 这里是代码</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="http://tianzhen001.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="php" scheme="http://tianzhen001.github.io/tags/php/"/>
+    
+    <category term="后端" scheme="http://tianzhen001.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Js高级语法及进阶之路</title>
     <link href="http://tianzhen001.github.io/articles/2a35.html"/>
     <id>http://tianzhen001.github.io/articles/2a35.html</id>
@@ -228,6 +284,60 @@
     
     
     <category term="JavaScript" scheme="http://tianzhen001.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>同源和跨域</title>
+    <link href="http://tianzhen001.github.io/articles/2a35.html"/>
+    <id>http://tianzhen001.github.io/articles/2a35.html</id>
+    <published>2019-06-06T12:13:36.000Z</published>
+    <updated>2020-11-15T14:01:04.395Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;同源与跨域&quot;&gt;&lt;a href=&quot;#同源与跨域&quot; class=&quot;headerlink&quot; title=&quot;同源与跨域&quot;&gt;&lt;/a&gt;同源与跨域&lt;/h1&gt;&lt;h2 id=&quot;同源&quot;&gt;&lt;a href=&quot;#同源&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网络请求" scheme="http://tianzhen001.github.io/categories/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/"/>
+    
+    
+    <category term="跨域" scheme="http://tianzhen001.github.io/tags/%E8%B7%A8%E5%9F%9F/"/>
+    
+    <category term="Jsonp" scheme="http://tianzhen001.github.io/tags/Jsonp/"/>
+    
+    <category term="CORS" scheme="http://tianzhen001.github.io/tags/CORS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ajax技术原理剖析</title>
+    <link href="http://tianzhen001.github.io/articles/968f.html"/>
+    <id>http://tianzhen001.github.io/articles/968f.html</id>
+    <published>2019-01-20T01:06:42.000Z</published>
+    <updated>2020-11-15T12:44:30.841Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;什么是Ajax？&quot;&gt;&lt;a href=&quot;#什么是Ajax？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网络请求" scheme="http://tianzhen001.github.io/categories/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/"/>
+    
+    
+    <category term="ajax" scheme="http://tianzhen001.github.io/tags/ajax/"/>
     
   </entry>
   

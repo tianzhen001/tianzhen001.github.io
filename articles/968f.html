@@ -1,0 +1,1301 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Ajax技术原理剖析, html,css,javascript,api,jQuery,nodejs,UI框架,bootstrap,laiui,vue,小程序">
+    <meta name="description" content="技术分享,快乐传递">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Ajax技术原理剖析 | 一路高歌</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="一路高歌" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">一路高歌</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">一路高歌</div>
+        <div class="logo-desc">
+            
+            技术分享,快乐传递
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Ajax技术原理剖析</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ajax/">
+                                <span class="chip bg-color">ajax</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/" class="post-category">
+                                网络请求
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-01-20
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h4 id="什么是Ajax？"><a href="#什么是Ajax？" class="headerlink" title="什么是Ajax？"></a>什么是Ajax？</h4><p>是浏览器提供的一套方法，是一门发送请求的技术，可以在不整体刷新网页的情况下向服务器发送请求，用来提升用户体验</p>
+<h4 id="Ajax-的应用场景"><a href="#Ajax-的应用场景" class="headerlink" title="Ajax 的应用场景"></a>Ajax 的应用场景</h4><ol>
+<li><p>页面上拉加载更多数据</p>
+</li>
+<li><p>列表数据无刷新分页</p>
+</li>
+<li><p>表单项离开焦点数据验证</p>
+</li>
+<li><p>搜索框提示文字下拉列表</p>
+<p>以上是基础应用场景</p>
+</li>
+</ol>
+<h4 id="Ajax-的运行环境"><a href="#Ajax-的运行环境" class="headerlink" title="Ajax 的运行环境"></a>Ajax 的运行环境</h4><p>Ajax技术需要在运行在<strong>网站环境</strong>中才能生效，所以需要在<strong>开启的服务中运行</strong>。如node服务 开启后 通过<strong>localhost:端口号/路由或者文件名</strong>访问  ！！！切勿直接双击打开文件执行，也不能通过IDE右键在浏览器打开，这两种方式都是打开的静态资源，不能访问服务，相应的请求也无法实现。</p>
+<p>Ajax 的实现步骤</p>
+<ol>
+<li><p>开启node服务 express 第三方模块</p>
+</li>
+<li><p>开启静态资源访问  express 模块中开放的方法express。static(“开放的绝对路径”) —-实质上是express模块导入了server-</p>
+<p>中间件：拦截所有请求，交由express.static()处理请求</p>
+<p>app.use(express.static(path.join(__dirname,”public”)))</p>
+<p><strong>这样我们就可以通过localhost:3000/文件名 的方式访问HTML页面了</strong></p>
+</li>
+<li><p>app.listen(3000) 监听端口</p>
+</li>
+</ol>
+<p>以下代码需要写在</p>
+<ol>
+<li><p>创建Ajax对象  （代替浏览器发送请求的代理人，因为浏览器发送请求，要么需要刷新，要么需要转跳，这不是我们期望的）</p>
+<pre class=" language-lang-js"><code class="language-lang-js">let xhr = new XMLHttpRequest();
+</code></pre>
+</li>
+<li><p>告诉Ajax请求地址以及请求方式（告诉Ajax实例对象要想哪发送请求，用什么方式发送请求）</p>
+<pre class=" language-lang-js"><code class="language-lang-js">xhr.open('get','http://www.example.com');
+</code></pre>
+</li>
+<li><p>发送请求（get方式的请求，send中不用传参，post需要传请求的参数）</p>
+<pre class=" language-lang-js"><code class="language-lang-js">xhr.send();
+</code></pre>
+</li>
+<li><p>获取服务器端给客户端的相应数据（响应需要一定时间，才能拿到响应的数据，当Ajax对象接收完成响应数据的时候，会触发xhr.onload()事件，所以将响应数据写在onload事件中）</p>
+<pre class=" language-lang-js"><code class="language-lang-js">xhr.onload = functon() &#123;
+    console.log(xhr.responseText);
+    console.log(xhr.status)
+&#125;
+</code></pre>
+</li>
+<li><p>JSON对象的获取</p>
+<pre class=" language-lang-js"><code class="language-lang-js">let j = &#123;"name":"zs"&#125;;
+console.log(j);
+// JSON字符串生成
+let strJ = JSON.stringify(j);
+console.log(strJ)
+// JSON字符串转JSON对象
+let objJ = JSON.parse(strJ);
+console.log(objJ)
+</code></pre>
+</li>
+<li></li>
+</ol>
+<p>Ajax运行原理</p>
+<p>浏览器端 —-  服务器端  （开发人员不可控）</p>
+<p>浏览器端   —-  Ajax —-  服务器端 （开发人员可控）</p>
+<p>函数封装的建议</p>
+<p>封装方法的时候，传入的参数可以是一个对象或者是一个数组，这样方便在赋值的时候区分各个参数的意义</p>
+<pre><code>function ajax(options) &#123;
+    let xhr = new XMLHttpRequest();
+    xhr.open(options.type,options.url);
+    xhr.send();
+    xhr.onload = () =&gt; &#123;
+        options.success(xhr.responseText)
+    &#125;
+&#125;
+ajax(&#123;
+    type: &quot;get&quot;,
+    url: &quot;http://localhost:3000/first&quot;,
+    success(data) &#123;
+        console.log(data)
+    &#125;,
+    data: &#123;
+        name: &quot;COder Rat&quot;,
+        age: 25
+    &#125;
+&#125;)
+</code></pre><p>请求参数要考虑的问题</p>
+<ol>
+<li><p>请求参数位置的问题</p>
+<p>将请求参数传递到Ajax函数内部，在函数内部根据请求方式的不同，参数的添加位置不同</p>
+<p>get 放在请求地址后面</p>
+<p>post 放在send方法中</p>
+</li>
+<li><p>请求参数格式的问题</p>
+<p>application/x-www-form-urlencoded</p>
+<p>​    参数名称 </p>
+</li>
+</ol>
+<blockquote>
+<p>.后面不能加变量 a.b —-&gt; a[b] </p>
+</blockquote>
+<h4 id="跨域请求的解决方案"><a href="#跨域请求的解决方案" class="headerlink" title="跨域请求的解决方案"></a>跨域请求的解决方案</h4><ol>
+<li>通过script的src属性 进行请求，绕过浏览器的同源策略</li>
+<li>设置服务器允许跨域访问</li>
+<li>通过自身服务器，访问目标服务器</li>
+</ol>
+<h4 id="cookie-session"><a href="#cookie-session" class="headerlink" title="cookie session"></a>cookie session</h4><p>是一个容器，保存到客户端或服务器端一些客户信息等等</p>
+<p>在http协议中规定，客户端与服务器端之间是无状态性的</p>
+<h3 id="弄清接口文档-amp-后端接口之间的联系"><a href="#弄清接口文档-amp-后端接口之间的联系" class="headerlink" title="弄清接口文档 &amp; 后端接口之间的联系"></a>弄清接口文档 &amp; 后端接口之间的联系</h3><hr>
+<p>以上为原生ajax的使用 目前JQuery提供的$.ajax()是用的比较多的，功能更加强大，使用更加便捷。</p>
+<hr>
+<h3 id="ajax的原理："><a href="#ajax的原理：" class="headerlink" title="ajax的原理："></a>ajax的原理：</h3><p> 通过XMLHttpRequest()对象 向服务器发出 异步 请求；从服务器获取数据 通过js Dom操作更新页面<br> 异步：向服务器发送请求 不阻碍用户的操作  实现无刷新数据更新</p>
+<h3 id="Ajax的优点："><a href="#Ajax的优点：" class="headerlink" title="Ajax的优点："></a>Ajax的优点：</h3><p> 1、最大的一点是能在不刷新整个页面的情况下维持与服务器通信 这使得web应用程序迅捷的响应用户交互，<br> 在页面内与服务器通信给用户的体验非常好。<br> 2、使用异步方式与服务器通信，不需要打断用户的操作，具有更加迅速的响应能力。<br> 3、可以把以前一些服务器负担的工作转嫁到客户端，利用客户端闲置的能力来处理，减轻服务器和带宽的负担，<br> 节约空间和宽带租用成本。并且减轻服务器的负担，ajax的原则是“按需取数据”，可以最大程度的减少冗余请求，<br> 和响应对服务器造成的负担。<br> 4、基于标准化的并被广泛支持的技术，不需要下载插件或者小程序 但需要客户允许JavaScript在浏览器上执行。<br> 5.界面与应用分离 Ajax使得界面与应用分离，也就是数据与呈现分离 有利于分工合作。</p>
+<h3 id="Ajax的缺点："><a href="#Ajax的缺点：" class="headerlink" title="Ajax的缺点："></a>Ajax的缺点：</h3><p> 1、ajax不支持浏览器back按钮。在动态更新页面的情况下，用户无法回到前一页的页面状态，因为浏览器仅能记忆历史纪录中的静态页面<br> 2、安全问题 AJAX暴露了与服务器交互的细节，就如同对企业数据建立了一个直接通道。<br> 这使得开发者在不经意间会暴露比以前更多的数据和服务器逻辑。。<br> 3、对搜索引擎的支持比较弱。<br> 4、破坏了程序的异常机制。<br> 5、不容易调试。<br> 6.不能很好地支持移动设备 例如手机APP;<br> 7.客户端肥大，太多客户段代码造成开发上的成本</p>
+<h3 id="Ajax的转换"><a href="#Ajax的转换" class="headerlink" title="Ajax的转换"></a>Ajax的转换</h3><p> 通过Ajax的函数封装，获取到这个json文件 通过json.parse()或 jaon.stringify 的方法。<br> 将这个json文件解析成数组或字符串，然后循环遍历获取<br> 例如：<br> //obj—&gt;string json字符串 JSON.stringify();<br> //string json字符串—&gt;obj JSON.parse();</p>
+<h3 id="Ajax请求数据的过程-步骤"><a href="#Ajax请求数据的过程-步骤" class="headerlink" title="Ajax请求数据的过程  步骤"></a>Ajax请求数据的过程  步骤</h3><p> 1.创建Ajax对象<br> 创建一个能够发数据的对象；—-&gt;XMLHttpRequest  //数据请求协议<br> 创建一个请求对象  new XMLHttpRequest();  兼容所有浏览器<br> new XMLHttpRequest();<br> new ActiveXObject(“mircosoft.XMLHTTP”);//只兼容IE6浏览器使用<br> 2.打开请求<br> 发送数据的方式 向服务器传输数据  open(“get/post”,”提交的地址”,”是否异步”);<br> 3.发送请求<br> (1)、get 在网址栏   域名 /?text=123&amp;pass=12135<br> 区别：get 方式  提交数据时  数据 url/?名称=数据&amp;名称=数据<br> 通过send();提交数据<br> (2)、post方法是提交时 设置请球头  声明数据类型<br> setRequestHeader(‘content-type’,’application/x-www-form-urlencoded’)<br> 通过send(data);提交数据<br> 4.等待服务器，返回内容<br> XMLHttpRequest 对象属性描述<br> onreadystatechange状态改变的事件触发器，每个状态改变时都会触发这个事件处理器，通常会调用一个JavaScript函数<br> readyState<br> 请求的状态。有5个可取值：<br> 0 = 未初始化，<br> 1 = 正在加载，<br> 2 = 已加载，<br> 3 = 交互中，<br> 4 = 完成<br> responseText    服务器的响应，返回数据的文本。请求的数据文本  ——-&gt;string<br> status  服务器的HTTP状态码（如：404 = “文件末找到” 、200 =”成功” ，等等）<br> statusText  服务器返回的状态文本信息 ，HTTP状态码的相应文本（OK或Not Found（未找到）等等）<br> status:   服务器的状态码<br> 200  服务器请求成功<br> 404  服务器请求失败<br> 302  307  服务器请求异常</p>
+<h3 id="post-get-服务器获取和提交方式的区别"><a href="#post-get-服务器获取和提交方式的区别" class="headerlink" title="post get  服务器获取和提交方式的区别"></a>post get  服务器获取和提交方式的区别</h3><p> get方式：get请求数据时  是将数据暴露在网址中 /?user=value&amp;pass=value&amp;时间毫秒数<br> 1-提交数据的大小受限制 比较小<br> 2-数据提交相对不安全  提交的数据在网址栏中通过字符串拼接发送<br> 3-有缓存问题  需要使用不断改变字符 后缀 来解决  添加：”&amp;”+new Date().getTime();<br> 4-有些浏览器不能提交中文数据  encoddeURI();解决中文      ie不能  encodeURI(“你好”)<br> post方式：post请求数据 是通过请求的域名<br> 1-理论上大小不受限制 可设置<br> 2-相对于get方式比较安全<br> 3-没有缓存问题<br> 4-可以提交中文数据<br> 5-提交数据时需要 请求头 声明请求数据类型<br> 6-提交的数据要通过send()传入参数提交数据<br> 7-content-type :提交的数据格式 application/x-www-form-urlencoded</p>
+<h3 id="Jsonp的原理和用法"><a href="#Jsonp的原理和用法" class="headerlink" title="Jsonp的原理和用法"></a>Jsonp的原理和用法</h3><p> 1-jsonp是一种解决解决方案<br> 2-Jsonp就是跨域请求数据，通过动态创建script标签，<br> 然后通过标签的src属性 获取 js文件中的程序 该程序就是一个回调函数 参数是请求<br> 其他站点的资源文件；所以要预先定义好回调函数，不是ajax技术Jsonp的原理和用法<br> 1-jsonp是一种解决解决方案<br> 2-Jsonp就是跨域请求数据，通过动态创建script标签，<br> 然后通过标签的src属性 获取 js文件中的程序 该程序就是一个回调函数 参数是请求<br> 其他站点的资源文件；所以要预先定义好回调函数，不是ajax技术</p>
+<h3 id="AJAX封装与调用"><a href="#AJAX封装与调用" class="headerlink" title="AJAX封装与调用"></a>AJAX封装与调用</h3><h4 id="AJAX封装"><a href="#AJAX封装" class="headerlink" title="AJAX封装"></a>AJAX封装</h4><pre class=" language-lang-jsx"><code class="language-lang-jsx">function ajax(obj)&#123;
+                //1.创建ajax对象
+                var xhr
+                if(window.XMLHttpRequest)&#123;           支持此对象
+                    xhr=new XMLHttpRequest()                    //IE7以上浏览器
+                &#125;else&#123;
+                    xhr=new ActiveXObject("Microsoft.XMLHTTP")  //只有IE6支持此对象
+                &#125;
+                //2.打开请求
+                //第一个参数表示请求方式,值为get/post,是字符串
+                //第二个参数表示请求的地址
+                //第三个参数是布尔值,默认是true表示异步,false表示同步
+                xhr.open(obj.type,obj.url,obj.async)
+                //3.判断请求方式get/post，发送数据(post方式必须发送请求头)
+                if(obj.type.toLowerCase()=="get")&#123;
+                    xhr.send()
+                &#125;else if(obj.type.toLowerCase()=="post")&#123;
+                    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")      //设置请求头
+                    xhr.send(toUrl(obj.data))//name=1&name2=2
+                &#125;
+
+                //4.操作返回的数据
+                xhr.onreadystatechange=function()&#123;
+                    if(xhr.readyState==4 && xhr.status==200)&#123;
+                        //1.readyState属性:ajax工作状态
+                        //2.每当readyState的值发生改变时,就会触发         onreadystatechange事件
+                        //存有XMLHttpRequest的状态.从0-4发生变化
+                        //0:请求未初始化
+                        //1:服务器连接已建立
+                        //2:请求已接收
+                        //3:请求处理中
+                        //4:请求已完成,且响应已就绪
+
+                        //http状态码
+                        //200代表请求成功
+                        //403禁止访问
+                        //404文件未找到
+                        //500服务器错误
+                        //对responseText进行json转化
+                        var data=JSON.parse(xhr.responseText)
+                        //把转化好的数据当做参数返回给obj.success函数
+                        obj.success(data)
+                    &#125;
+                &#125;
+
+                //对obj.data进行转化，把对象转化成url形式
+                function toUrl(obj)&#123;
+                    var arr=[]
+                    for(var i in obj)&#123;
+                        arr.push(i+"="+obj[i])
+                    &#125;
+                    return arr.join("&")
+                &#125;
+            &#125;
+</code></pre>
+<h4 id="ajax调用"><a href="#ajax调用" class="headerlink" title="ajax调用"></a>ajax调用</h4><pre class=" language-lang-php"><code class="language-lang-php">ajax(&#123;
+    type:"post或者get",
+    url:"地址",
+    //加post的话用到data
+    //get的话直接用&拼接  
+    data:&#123;
+            key:"c0bf48603646fc9a7c831342cb34a9b,
+        &#125;,
+    async:true,
+    success:function(res)&#123;      
+        console.log(res);
+    &#125;
+&#125;)
+//要点:
+//直接返回调用的对象
+//请求方式type用get/post
+//get方式直接拼接key必选项
+//post方式直接传入data对象再设置key必选项
+</code></pre>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">田振</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://tianzhen001.github.io/articles/968f.html">http://tianzhen001.github.io/articles/968f.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">田振</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/ajax/">
+                                    <span class="chip bg-color">ajax</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/articles/2a35.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="同源和跨域">
+                        
+                        <span class="card-title">同源和跨域</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            由于同源策略的影响，当我们从一个域名的网页去请求另一个域名的资源时，就无法成功获取资源。如果我们要想成功获取资源，那么就要用到跨域。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-06-06
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/" class="post-category">
+                                    网络请求
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%B7%A8%E5%9F%9F/">
+                        <span class="chip bg-color">跨域</span>
+                    </a>
+                    
+                    <a href="/tags/Jsonp/">
+                        <span class="chip bg-color">Jsonp</span>
+                    </a>
+                    
+                    <a href="/tags/CORS/">
+                        <span class="chip bg-color">CORS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/articles/8e14.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="最好用的js库之jQuery">
+                        
+                        <span class="card-title">最好用的js库之jQuery</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            jQuery是一个快速，小型且功能丰富的JavaScript库。借助易于使用的API，使HTML文档的遍历和操纵，事件处理，动画和Ajax等事情变得更加简单
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-12-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/js%E5%BA%93/" class="post-category">
+                                    js库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/jQuery/">
+                        <span class="chip bg-color">jQuery</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2018</span>
+            <a href="/about" target="_blank">田振</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2018";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/tianzhen001" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="#" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="#" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1341405151" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+
+</body>
+
+</html>
