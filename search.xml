@@ -110,6 +110,33 @@
     
     
     <entry>
+      <title>登录状态保持</title>
+      <link href="articles/3250.html"/>
+      <url>articles/3250.html</url>
+      
+        <content type="html"><![CDATA[<p>前端开发登录状态的保持，主要有两种方法：<strong>cookie+session 和 token技术</strong></p><p><strong>原因:</strong>   登录状态保持，起源于http的无状态，无记忆</p><ol><li><p>最早的时候，web的作用就是网页的浏览。  服务器只用提供简单的网页浏览器操作即可，不用记住刚刚谁发了请求，更没有登录，注册之类的操作</p></li><li><p>http设计之初就是无状态的</p></li><li><p>http无状态： http不会记住每一次的请求  就跟公交车司机不会记住乘客一样</p></li><li><p>这段时间很嗨皮，业务逻辑非常简单。</p></li></ol><h2 id="一-cookie-session实现登录状态保持"><a href="#一-cookie-session实现登录状态保持" class="headerlink" title="一. cookie+session实现登录状态保持"></a>一. cookie+session实现登录状态保持</h2><p>1.随着交互型的网页的兴起，在线购物网站，需要登录的网站变得越来越多。但是http是无状态的</p><p>2.通过cookie+session实现状态保持</p><p>3.服务端登录的时候，给分配一个session用于存储数据，同时将sessionID返回给浏览器</p><p>4.浏览器通过cookie把sessionID存储起来，下次访问时携带上</p><p>5.服务端就可以通过sessionID来确定用户是否登录</p><p><strong>cookie+session实现状态保持的缺点</strong></p><p>1.通过cookie+sesion技术实现了状态的保持，大家都很嗨皮</p><p>2.服务端不嗨皮了，原因如下：</p><p>  —每个人登录都需要在服务端开辟一块空间来信息，如果访问的人越来越多了，该怎么办？</p><p>  —浪费了大量的内存，对于服务器来说是一个很大的开销。</p><p>  —手机端很多浏览器不支持cookie或者是禁用cookie</p><p>  —如果要集群了，会很麻烦</p><p> <strong>集群+session持久化</strong></p><p>1.因为需要访问的用户越来越多，一台服务器扛不住压力了</p><p>2.那就准备2台，3台，甚至是更多的服务器进行服务</p><p>3.问题：如果小明的请求第一次访问了A服务器，下一次访问了B服务器怎么办？</p><p>4.可以通过session共享解决，也就是在每一台服务器中都共享所有的用户信息，这样就占用了更多的服务器内存</p><p>5.通过数据持久化解决，使用缓存（redis/Memcached）,将所有的session存储到数据库中，所有的session都统一去数据库中进行查找</p><p>6.服务端也嗨皮了，但是数据库服务器崩了咋办？？？</p><h2 id="二-登录状态保持-token技术"><a href="#二-登录状态保持-token技术" class="headerlink" title="二. 登录状态保持-token技术"></a>二. 登录状态保持-token技术</h2><p><strong>token的基本介绍</strong></p><p>1.想想，我们为什么要存储session呢，浪费大量的内存，要是不存该有多好啊，但是不存储session，我怎么验证合法用户？关键点就在于验证服务端不存储任何的数据，我还能验证你的真实身份</p><p>2.新的想法产生了：当小明登录系统的时候，根据小明的用户名生成一个token(令牌)，把令牌交给小明，服务端不做任何存储。下次小明登录时，小明带上token进行访问，服务端对token进行校验，当然这个令牌必须是通过一定的算法进行严格加密的，只有服务器才能解析校验</p><p>3.校验token比存储session省事多了</p><p><strong>token的优势</strong></p><ol><li><p>token无状态，服务端不用存储token，服务端只需要签发和校验token即可。</p></li><li><p>集群：token是无状态，集群的时候，算法一致，无论访问哪台服务器，都是一样的</p></li><li><p>性能： 解析token效率比查询数据库高的多</p></li><li><p>跨站点：只要服务端算法一致，token就可以夸站点登录</p></li><li><p>移动端：在移动端开发中，使用cookie非常麻烦，使用token验证非常常见</p></li></ol><p><strong>token的使用</strong></p><p>1.客户端收到服务器返回的JWT，可以储存在Cookie里面，也可以储存在localStorage。</p><p>2.此后，客户端每次与服务器通信，都要带上这个JWT。你可以把它放在Cookie里面自动发送，但是这样不能跨域，所以更好的做法是放在HTTP请求的头信息Authorization字段里面。</p><p>参考链接：<a href="https://www.jianshu.com/p/79225bd8a9c9">https://www.jianshu.com/p/79225bd8a9c9</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 会话 </tag>
+            
+            <tag> Token </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>webpack配置指南</title>
       <link href="articles/dfd4.html"/>
       <url>articles/dfd4.html</url>

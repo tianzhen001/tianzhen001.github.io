@@ -126,6 +126,34 @@
   </entry>
   
   <entry>
+    <title>登录状态保持</title>
+    <link href="http://tianzhen001.github.io/articles/3250.html"/>
+    <id>http://tianzhen001.github.io/articles/3250.html</id>
+    <published>2020-05-19T15:22:07.000Z</published>
+    <updated>2020-11-19T03:28:26.670Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;前端开发登录状态的保持，主要有两种方法：&lt;strong&gt;cookie+session 和 token技术&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因:&lt;/strong&gt;  </summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="http://tianzhen001.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="会话" scheme="http://tianzhen001.github.io/tags/%E4%BC%9A%E8%AF%9D/"/>
+    
+    <category term="Token" scheme="http://tianzhen001.github.io/tags/Token/"/>
+    
+  </entry>
+  
+  <entry>
     <title>webpack配置指南</title>
     <link href="http://tianzhen001.github.io/articles/dfd4.html"/>
     <id>http://tianzhen001.github.io/articles/dfd4.html</id>
